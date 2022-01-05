@@ -1,0 +1,6 @@
+framework module Pods_RichMan {
+  umbrella header "Pods-RichMan-umbrella.h"
+
+  export *
+  module * { export * }
+}

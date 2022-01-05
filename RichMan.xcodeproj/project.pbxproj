@@ -8,22 +8,46 @@
 
 /* Begin PBXBuildFile section */
 		3C6BFF982785CCBF001AF291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFF972785CCBF001AF291 /* AppDelegate.swift */; };
-		3C6BFF9A2785CCBF001AF291 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFF992785CCBF001AF291 /* SceneDelegate.swift */; };
 		3C6BFF9C2785CCBF001AF291 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFF9B2785CCBF001AF291 /* ViewController.swift */; };
 		3C6BFF9F2785CCBF001AF291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BFF9D2785CCBF001AF291 /* Main.storyboard */; };
 		3C6BFFA12785CCBF001AF291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BFFA02785CCBF001AF291 /* Assets.xcassets */; };
 		3C6BFFA42785CCBF001AF291 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BFFA22785CCBF001AF291 /* LaunchScreen.storyboard */; };
+		3C6BFFAC2785E60C001AF291 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFAB2785E60C001AF291 /* Constants.swift */; };
+		3C6BFFAE2785E679001AF291 /* ShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFAD2785E679001AF291 /* ShareData.swift */; };
+		3C6BFFB02785E6BA001AF291 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFAF2785E6BA001AF291 /* Utility.swift */; };
+		3C6BFFE92785E772001AF291 /* XibType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFE82785E772001AF291 /* XibType.swift */; };
+		3C6BFFED2785E94E001AF291 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFEC2785E94E001AF291 /* UIViewExtension.swift */; };
+		3C6BFFEF2785E99E001AF291 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFEE2785E99E001AF291 /* UIColorExtension.swift */; };
+		3C6BFFF12785EB1A001AF291 /* RootTBVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFF02785EB1A001AF291 /* RootTBVC.swift */; };
+		3C6BFFF32785EB64001AF291 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFF22785EB64001AF291 /* BaseTableViewCell.swift */; };
+		3C6BFFF92785ECAB001AF291 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFF72785ECAB001AF291 /* TeamCell.swift */; };
+		3C6BFFFA2785ECAB001AF291 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BFFF82785ECAB001AF291 /* TeamCell.xib */; };
+		3C6BFFFC2785EF68001AF291 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFFB2785EF68001AF291 /* UITableViewExtension.swift */; };
+		A90B6D3055277FD12A050765 /* Pods_RichMan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F553D9F5B1B7AB44C32C3B3B /* Pods_RichMan.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C6BFF942785CCBF001AF291 /* RichMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RichMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6BFF972785CCBF001AF291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C6BFF992785CCBF001AF291 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3C6BFF9B2785CCBF001AF291 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C6BFF9E2785CCBF001AF291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C6BFFA02785CCBF001AF291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C6BFFA32785CCBF001AF291 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C6BFFA52785CCBF001AF291 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C6BFFAB2785E60C001AF291 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3C6BFFAD2785E679001AF291 /* ShareData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareData.swift; sourceTree = "<group>"; };
+		3C6BFFAF2785E6BA001AF291 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		3C6BFFE82785E772001AF291 /* XibType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibType.swift; sourceTree = "<group>"; };
+		3C6BFFEC2785E94E001AF291 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = "../../../../../Documents/數字科技/518pt_ios/Parttime/Extension/UIViewExtension.swift"; sourceTree = "<group>"; };
+		3C6BFFEE2785E99E001AF291 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = "../../../../../Documents/數字科技/518pt_ios/Parttime/Extension/UIColorExtension.swift"; sourceTree = "<group>"; };
+		3C6BFFF02785EB1A001AF291 /* RootTBVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTBVC.swift; sourceTree = "<group>"; };
+		3C6BFFF22785EB64001AF291 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		3C6BFFF72785ECAB001AF291 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
+		3C6BFFF82785ECAB001AF291 /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
+		3C6BFFFB2785EF68001AF291 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewExtension.swift; path = "../../../../../Documents/數字科技/518pt_ios/Parttime/Extension/UITableViewExtension.swift"; sourceTree = "<group>"; };
+		5FBB01BF50963199981DCC31 /* Pods-RichMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichMan.release.xcconfig"; path = "Target Support Files/Pods-RichMan/Pods-RichMan.release.xcconfig"; sourceTree = "<group>"; };
+		E8FD8CFC7E7021CDB487B89C /* Pods-RichMan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichMan.debug.xcconfig"; path = "Target Support Files/Pods-RichMan/Pods-RichMan.debug.xcconfig"; sourceTree = "<group>"; };
+		F553D9F5B1B7AB44C32C3B3B /* Pods_RichMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A90B6D3055277FD12A050765 /* Pods_RichMan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +67,8 @@
 			children = (
 				3C6BFF962785CCBF001AF291 /* RichMan */,
 				3C6BFF952785CCBF001AF291 /* Products */,
+				EC514CEF9E3440BE72D3EC63 /* Pods */,
+				B6A7F6EB9F287978890C6FBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +83,58 @@
 		3C6BFF962785CCBF001AF291 /* RichMan */ = {
 			isa = PBXGroup;
 			children = (
+				3C6BFFA02785CCBF001AF291 /* Assets.xcassets */,
 				3C6BFF972785CCBF001AF291 /* AppDelegate.swift */,
-				3C6BFF992785CCBF001AF291 /* SceneDelegate.swift */,
 				3C6BFF9B2785CCBF001AF291 /* ViewController.swift */,
 				3C6BFF9D2785CCBF001AF291 /* Main.storyboard */,
-				3C6BFFA02785CCBF001AF291 /* Assets.xcassets */,
-				3C6BFFA22785CCBF001AF291 /* LaunchScreen.storyboard */,
+				3C6BFFF02785EB1A001AF291 /* RootTBVC.swift */,
+				3C6BFFF72785ECAB001AF291 /* TeamCell.swift */,
+				3C6BFFF82785ECAB001AF291 /* TeamCell.xib */,
 				3C6BFFA52785CCBF001AF291 /* Info.plist */,
+				3C6BFFF42785EB77001AF291 /* Other */,
+				3C6BFFB12785E723001AF291 /* Extension */,
 			);
 			path = RichMan;
+			sourceTree = "<group>";
+		};
+		3C6BFFB12785E723001AF291 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3C6BFFEC2785E94E001AF291 /* UIViewExtension.swift */,
+				3C6BFFEE2785E99E001AF291 /* UIColorExtension.swift */,
+				3C6BFFFB2785EF68001AF291 /* UITableViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3C6BFFF42785EB77001AF291 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3C6BFFA22785CCBF001AF291 /* LaunchScreen.storyboard */,
+				3C6BFFAB2785E60C001AF291 /* Constants.swift */,
+				3C6BFFAD2785E679001AF291 /* ShareData.swift */,
+				3C6BFFAF2785E6BA001AF291 /* Utility.swift */,
+				3C6BFFE82785E772001AF291 /* XibType.swift */,
+				3C6BFFF22785EB64001AF291 /* BaseTableViewCell.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		B6A7F6EB9F287978890C6FBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F553D9F5B1B7AB44C32C3B3B /* Pods_RichMan.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC514CEF9E3440BE72D3EC63 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8FD8CFC7E7021CDB487B89C /* Pods-RichMan.debug.xcconfig */,
+				5FBB01BF50963199981DCC31 /* Pods-RichMan.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +144,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3C6BFFA82785CCBF001AF291 /* Build configuration list for PBXNativeTarget "RichMan" */;
 			buildPhases = (
+				CAC37E237CC6CBC7EE64651A /* [CP] Check Pods Manifest.lock */,
 				3C6BFF902785CCBF001AF291 /* Sources */,
 				3C6BFF912785CCBF001AF291 /* Frameworks */,
 				3C6BFF922785CCBF001AF291 /* Resources */,
@@ -125,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6BFFFA2785ECAB001AF291 /* TeamCell.xib in Resources */,
 				3C6BFFA42785CCBF001AF291 /* LaunchScreen.storyboard in Resources */,
 				3C6BFFA12785CCBF001AF291 /* Assets.xcassets in Resources */,
 				3C6BFF9F2785CCBF001AF291 /* Main.storyboard in Resources */,
@@ -133,14 +205,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CAC37E237CC6CBC7EE64651A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RichMan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3C6BFF902785CCBF001AF291 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C6BFFB02785E6BA001AF291 /* Utility.swift in Sources */,
 				3C6BFF9C2785CCBF001AF291 /* ViewController.swift in Sources */,
 				3C6BFF982785CCBF001AF291 /* AppDelegate.swift in Sources */,
-				3C6BFF9A2785CCBF001AF291 /* SceneDelegate.swift in Sources */,
+				3C6BFFFC2785EF68001AF291 /* UITableViewExtension.swift in Sources */,
+				3C6BFFEF2785E99E001AF291 /* UIColorExtension.swift in Sources */,
+				3C6BFFF92785ECAB001AF291 /* TeamCell.swift in Sources */,
+				3C6BFFF12785EB1A001AF291 /* RootTBVC.swift in Sources */,
+				3C6BFFAC2785E60C001AF291 /* Constants.swift in Sources */,
+				3C6BFFED2785E94E001AF291 /* UIViewExtension.swift in Sources */,
+				3C6BFFE92785E772001AF291 /* XibType.swift in Sources */,
+				3C6BFFF32785EB64001AF291 /* BaseTableViewCell.swift in Sources */,
+				3C6BFFAE2785E679001AF291 /* ShareData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +323,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,6 +390,7 @@
 		};
 		3C6BFFA92785CCBF001AF291 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8FD8CFC7E7021CDB487B89C /* Pods-RichMan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,8 +402,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +421,7 @@
 		};
 		3C6BFFAA2785CCBF001AF291 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FBB01BF50963199981DCC31 /* Pods-RichMan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,8 +433,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationLandscapeLeft";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
