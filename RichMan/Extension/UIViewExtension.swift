@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import Lottie
 
 extension UIView {
 
@@ -85,38 +84,6 @@ extension UIView {
         self.layer.masksToBounds = true
     }
     
-    /// showToastView 最新 108.11.07
-    func showToast(title: String, offsetY: CGFloat = 0) {
-        // 存在時，先移除
-        for view in self.subviews {
-            if view is ToastView {
-                view.removeFromSuperview()
-            }
-        }
-        let toast = ToastView()
-        // 背景的寬小於toast的寬，避免觸控背景區塊沒反應，toast寬會突出背景寬
-        let width = self.width/3
-        // 螢幕一半寬 減掉自身toast寬的一半當x點
-        let x = (self.width/2) - (width/2)
-        let y = (self.height/2) - 60 + offsetY
-        toast.frame = CGRect(x: x, y: y, width: width, height: 50)
-        toast.alpha = 0.0
-        toast.titleLabel.text = title
-        
-        self.addSubview(toast)
-        
-        UIView.animate(withDuration: 0.3, animations: {
-            toast.alpha = 1.0
-        }) { (completion) in
-            DispatchQueue.main.asyncAfter(deadline: 1.5, execute: {
-                UIView.animate(withDuration: 0.5, animations: {
-                    toast.alpha = 0.0
-                }, completion: { (completion) in
-                    toast.removeFromSuperview()
-                })
-            })
-        }
-    }
 }
 
 extension UIView {
@@ -250,4 +217,11 @@ extension UIStoryboard {
         
         return VC
     }
+}
+
+enum StoryboardID: String {
+    case remindReplyBKVC            = "RemindReplyBKVC"
+    case contactRecordsFilterVC     = "ContactRecordsFilterVC"
+    case dressingRoomVC             = "DressingRoomVC"
+    
 }

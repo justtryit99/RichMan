@@ -16,14 +16,14 @@
 		3C6BFFAE2785E679001AF291 /* ShareData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFAD2785E679001AF291 /* ShareData.swift */; };
 		3C6BFFB02785E6BA001AF291 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFAF2785E6BA001AF291 /* Utility.swift */; };
 		3C6BFFE92785E772001AF291 /* XibType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFE82785E772001AF291 /* XibType.swift */; };
-		3C6BFFED2785E94E001AF291 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFEC2785E94E001AF291 /* UIViewExtension.swift */; };
-		3C6BFFEF2785E99E001AF291 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFEE2785E99E001AF291 /* UIColorExtension.swift */; };
 		3C6BFFF12785EB1A001AF291 /* RootTBVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFF02785EB1A001AF291 /* RootTBVC.swift */; };
 		3C6BFFF32785EB64001AF291 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFF22785EB64001AF291 /* BaseTableViewCell.swift */; };
 		3C6BFFF92785ECAB001AF291 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFF72785ECAB001AF291 /* TeamCell.swift */; };
 		3C6BFFFA2785ECAB001AF291 /* TeamCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BFFF82785ECAB001AF291 /* TeamCell.xib */; };
-		3C6BFFFC2785EF68001AF291 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFFFB2785EF68001AF291 /* UITableViewExtension.swift */; };
 		A90B6D3055277FD12A050765 /* Pods_RichMan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F553D9F5B1B7AB44C32C3B3B /* Pods_RichMan.framework */; };
+		EE228092278673BD003BBFDE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE228091278673BD003BBFDE /* UIColorExtension.swift */; };
+		EE228094278673CC003BBFDE /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE228093278673CC003BBFDE /* UITableViewExtension.swift */; };
+		EE228096278673D4003BBFDE /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE228095278673D4003BBFDE /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,15 +38,15 @@
 		3C6BFFAD2785E679001AF291 /* ShareData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareData.swift; sourceTree = "<group>"; };
 		3C6BFFAF2785E6BA001AF291 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		3C6BFFE82785E772001AF291 /* XibType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibType.swift; sourceTree = "<group>"; };
-		3C6BFFEC2785E94E001AF291 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtension.swift; path = "../../../../../Documents/數字科技/518pt_ios/Parttime/Extension/UIViewExtension.swift"; sourceTree = "<group>"; };
-		3C6BFFEE2785E99E001AF291 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = "../../../../../Documents/數字科技/518pt_ios/Parttime/Extension/UIColorExtension.swift"; sourceTree = "<group>"; };
 		3C6BFFF02785EB1A001AF291 /* RootTBVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTBVC.swift; sourceTree = "<group>"; };
 		3C6BFFF22785EB64001AF291 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		3C6BFFF72785ECAB001AF291 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
 		3C6BFFF82785ECAB001AF291 /* TeamCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamCell.xib; sourceTree = "<group>"; };
-		3C6BFFFB2785EF68001AF291 /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewExtension.swift; path = "../../../../../Documents/數字科技/518pt_ios/Parttime/Extension/UITableViewExtension.swift"; sourceTree = "<group>"; };
 		5FBB01BF50963199981DCC31 /* Pods-RichMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichMan.release.xcconfig"; path = "Target Support Files/Pods-RichMan/Pods-RichMan.release.xcconfig"; sourceTree = "<group>"; };
 		E8FD8CFC7E7021CDB487B89C /* Pods-RichMan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichMan.debug.xcconfig"; path = "Target Support Files/Pods-RichMan/Pods-RichMan.debug.xcconfig"; sourceTree = "<group>"; };
+		EE228091278673BD003BBFDE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		EE228093278673CC003BBFDE /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		EE228095278673D4003BBFDE /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		F553D9F5B1B7AB44C32C3B3B /* Pods_RichMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,20 +91,10 @@
 				3C6BFFF72785ECAB001AF291 /* TeamCell.swift */,
 				3C6BFFF82785ECAB001AF291 /* TeamCell.xib */,
 				3C6BFFA52785CCBF001AF291 /* Info.plist */,
+				EE228090278673A8003BBFDE /* Extension */,
 				3C6BFFF42785EB77001AF291 /* Other */,
-				3C6BFFB12785E723001AF291 /* Extension */,
 			);
 			path = RichMan;
-			sourceTree = "<group>";
-		};
-		3C6BFFB12785E723001AF291 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				3C6BFFEC2785E94E001AF291 /* UIViewExtension.swift */,
-				3C6BFFEE2785E99E001AF291 /* UIColorExtension.swift */,
-				3C6BFFFB2785EF68001AF291 /* UITableViewExtension.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		3C6BFFF42785EB77001AF291 /* Other */ = {
@@ -135,6 +125,16 @@
 				5FBB01BF50963199981DCC31 /* Pods-RichMan.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EE228090278673A8003BBFDE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EE228091278673BD003BBFDE /* UIColorExtension.swift */,
+				EE228093278673CC003BBFDE /* UITableViewExtension.swift */,
+				EE228095278673D4003BBFDE /* UIViewExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,13 +238,13 @@
 				3C6BFFB02785E6BA001AF291 /* Utility.swift in Sources */,
 				3C6BFF9C2785CCBF001AF291 /* ViewController.swift in Sources */,
 				3C6BFF982785CCBF001AF291 /* AppDelegate.swift in Sources */,
-				3C6BFFFC2785EF68001AF291 /* UITableViewExtension.swift in Sources */,
-				3C6BFFEF2785E99E001AF291 /* UIColorExtension.swift in Sources */,
 				3C6BFFF92785ECAB001AF291 /* TeamCell.swift in Sources */,
 				3C6BFFF12785EB1A001AF291 /* RootTBVC.swift in Sources */,
+				EE228094278673CC003BBFDE /* UITableViewExtension.swift in Sources */,
+				EE228096278673D4003BBFDE /* UIViewExtension.swift in Sources */,
 				3C6BFFAC2785E60C001AF291 /* Constants.swift in Sources */,
-				3C6BFFED2785E94E001AF291 /* UIViewExtension.swift in Sources */,
 				3C6BFFE92785E772001AF291 /* XibType.swift in Sources */,
+				EE228092278673BD003BBFDE /* UIColorExtension.swift in Sources */,
 				3C6BFFF32785EB64001AF291 /* BaseTableViewCell.swift in Sources */,
 				3C6BFFAE2785E679001AF291 /* ShareData.swift in Sources */,
 			);
