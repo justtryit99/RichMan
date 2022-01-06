@@ -47,10 +47,51 @@ class RootTBVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        let row = indexPath.row
+        let cellData = model.data[row]
         
+        let vc = DetailVC()
+//        navigationController?.pushViewController(vc, animated: true)
+        
+//        splitViewController?.pushViewController(vc, animated: true)
+        
+//        if let splitVC = self.splitViewController, let detailVC = splitVC.viewControllers[1] as? ViewController {
+//            detailVC.label.text = cellData.key.rawValue
+//        }
+//        print("viewControllers: \(splitViewController?.viewControllers[1])")
+//
+//        if let nav = splitViewController?.viewControllers[1] as? UINavigationController {
+//            print("nav viewControllers: \(nav.viewControllers)")
+//
+//            if let vc = nav.viewControllers[0] as? ViewController {
+//                vc.label.text = cellData.key.rawValue
+//            }
+//        }
+        
+        
+        vc.text = cellData.key.rawValue
+        splitViewController?.showDetailViewController(vc, sender: nil)
         
     }
 
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showDetail" {
+//            if let indexPath = tableView.indexPathForSelectedRow {
+//
+//                let controller = (segue.destination as! UINavigationController).topViewController as! ViewController
+//                // 2.
+//                controller.label.text = model.data[indexPath.row].key.rawValue
+//                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+//                controller.navigationItem.leftItemsSupplementBackButton = true
+//            }
+//        }
+//
+//        let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailNavigationViewController") as! UINavigationController
+//        self.splitViewController?.viewControllers[1] = detailViewController
+//    }
+    
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -83,16 +124,6 @@ class RootTBVC: UITableViewController {
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
     */
 

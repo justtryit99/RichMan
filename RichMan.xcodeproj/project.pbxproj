@@ -29,6 +29,8 @@
 		EEF1EB132786E39E009974D7 /* RootHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF1EB122786E39E009974D7 /* RootHeader.swift */; };
 		EEF1EB152786E3AB009974D7 /* RootHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF1EB142786E3AB009974D7 /* RootHeader.xib */; };
 		EEF1EB172786E582009974D7 /* crayon_1-1.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEF1EB162786E582009974D7 /* crayon_1-1.ttf */; };
+		EEF1EB1C2786F59D009974D7 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF1EB1A2786F59D009974D7 /* DetailVC.swift */; };
+		EEF1EB1D2786F59D009974D7 /* DetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF1EB1B2786F59D009974D7 /* DetailVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		EEF1EB122786E39E009974D7 /* RootHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootHeader.swift; sourceTree = "<group>"; };
 		EEF1EB142786E3AB009974D7 /* RootHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootHeader.xib; sourceTree = "<group>"; };
 		EEF1EB162786E582009974D7 /* crayon_1-1.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "crayon_1-1.ttf"; sourceTree = "<group>"; };
+		EEF1EB1A2786F59D009974D7 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		EEF1EB1B2786F59D009974D7 /* DetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailVC.xib; sourceTree = "<group>"; };
 		F553D9F5B1B7AB44C32C3B3B /* Pods_RichMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RichMan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,6 +107,8 @@
 				3C6BFFF82785ECAB001AF291 /* TeamCell.xib */,
 				EEF1EB122786E39E009974D7 /* RootHeader.swift */,
 				EEF1EB142786E3AB009974D7 /* RootHeader.xib */,
+				EEF1EB1A2786F59D009974D7 /* DetailVC.swift */,
+				EEF1EB1B2786F59D009974D7 /* DetailVC.xib */,
 				3C6BFFA52785CCBF001AF291 /* Info.plist */,
 				EE228090278673A8003BBFDE /* Extension */,
 				3C6BFFF42785EB77001AF291 /* Other */,
@@ -214,6 +220,7 @@
 				EEF1EB172786E582009974D7 /* crayon_1-1.ttf in Resources */,
 				3C6BFFFA2785ECAB001AF291 /* TeamCell.xib in Resources */,
 				3C6BFFA42785CCBF001AF291 /* LaunchScreen.storyboard in Resources */,
+				EEF1EB1D2786F59D009974D7 /* DetailVC.xib in Resources */,
 				EEF1EB152786E3AB009974D7 /* RootHeader.xib in Resources */,
 				3C6BFFA12785CCBF001AF291 /* Assets.xcassets in Resources */,
 				3C6BFF9F2785CCBF001AF291 /* Main.storyboard in Resources */,
@@ -257,6 +264,7 @@
 				3C6BFF982785CCBF001AF291 /* AppDelegate.swift in Sources */,
 				3C6BFFF92785ECAB001AF291 /* TeamCell.swift in Sources */,
 				3C6BFFF12785EB1A001AF291 /* RootTBVC.swift in Sources */,
+				EEF1EB1C2786F59D009974D7 /* DetailVC.swift in Sources */,
 				EE228094278673CC003BBFDE /* UITableViewExtension.swift in Sources */,
 				EE228096278673D4003BBFDE /* UIViewExtension.swift in Sources */,
 				3C6BFFAC2785E60C001AF291 /* Constants.swift in Sources */,
