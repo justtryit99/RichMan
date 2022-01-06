@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,24 +21,33 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4E-la-ffD" customClass="CircleView" customModule="RichMan" customModuleProvider="target">
                         <rect key="frame" x="-80" y="-5" width="160" height="160"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="雞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9C-JK-aDk">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="雞" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9C-JK-aDk">
                                 <rect key="frame" x="89.5" y="48" width="54.5" height="64.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="miS-y2-gH8">
+                                <rect key="frame" x="78" y="40" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="miS-y2-gH8" secondAttribute="height" multiplier="1:1" id="1Tb-as-IID"/>
+                                    <constraint firstAttribute="width" constant="80" id="fPB-aI-tNQ"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="miS-y2-gH8" secondAttribute="trailing" constant="2" id="5Ma-7T-vKo"/>
                             <constraint firstAttribute="trailing" secondItem="w9C-JK-aDk" secondAttribute="trailing" constant="16" id="DZX-dG-YBk"/>
                             <constraint firstItem="w9C-JK-aDk" firstAttribute="centerY" secondItem="G4E-la-ffD" secondAttribute="centerY" id="JmR-oH-p46"/>
                             <constraint firstAttribute="width" secondItem="G4E-la-ffD" secondAttribute="height" multiplier="1:1" id="OXo-tb-Phg"/>
+                            <constraint firstItem="miS-y2-gH8" firstAttribute="centerY" secondItem="G4E-la-ffD" secondAttribute="centerY" id="YKT-ln-zC1"/>
                             <constraint firstAttribute="width" constant="160" id="yA1-q4-IAB"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5888" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSW-IH-hQx">
-                        <rect key="frame" x="103" y="38" width="182.5" height="81.5"/>
-                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="68"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5680" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSW-IH-hQx">
+                        <rect key="frame" x="103" y="34.5" width="177.5" height="88"/>
+                        <fontDescription key="fontDescription" name="GillSans-BoldItalic" family="Gill Sans" pointSize="76"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -51,7 +61,17 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="circleView" destination="G4E-la-ffD" id="Wxj-02-6sG"/>
+                <outlet property="headImageView" destination="miS-y2-gH8" id="C2D-op-WpK"/>
+                <outlet property="scoreLabel" destination="HSW-IH-hQx" id="rCN-gy-Hfq"/>
+            </connections>
             <point key="canvasLocation" x="155.07246376811597" y="155.69196428571428"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

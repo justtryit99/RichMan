@@ -46,6 +46,11 @@ extension UIColor {
     
     static let r255_g185_b69 = UIColor(255, 185, 69, 1)         // 商品直接換的橘
     static let placeHolder = UIColor(195, 195, 197, 1)          // textField placeholder color
+    
+    static let marry = UIColor(200, 172, 152, 1)
+    static let tasker = UIColor(226, 22, 74, 1)
+    static let bear = UIColor(215, 225, 238, 1)
+    
 }
 
 public func ToColor (hex:String) -> UIColor {

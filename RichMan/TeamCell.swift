@@ -8,10 +8,17 @@
 import UIKit
 
 class TeamCell: BaseTableViewCell {
-
+    
+    @IBOutlet weak var headImageView: UIImageView!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var circleView: CircleView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
+//        scoreLabel.textColor = .white
+        circleView.backgroundColor = .white
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

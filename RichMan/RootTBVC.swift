@@ -8,28 +8,47 @@
 import UIKit
 
 class RootTBVC: UITableViewController {
-
+    
+    let model = RootTBModel()
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if tableView.tableHeaderView == nil {
+            tableView.tableHeaderView = RootHeader(frame: CGRect(x: 0, y: 0, width: view.width, height: 80))
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        model.setData()
+        
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .black
         tableView.registerCell([.teamCell])
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return model.data.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let row = indexPath.row
+        let cellData = model.data[row]
         let cell: TeamCell = tableView.createCell(indexPath: indexPath)
-        cell.backgroundColor = .random()
+        cell.backgroundColor = cellData.color
+        cell.headImageView.image = UIImage(named: cellData.key.rawValue)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        
+        
     }
 
     /*
