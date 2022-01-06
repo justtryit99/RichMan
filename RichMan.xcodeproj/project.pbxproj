@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C3D921927873CED00D3E9EF /* PopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D921827873CED00D3E9EF /* PopVC.swift */; };
 		3C6BFF982785CCBF001AF291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFF972785CCBF001AF291 /* AppDelegate.swift */; };
 		3C6BFF9C2785CCBF001AF291 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFF9B2785CCBF001AF291 /* ViewController.swift */; };
 		3C6BFF9F2785CCBF001AF291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BFF9D2785CCBF001AF291 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C3D921827873CED00D3E9EF /* PopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopVC.swift; sourceTree = "<group>"; };
 		3C6BFF942785CCBF001AF291 /* RichMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RichMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6BFF972785CCBF001AF291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C6BFF9B2785CCBF001AF291 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				EEF1EB142786E3AB009974D7 /* RootHeader.xib */,
 				EEF1EB1A2786F59D009974D7 /* DetailVC.swift */,
 				EEF1EB1B2786F59D009974D7 /* DetailVC.xib */,
+				3C3D921827873CED00D3E9EF /* PopVC.swift */,
 				3C6BFFA52785CCBF001AF291 /* Info.plist */,
 				EE228090278673A8003BBFDE /* Extension */,
 				3C6BFFF42785EB77001AF291 /* Other */,
@@ -271,6 +274,7 @@
 				3C6BFFE92785E772001AF291 /* XibType.swift in Sources */,
 				EE228092278673BD003BBFDE /* UIColorExtension.swift in Sources */,
 				EE82EEF52786991E00C2A655 /* RootTBModel.swift in Sources */,
+				3C3D921927873CED00D3E9EF /* PopVC.swift in Sources */,
 				EEF1EB132786E39E009974D7 /* RootHeader.swift in Sources */,
 				EEF1EB112786E366009974D7 /* BaseView.swift in Sources */,
 				3C6BFFF32785EB64001AF291 /* BaseTableViewCell.swift in Sources */,

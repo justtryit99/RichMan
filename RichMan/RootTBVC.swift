@@ -11,6 +11,14 @@ class RootTBVC: UITableViewController {
     
     let model = RootTBModel()
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        navigationController?.navigationBar.setBackgroundColor(.clear)
+        
+        
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -23,9 +31,17 @@ class RootTBVC: UITableViewController {
         super.viewDidLoad()
         model.setData()
         
+        let barAppearance =  UINavigationBarAppearance()
+        barAppearance.configureWithTransparentBackground()
+        navigationController?.navigationBar.standardAppearance = barAppearance
+        
         tableView.separatorStyle = .none
         tableView.backgroundColor = .black
         tableView.registerCell([.teamCell])
+        
+        print("preferredDisplayMode: \(splitViewController?.preferredDisplayMode.rawValue)")
+        
+        
     }
 
     // MARK: - Table view data source
@@ -51,29 +67,53 @@ class RootTBVC: UITableViewController {
         let cellData = model.data[row]
         
         let vc = DetailVC()
-//        navigationController?.pushViewController(vc, animated: true)
-        
-//        splitViewController?.pushViewController(vc, animated: true)
-        
-//        if let splitVC = self.splitViewController, let detailVC = splitVC.viewControllers[1] as? ViewController {
-//            detailVC.label.text = cellData.key.rawValue
-//        }
-//        print("viewControllers: \(splitViewController?.viewControllers[1])")
-//
-//        if let nav = splitViewController?.viewControllers[1] as? UINavigationController {
-//            print("nav viewControllers: \(nav.viewControllers)")
-//
-//            if let vc = nav.viewControllers[0] as? ViewController {
-//                vc.label.text = cellData.key.rawValue
-//            }
-//        }
-        
-        
+
         vc.text = cellData.key.rawValue
-        splitViewController?.showDetailViewController(vc, sender: nil)
+        // 加了nac，sb的detailVC就會消失，不會一直push下去
+        let nav = UINavigationController(rootViewController: vc)
+//        vc.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+        splitViewController?.showDetailViewController(nav, sender: nil)
+        
+//        vc.navigationItem.leftItemsSupplementBackButton = true
+//        self.splitViewController?.viewControllers[1] = vc
+        
+        if #available(iOS 14.5, *) {
+//            splitViewController?.displayModeButtonVisibility = .always
+        } else {
+            // Fallback on earlier versions
+        }
         
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if segue.identifier == "showDetail" {
 //            if let indexPath = tableView.indexPathForSelectedRow {
@@ -89,8 +129,6 @@ class RootTBVC: UITableViewController {
 //        let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetailNavigationViewController") as! UINavigationController
 //        self.splitViewController?.viewControllers[1] = detailViewController
 //    }
-    
-    
     
     /*
     // Override to support conditional editing of the table view.

@@ -20,17 +20,30 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIa-iL-OSg">
-                    <rect key="frame" x="447" y="261" width="94" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIa-iL-OSg">
+                    <rect key="frame" x="465" y="360" width="94" height="48"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgA-5c-XUb">
+                    <rect key="frame" x="478.5" y="120" width="67" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <connections>
+                        <action selector="clickButton:" destination="-1" eventType="touchUpInside" id="N60-8c-Z81"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="139" y="129"/>
+            <constraints>
+                <constraint firstItem="cgA-5c-XUb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Hnj-VL-IiU"/>
+                <constraint firstItem="cgA-5c-XUb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="fWA-o2-7mr"/>
+                <constraint firstItem="EIa-iL-OSg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lZu-iq-f22"/>
+                <constraint firstItem="EIa-iL-OSg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nq4-hy-NkA"/>
+            </constraints>
+            <point key="canvasLocation" x="138.8671875" y="128.90625"/>
         </view>
     </objects>
     <resources>
