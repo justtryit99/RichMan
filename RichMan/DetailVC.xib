@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailVC" customModule="RichMan" customModuleProvider="target">
             <connections>
+                <outlet property="cardView" destination="y8R-MQ-WmC" id="MQT-PZ-wic"/>
                 <outlet property="label" destination="EIa-iL-OSg" id="vn6-IR-dZV"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,12 +21,6 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIa-iL-OSg">
-                    <rect key="frame" x="465" y="360" width="94" height="48"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgA-5c-XUb">
                     <rect key="frame" x="478.5" y="120" width="67" height="31"/>
                     <state key="normal" title="Button"/>
@@ -34,14 +29,30 @@
                         <action selector="clickButton:" destination="-1" eventType="touchUpInside" id="N60-8c-Z81"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8R-MQ-WmC">
+                    <rect key="frame" x="392" y="234" width="240" height="300"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="8ti-sy-fSg"/>
+                        <constraint firstAttribute="height" constant="300" id="wtH-ew-Lpr"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIa-iL-OSg">
+                    <rect key="frame" x="830" y="120" width="94" height="48"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="cgA-5c-XUb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Hnj-VL-IiU"/>
+                <constraint firstItem="y8R-MQ-WmC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Qg0-ED-Poo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EIa-iL-OSg" secondAttribute="trailing" constant="100" id="VCk-Ue-IUC"/>
                 <constraint firstItem="cgA-5c-XUb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="fWA-o2-7mr"/>
-                <constraint firstItem="EIa-iL-OSg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="lZu-iq-f22"/>
-                <constraint firstItem="EIa-iL-OSg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nq4-hy-NkA"/>
+                <constraint firstItem="EIa-iL-OSg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="s67-v9-DIP"/>
+                <constraint firstItem="y8R-MQ-WmC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="yic-t1-mmp"/>
             </constraints>
             <point key="canvasLocation" x="138.8671875" y="128.90625"/>
         </view>
@@ -49,6 +60,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
