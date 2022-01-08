@@ -105,9 +105,6 @@ class DetailVC: UIViewController {
 //            let name = isFront ? "Frame 1" : "Frame 6"
 //            self.cardView.image = UIImage(named: name)
             
-            
-            
-            
         } completion: { finish in
 
             if i > 1 {
