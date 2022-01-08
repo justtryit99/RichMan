@@ -74,6 +74,17 @@ class RootTBVC: UITableViewController {
 //        vc.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         splitViewController?.showDetailViewController(nav, sender: nil)
         
+        
+        // test
+//        let vc = TestVC()
+//        vc.text = cellData.key.rawValue
+//        let nav = UINavigationController(rootViewController: vc)
+//        splitViewController?.showDetailViewController(nav, sender: nil)
+        
+        
+        
+        
+        
 //        vc.navigationItem.leftItemsSupplementBackButton = true
 //        self.splitViewController?.viewControllers[1] = vc
         
@@ -83,6 +94,10 @@ class RootTBVC: UITableViewController {
             // Fallback on earlier versions
         }
         
+        
+//        let vc: ViewController = MainSB.with(id: .VC)
+//        vc.text = cellData.key.rawValue
+//        splitViewController?.showDetailViewController(vc, sender: nil)
     }
 
     

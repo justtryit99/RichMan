@@ -11,6 +11,8 @@
 		3C3D921B27892DE100D3E9EF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D921A27892DE100D3E9EF /* CardView.swift */; };
 		3C3D921D27892DF300D3E9EF /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C3D921C27892DF300D3E9EF /* CardView.xib */; };
 		3C3D921F2789643700D3E9EF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D921E2789643700D3E9EF /* UIButtonExtension.swift */; };
+		3C3D922227897E9E00D3E9EF /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D922027897E9E00D3E9EF /* TestVC.swift */; };
+		3C3D922327897E9E00D3E9EF /* TestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C3D922127897E9E00D3E9EF /* TestVC.xib */; };
 		3C6BFF982785CCBF001AF291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFF972785CCBF001AF291 /* AppDelegate.swift */; };
 		3C6BFF9C2785CCBF001AF291 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFF9B2785CCBF001AF291 /* ViewController.swift */; };
 		3C6BFF9F2785CCBF001AF291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BFF9D2785CCBF001AF291 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 		3C3D921A27892DE100D3E9EF /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3C3D921C27892DF300D3E9EF /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
 		3C3D921E2789643700D3E9EF /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		3C3D922027897E9E00D3E9EF /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		3C3D922127897E9E00D3E9EF /* TestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestVC.xib; sourceTree = "<group>"; };
 		3C6BFF942785CCBF001AF291 /* RichMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RichMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6BFF972785CCBF001AF291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C6BFF9B2785CCBF001AF291 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				3C3D921A27892DE100D3E9EF /* CardView.swift */,
 				3C3D921C27892DF300D3E9EF /* CardView.xib */,
 				3C3D921827873CED00D3E9EF /* PopVC.swift */,
+				3C3D922027897E9E00D3E9EF /* TestVC.swift */,
+				3C3D922127897E9E00D3E9EF /* TestVC.xib */,
 				3C6BFFA52785CCBF001AF291 /* Info.plist */,
 				EE228090278673A8003BBFDE /* Extension */,
 				3C6BFFF42785EB77001AF291 /* Other */,
@@ -231,6 +237,7 @@
 			files = (
 				EEF1EB172786E582009974D7 /* crayon_1-1.ttf in Resources */,
 				3C6BFFFA2785ECAB001AF291 /* TeamCell.xib in Resources */,
+				3C3D922327897E9E00D3E9EF /* TestVC.xib in Resources */,
 				3C3D921D27892DF300D3E9EF /* CardView.xib in Resources */,
 				3C6BFFA42785CCBF001AF291 /* LaunchScreen.storyboard in Resources */,
 				EEF1EB1D2786F59D009974D7 /* DetailVC.xib in Resources */,
@@ -272,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C3D922227897E9E00D3E9EF /* TestVC.swift in Sources */,
 				3C6BFFB02785E6BA001AF291 /* Utility.swift in Sources */,
 				3C6BFF9C2785CCBF001AF291 /* ViewController.swift in Sources */,
 				3C3D921F2789643700D3E9EF /* UIButtonExtension.swift in Sources */,

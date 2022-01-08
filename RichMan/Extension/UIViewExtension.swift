@@ -222,6 +222,7 @@ extension UIStoryboard {
 enum StoryboardID: String {
     case dressingRoomVC             = "DressingRoomVC"
     case popVC  = "PopVC"
+    case VC  = "ViewController"
 }
 
 extension UINavigationBar {

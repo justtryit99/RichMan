@@ -11,10 +11,17 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailVC" customModule="RichMan" customModuleProvider="target">
             <connections>
+                <outlet property="blurView" destination="kER-nL-ZV1" id="EjB-tW-jkG"/>
                 <outlet property="cardView" destination="AcB-M6-Hc3" id="Uwa-NP-FVL"/>
+                <outlet property="chanceCard" destination="c0x-9K-0P0" id="x8l-66-0ku"/>
+                <outlet property="chanceCenterX" destination="54m-PA-9hk" id="ENA-jo-t8C"/>
+                <outlet property="chanceWidth" destination="bG1-MC-G0V" id="RPn-7Z-5Yg"/>
                 <outlet property="circleView" destination="lMN-eT-ePk" id="I0T-3V-8PL"/>
+                <outlet property="fateCard" destination="f9j-4C-E8t" id="EgJ-eL-IXV"/>
+                <outlet property="fateCenterX" destination="9Cz-Ws-aG8" id="NxW-UR-RMS"/>
+                <outlet property="fateWidth" destination="MPO-fP-S9z" id="dcr-fR-2dQ"/>
                 <outlet property="label" destination="EIa-iL-OSg" id="vn6-IR-dZV"/>
-                <outlet property="teamImageView" destination="QhR-P1-u7q" id="D6C-ZD-7ne"/>
+                <outlet property="teamImageView" destination="oxM-kG-YhW" id="RAR-RI-eFm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -37,16 +44,16 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 1" translatesAutoresizingMaskIntoConstraints="NO" id="AcB-M6-Hc3">
-                    <rect key="frame" x="230" y="234" width="240" height="300"/>
+                <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 1" translatesAutoresizingMaskIntoConstraints="NO" id="AcB-M6-Hc3">
+                    <rect key="frame" x="230" y="634" width="240" height="300"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="300" id="OgN-gX-Qak"/>
                         <constraint firstAttribute="width" constant="240" id="Wxv-cd-P7J"/>
                     </constraints>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMN-eT-ePk" customClass="CircleView" customModule="RichMan" customModuleProvider="target">
-                    <rect key="frame" x="230" y="264" width="240" height="240"/>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMN-eT-ePk" customClass="CircleView" customModule="RichMan" customModuleProvider="target">
+                    <rect key="frame" x="230" y="664" width="240" height="240"/>
                     <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="240" id="JjX-bo-u0t"/>
@@ -60,17 +67,58 @@
                         <constraint firstAttribute="width" constant="100" id="HV3-bl-Mns"/>
                     </constraints>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c0x-9K-0P0" customClass="CardView" customModule="RichMan" customModuleProvider="target">
+                    <rect key="frame" x="35" y="191.5" width="280" height="385"/>
+                    <color key="backgroundColor" systemColor="labelColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="bG1-MC-G0V"/>
+                        <constraint firstAttribute="width" secondItem="c0x-9K-0P0" secondAttribute="height" multiplier="8:11" id="bnI-TR-G1x"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9j-4C-E8t" customClass="CardView" customModule="RichMan" customModuleProvider="target">
+                    <rect key="frame" x="385" y="191.5" width="280" height="385"/>
+                    <color key="backgroundColor" systemColor="labelColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="280" id="MPO-fP-S9z"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kER-nL-ZV1">
+                    <rect key="frame" x="0.0" y="0.0" width="700" height="768"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oxM-kG-YhW">
+                            <rect key="frame" x="582" y="18" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="oxM-kG-YhW" secondAttribute="height" multiplier="1:1" id="SxZ-E1-LTc"/>
+                                <constraint firstAttribute="width" constant="100" id="nKl-Zl-JvP"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="oxM-kG-YhW" firstAttribute="top" secondItem="kER-nL-ZV1" secondAttribute="top" constant="18" id="9nL-Yg-rXm"/>
+                        <constraint firstAttribute="trailing" secondItem="oxM-kG-YhW" secondAttribute="trailing" constant="18" id="Fl6-hE-6U4"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="kER-nL-ZV1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0mz-ea-Pgu"/>
+                <constraint firstItem="kER-nL-ZV1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1gI-Sq-sxW"/>
+                <constraint firstItem="f9j-4C-E8t" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="3nN-fE-bY0"/>
+                <constraint firstItem="c0x-9K-0P0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.5" id="54m-PA-9hk"/>
                 <constraint firstItem="QhR-P1-u7q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-40" id="89M-1g-kh2"/>
+                <constraint firstItem="c0x-9K-0P0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8hT-mC-Zp8"/>
+                <constraint firstItem="f9j-4C-E8t" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.5" id="9Cz-Ws-aG8"/>
                 <constraint firstItem="cgA-5c-XUb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Hnj-VL-IiU"/>
-                <constraint firstItem="AcB-M6-Hc3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="SGI-4U-gw3"/>
+                <constraint firstItem="AcB-M6-Hc3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="400" id="SGI-4U-gw3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EIa-iL-OSg" secondAttribute="trailing" constant="100" id="VCk-Ue-IUC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kER-nL-ZV1" secondAttribute="trailing" id="Xyk-rP-Wv8"/>
+                <constraint firstAttribute="bottom" secondItem="kER-nL-ZV1" secondAttribute="bottom" id="fLN-eK-7L8"/>
                 <constraint firstItem="cgA-5c-XUb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="fWA-o2-7mr"/>
                 <constraint firstItem="AcB-M6-Hc3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iPq-KJ-FWh"/>
-                <constraint firstItem="lMN-eT-ePk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ktW-WH-KaL"/>
+                <constraint firstItem="lMN-eT-ePk" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="400" id="ktW-WH-KaL"/>
+                <constraint firstItem="f9j-4C-E8t" firstAttribute="width" secondItem="f9j-4C-E8t" secondAttribute="height" multiplier="8:11" id="lLg-D7-byP"/>
                 <constraint firstItem="lMN-eT-ePk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qBv-P3-Uuc"/>
                 <constraint firstItem="EIa-iL-OSg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="s67-v9-DIP"/>
                 <constraint firstItem="QhR-P1-u7q" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wyR-9x-rAV"/>
@@ -81,6 +129,9 @@
     </objects>
     <resources>
         <image name="Frame 1" width="337" height="460"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

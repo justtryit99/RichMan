@@ -15,10 +15,20 @@ class DetailVC: UIViewController {
     @IBOutlet weak var circleView: CircleView!
     @IBOutlet weak var teamImageView: UIImageView!
     
+    @IBOutlet weak var fateCard: CardView!
+    @IBOutlet weak var fateWidth: NSLayoutConstraint!
+    @IBOutlet weak var fateCenterX: NSLayoutConstraint!
+    @IBOutlet weak var chanceCard: CardView!
+    @IBOutlet weak var chanceWidth: NSLayoutConstraint!
+    @IBOutlet weak var chanceCenterX: NSLayoutConstraint!
+    
+    @IBOutlet weak var blurView: UIView!
+    
     
     var text = ""
-    var sec = 4
+    var sec = 3
     var secTimer = Timer()
+    var tapCardType = CardType.chance
     
     
 //    var timeAry: [TimeInterval] = [0.5, 0.3, 0.2, 0.2, 0.3, 0.5]
@@ -26,7 +36,6 @@ class DetailVC: UIViewController {
         var ary = [TimeInterval]()
         var i: TimeInterval = 0.1
         for _ in 1...5 {
-
             ary.append(i)
             i += 0.1
         }
@@ -39,66 +48,181 @@ class DetailVC: UIViewController {
         print("\(String(describing: self)) deinit!!!")
     }
     
+    // MARK: - Func
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let barAppearance =  UINavigationBarAppearance()
+        barAppearance.configureWithTransparentBackground()
+        navigationController?.navigationBar.standardAppearance = barAppearance
+        
+        chanceCard.type = .chance
+        fateCard.type = .fate
+        chanceCard.backgroundColor = .clear
+        fateCard.backgroundColor = .clear
+        blurView.isHidden = true
+        
         label.text = "\(sec)"
         label.isHidden = true
         
         teamImageView.image = UIImage(named: text)
         
         
+        let tapCh = UITapGestureRecognizer(target: self, action: #selector(tapChanceCard))
+        chanceCard.addGestureRecognizer(tapCh)
+        let tapFa = UITapGestureRecognizer(target: self, action: #selector(tapFateCard))
+        fateCard.addGestureRecognizer(tapFa)
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapCardView))
-        cardView.addGestureRecognizer(tap)
-//        cardView.isHidden = true
         
-        let tapCir = UITapGestureRecognizer(target: self, action: #selector(tapCircleView))
-        circleView.addGestureRecognizer(tapCir)
-        circleView.backgroundColor = .black
-        circleView.isHidden = true
+
+        
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(tapCardView))
+//        cardView.addGestureRecognizer(tap)
+////        cardView.isHidden = true
+//
+//        let tapCir = UITapGestureRecognizer(target: self, action: #selector(tapCircleView))
+//        circleView.addGestureRecognizer(tapCir)
+//        circleView.backgroundColor = .black
+//        circleView.isHidden = true
         
         
 //        secTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(timeCount)), userInfo: nil, repeats: true)
+        
     }
     
 //    override func viewWillDisappear(_ animated: Bool) {
 //        super.viewWillDisappear(animated)
 //        secTimer.invalidate()
 //    }
-
-    @IBAction func clickButton(_ sender: Any) {
-        let popupVC: PopVC = MainSB.with(id: .popVC)
-        present(popupVC, animated: true, completion: nil)
+    
+    
+    
+    
+    @objc func tapChanceCard() {
+        tapCardType = .chance
+        popCard(type: tapCardType)
+        
+//        view.bringSubviewToFront(chanceCard)
+//        chanceWidth.constant = 498
+//        
+//        let newConstraint = chanceCenterX.constraintWithMultiplier(1)
+//        view.removeConstraint(chanceCenterX)
+//        view.addConstraint(newConstraint)
+//        chanceCenterX = newConstraint
+//        
+//        UIView.animate(withDuration: 0.3) {
+//            self.view.layoutIfNeeded()
+//        }
+//        
+//        transitionTest(i: timeAry.count, targetView: chanceCard)
+//        
+//        
+//        DispatchQueue.main.asyncAfter(deadline: 1) { [self] in
+//            secTimer.invalidate()
+//            sec = 3
+//            secTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(self.timeCount)), userInfo: nil, repeats: true)
+//        }
+        
+        
+    }
+    
+    @objc func tapFateCard() {
+        tapCardType = .fate
+        popCard(type: tapCardType)
+    }
+    
+    func popCard(type: CardType) {
+        let card: CardView = type == .chance ? chanceCard : fateCard
+        var centerX: NSLayoutConstraint = type == .chance ? chanceCenterX : fateCenterX
+        let width: NSLayoutConstraint = type == .chance ? chanceWidth : fateWidth
+        
+        view.bringSubviewToFront(card)
+        width.constant = 498
+        
+        let newConstraint = centerX.constraintWithMultiplier(1)
+        view.removeConstraint(centerX)
+        view.addConstraint(newConstraint)
+        centerX = newConstraint
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+        
+        transitionTest(i: timeAry.count, targetView: card)
+        
+        DispatchQueue.main.asyncAfter(deadline: 1) { [self] in
+            secTimer.invalidate()
+            sec = 3
+            secTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(self.timeCount)), userInfo: nil, repeats: true)
+        }
     }
     
     @objc func timeCount() {
         sec -= 1
         print("waitSec: \(sec)")
         
-        let text = "\(sec)"
-        label.text = text
+        let card: CardView = tapCardType == .chance ? chanceCard : fateCard
         
-        let scale = 5.0
-        UIView.animate(withDuration: 0.98, delay: 0) {
-            self.label.transform = CGAffineTransform(scaleX: scale, y: scale)
-            self.label.alpha = 0.0
-        } completion: { bool in
-            self.label.transform = .identity
-            self.label.alpha = 1.0
-        }
+        let text = "\(sec)"
+        card.countLabel.text = text
         
         //倒數計時結束
-        if sec == 0 {
-            label.text = "時間到"
+        if self.sec <= 0 {
+            card.countLabel.text = "Time's up!"
             secTimer.invalidate()
+            return
+        }
+        
+        let scale = 2.0
+        UIView.animate(withDuration: 0.98, delay: 0) {
+//            self.chanceCard.countLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+//            self.chanceCard.countLabel.alpha = 0.0
+            card.countLabel.transform = CGAffineTransform(scaleX: scale, y: scale)
+            card.countLabel.alpha = 0.0
+            
+        } completion: { bool in
+//            self.chanceCard.countLabel.transform = .identity
+//            self.chanceCard.countLabel.alpha = 1.0
+            card.countLabel.transform = .identity
+            card.countLabel.alpha = 1.0
         }
     }
     
     
-    func transitionTest(i: Int) {
+    
+    
+
+    @IBAction func clickButton(_ sender: Any) {
+        let popupVC: PopVC = MainSB.with(id: .popVC)
+        present(popupVC, animated: true, completion: nil)
+    }
+    
+//    @objc func timeCount() {
+//        sec -= 1
+//        print("waitSec: \(sec)")
+//
+//        let text = "\(sec)"
+//        label.text = text
+//
+//        let scale = 5.0
+//        UIView.animate(withDuration: 0.98, delay: 0) {
+//            self.label.transform = CGAffineTransform(scaleX: scale, y: scale)
+//            self.label.alpha = 0.0
+//        } completion: { bool in
+//            self.label.transform = .identity
+//            self.label.alpha = 1.0
+//        }
+//
+//        //倒數計時結束
+//        if sec == 0 {
+//            label.text = "時間到"
+//            secTimer.invalidate()
+//        }
+//    }
+    
+    
+    func transitionTest(i: Int, targetView: CardView) {
         
-        UIView.transition(with: cardView, duration: self.timeAry[i-1], options: .transitionFlipFromRight) {
+        UIView.transition(with: targetView, duration: self.timeAry[i-1], options: .transitionFlipFromRight) {
 //            self.cardView.backgroundColor = .random()
             
 //            let isFront = self.cardView.image == UIImage(named: "Frame 6")
@@ -108,7 +232,9 @@ class DetailVC: UIViewController {
         } completion: { finish in
 
             if i > 1 {
-                self.transitionTest(i: i-1)
+                self.transitionTest(i: i-1, targetView: targetView)
+            } else {
+                targetView.isFront = true
             }
 
 
@@ -116,7 +242,7 @@ class DetailVC: UIViewController {
     }
     
     func popTest(i: Int) {
-        let count: Float = 2
+//        let count: Float = 2
         let time = 0.15
         let sprScale = 1.3
         
@@ -170,9 +296,10 @@ class DetailVC: UIViewController {
         
         guard isCanTapCir else {return}
         
-        let count: Float = 2
-        let time = 0.1
-        let sprScale = 1.2
+//        let count: Float = 2
+//        let time = 0.1
+//        let sprScale = 1.2
+        
 //        UIView.animate(withDuration: time, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 10, options: []) {
 //
 //            UIView.setAnimationRepeatCount(count)
@@ -260,61 +387,6 @@ class DetailVC: UIViewController {
             self.cardView.transform = CGAffineTransform(scaleX: scale, y: scale)
         }
         
-        
-        
-        transitionTest(i: timeAry.count)
-        
-        
-        
-        
-//        UIView.transition(with: cardView, duration: 0.5, options: .transitionFlipFromRight) {
-//            UIView.setAnimationRepeatCount(2)
-//            self.cardView.backgroundColor = .random()
-//        } completion: { finish in
-//            UIView.transition(with: self.cardView, duration: 0.3, options: .transitionFlipFromRight) {
-//                UIView.setAnimationRepeatCount(3)
-//                self.cardView.backgroundColor = .random()
-//            } completion: { finish in
-//
-//            }
-//        }
-        
-        
-        
-        
-//        UIView.transition(with: cardView, duration: 0.2, options: .transitionFlipFromRight) {
-////                self.cardView.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-//
-////            UIView.setAnimationRepeatCount(10)
-//            self.cardView.backgroundColor = .random()
-//        } completion: { finish in
-////                UIView.animate(withDuration: 0.4, animations: {
-////                    self.cardView.transform = CGAffineTransform.identity
-////                })
-//            print("view done")
-//        }
-//
-//
-//        let animator = UIViewPropertyAnimator(duration:0.3, curve: .linear) {
-//            self.cardView.backgroundColor = .random()
-//         }
-//         animator.startAnimation()
-//
-//
-//        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.4, delay: 0, options: .transitionFlipFromRight) {
-//            self.cardView.backgroundColor = .random()
-//        } completion: { position in
-//            print("view done")
-//        }
-
-        
-//        UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.5, delay: 0, options: [.autoreverse, .curveEaseIn, .repeat], animations: {
-//            let transform = CATransform3DIdentity
-//            let rotate = CATransform3DRotate(transform, 450, 1, 1, 0)
-//            self.cardView.layer.transform = rotate
-//        })
-        
-
     }
 
 }
@@ -330,5 +402,11 @@ extension DispatchTime: ExpressibleByIntegerLiteral {
 extension DispatchTime: ExpressibleByFloatLiteral {
     public init(floatLiteral value: Double) {
         self = DispatchTime.now() + .milliseconds(Int(value * 1000))
+    }
+}
+
+extension NSLayoutConstraint {
+    func constraintWithMultiplier(_ multiplier: CGFloat) -> NSLayoutConstraint {
+        return NSLayoutConstraint(item: self.firstItem!, attribute: self.firstAttribute, relatedBy: self.relation, toItem: self.secondItem, attribute: self.secondAttribute, multiplier: multiplier, constant: self.constant)
     }
 }
