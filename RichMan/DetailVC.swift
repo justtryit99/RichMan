@@ -14,6 +14,7 @@ class DetailVC: UIViewController {
     @IBOutlet weak var cardView: UIImageView!
     @IBOutlet weak var circleView: CircleView!
     @IBOutlet weak var teamImageView: UIImageView!
+    @IBOutlet weak var teamImageView2: UIImageView!
     
     @IBOutlet weak var fateCard: CardView!
     @IBOutlet weak var fateWidth: NSLayoutConstraint!
@@ -65,7 +66,7 @@ class DetailVC: UIViewController {
         label.isHidden = true
         
         teamImageView.image = UIImage(named: text)
-        
+        teamImageView2.image = UIImage(named: text)
         
         let tapCh = UITapGestureRecognizer(target: self, action: #selector(tapChanceCard))
         chanceCard.addGestureRecognizer(tapCh)
@@ -100,29 +101,6 @@ class DetailVC: UIViewController {
     @objc func tapChanceCard() {
         tapCardType = .chance
         popCard(type: tapCardType)
-        
-//        view.bringSubviewToFront(chanceCard)
-//        chanceWidth.constant = 498
-//        
-//        let newConstraint = chanceCenterX.constraintWithMultiplier(1)
-//        view.removeConstraint(chanceCenterX)
-//        view.addConstraint(newConstraint)
-//        chanceCenterX = newConstraint
-//        
-//        UIView.animate(withDuration: 0.3) {
-//            self.view.layoutIfNeeded()
-//        }
-//        
-//        transitionTest(i: timeAry.count, targetView: chanceCard)
-//        
-//        
-//        DispatchQueue.main.asyncAfter(deadline: 1) { [self] in
-//            secTimer.invalidate()
-//            sec = 3
-//            secTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(self.timeCount)), userInfo: nil, repeats: true)
-//        }
-        
-        
     }
     
     @objc func tapFateCard() {
@@ -131,17 +109,27 @@ class DetailVC: UIViewController {
     }
     
     func popCard(type: CardType) {
+        
         let card: CardView = type == .chance ? chanceCard : fateCard
-        var centerX: NSLayoutConstraint = type == .chance ? chanceCenterX : fateCenterX
+        guard card.isFront == false else {return}
+        blurView.fadeIn(0.6)
+        let centerX: NSLayoutConstraint = type == .chance ? chanceCenterX : fateCenterX
         let width: NSLayoutConstraint = type == .chance ? chanceWidth : fateWidth
         
+        view.bringSubviewToFront(blurView)
         view.bringSubviewToFront(card)
         width.constant = 498
         
         let newConstraint = centerX.constraintWithMultiplier(1)
         view.removeConstraint(centerX)
         view.addConstraint(newConstraint)
-        centerX = newConstraint
+        
+        switch type {
+        case .chance:
+            chanceCenterX = newConstraint
+        case .fate:
+            fateCenterX = newConstraint
+        }
         
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
@@ -219,7 +207,7 @@ class DetailVC: UIViewController {
 //        }
 //    }
     
-    
+    /// 翻牌
     func transitionTest(i: Int, targetView: CardView) {
         
         UIView.transition(with: targetView, duration: self.timeAry[i-1], options: .transitionFlipFromRight) {

@@ -21,7 +21,8 @@
                 <outlet property="fateCenterX" destination="9Cz-Ws-aG8" id="NxW-UR-RMS"/>
                 <outlet property="fateWidth" destination="MPO-fP-S9z" id="dcr-fR-2dQ"/>
                 <outlet property="label" destination="EIa-iL-OSg" id="vn6-IR-dZV"/>
-                <outlet property="teamImageView" destination="oxM-kG-YhW" id="RAR-RI-eFm"/>
+                <outlet property="teamImageView" destination="QhR-P1-u7q" id="89H-4b-cji"/>
+                <outlet property="teamImageView2" destination="oxM-kG-YhW" id="x8g-wl-dLp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,6 +31,23 @@
             <rect key="frame" x="0.0" y="0.0" width="700" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kER-nL-ZV1">
+                    <rect key="frame" x="0.0" y="0.0" width="700" height="768"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oxM-kG-YhW">
+                            <rect key="frame" x="582" y="30" width="100" height="100"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="oxM-kG-YhW" secondAttribute="height" multiplier="1:1" id="SxZ-E1-LTc"/>
+                                <constraint firstAttribute="width" constant="100" id="nKl-Zl-JvP"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="oxM-kG-YhW" firstAttribute="top" secondItem="kER-nL-ZV1" secondAttribute="top" constant="30" id="9nL-Yg-rXm"/>
+                        <constraint firstAttribute="trailing" secondItem="oxM-kG-YhW" secondAttribute="trailing" constant="18" id="Fl6-hE-6U4"/>
+                    </constraints>
+                </view>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgA-5c-XUb">
                     <rect key="frame" x="316.5" y="120" width="67" height="31"/>
                     <state key="normal" title="Button"/>
@@ -80,23 +98,6 @@
                     <color key="backgroundColor" systemColor="labelColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="280" id="MPO-fP-S9z"/>
-                    </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kER-nL-ZV1">
-                    <rect key="frame" x="0.0" y="0.0" width="700" height="768"/>
-                    <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oxM-kG-YhW">
-                            <rect key="frame" x="582" y="18" width="100" height="100"/>
-                            <constraints>
-                                <constraint firstAttribute="width" secondItem="oxM-kG-YhW" secondAttribute="height" multiplier="1:1" id="SxZ-E1-LTc"/>
-                                <constraint firstAttribute="width" constant="100" id="nKl-Zl-JvP"/>
-                            </constraints>
-                        </imageView>
-                    </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstItem="oxM-kG-YhW" firstAttribute="top" secondItem="kER-nL-ZV1" secondAttribute="top" constant="18" id="9nL-Yg-rXm"/>
-                        <constraint firstAttribute="trailing" secondItem="oxM-kG-YhW" secondAttribute="trailing" constant="18" id="Fl6-hE-6U4"/>
                     </constraints>
                 </view>
             </subviews>
