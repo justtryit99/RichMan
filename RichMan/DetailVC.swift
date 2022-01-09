@@ -258,11 +258,13 @@ class DetailVC: UIViewController {
         view.addConstraint(newConstraint)
         markCenterY = newConstraint
         
+        // 位移到中心
         UIView.animate(withDuration: 0.5, delay: 0) {
             self.markView.backImg.image = UIImage(named: "問號正")
             self.view.layoutIfNeeded()
         } completion: { bool in
             
+            // 心跳放大
             UIView.animate(withDuration: time, delay: 0) {
                 self.markView.transform = CGAffineTransform(scaleX: sprScale, y: sprScale)
             } completion: { bool in
@@ -281,7 +283,9 @@ class DetailVC: UIViewController {
                 } completion: { bool in
                     view.removeFromSuperview()
                 }
+                // 波浪結束
                 
+                // 心跳縮小
                 UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 10) {
                     self.markView.transform = CGAffineTransform.identity
                 } completion: { bool in
@@ -299,12 +303,7 @@ class DetailVC: UIViewController {
                         // 最終放大
                         UIView.animate(withDuration: 0.6, delay: 0.8, usingSpringWithDamping: 0.5, initialSpringVelocity: 10, options: []) {
                             
-//                            let s = 4.2
-//                            self.markView.transform = CGAffineTransform(scaleX: s, y: s)
-                            
-//                            self.markView.backImg.image = UIImage(named: "問號圖放大")
                             self.view.layoutIfNeeded()
-                            
                             
                         } completion: { bool in
                             
