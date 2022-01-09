@@ -109,7 +109,7 @@ class DetailVC: UIViewController {
         isCanTapCir = false
         
         blurView.fadeIn(0.6)
-        popMark(i: 2)
+        popMark(i: 20)
     }
     
     @objc func tapChanceCard() {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C183A43278B121E00360983 /* question.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 3C183A42278B121E00360983 /* question.geojson */; };
 		3C3D921927873CED00D3E9EF /* PopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D921827873CED00D3E9EF /* PopVC.swift */; };
 		3C3D921B27892DE100D3E9EF /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D921A27892DE100D3E9EF /* CardView.swift */; };
 		3C3D921D27892DF300D3E9EF /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C3D921C27892DF300D3E9EF /* CardView.xib */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C183A42278B121E00360983 /* question.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = question.geojson; sourceTree = "<group>"; };
 		3C3D921827873CED00D3E9EF /* PopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopVC.swift; sourceTree = "<group>"; };
 		3C3D921A27892DE100D3E9EF /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		3C3D921C27892DF300D3E9EF /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				3C6BFFE82785E772001AF291 /* XibType.swift */,
 				3C6BFFF22785EB64001AF291 /* BaseTableViewCell.swift */,
 				EEF1EB102786E366009974D7 /* BaseView.swift */,
+				3C183A42278B121E00360983 /* question.geojson */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				EEF1EB172786E582009974D7 /* crayon_1-1.ttf in Resources */,
 				3C87F1242789AE0100B5437B /* MarkView.xib in Resources */,
 				3C6BFFFA2785ECAB001AF291 /* TeamCell.xib in Resources */,
+				3C183A43278B121E00360983 /* question.geojson in Resources */,
 				3C3D922327897E9E00D3E9EF /* TestVC.xib in Resources */,
 				3C3D921D27892DF300D3E9EF /* CardView.xib in Resources */,
 				3C87F126278A5F3100B5437B /* TAKUMISFONT_L.ttf in Resources */,
