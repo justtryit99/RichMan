@@ -21,6 +21,10 @@
                 <outlet property="fateCenterX" destination="9Cz-Ws-aG8" id="NxW-UR-RMS"/>
                 <outlet property="fateWidth" destination="MPO-fP-S9z" id="dcr-fR-2dQ"/>
                 <outlet property="label" destination="EIa-iL-OSg" id="vn6-IR-dZV"/>
+                <outlet property="markCenterY" destination="fES-7J-rNd" id="iDX-4B-m90"/>
+                <outlet property="markHeight" destination="Gqw-h5-y8X" id="8zw-JJ-ey7"/>
+                <outlet property="markView" destination="0cD-eN-BMx" id="MHG-er-qRu"/>
+                <outlet property="markWidth" destination="5gz-Zn-UDC" id="6Fd-hK-E7l"/>
                 <outlet property="teamImageView" destination="QhR-P1-u7q" id="89H-4b-cji"/>
                 <outlet property="teamImageView2" destination="oxM-kG-YhW" id="x8g-wl-dLp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -62,7 +66,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame 1" translatesAutoresizingMaskIntoConstraints="NO" id="AcB-M6-Hc3">
+                <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="機會" translatesAutoresizingMaskIntoConstraints="NO" id="AcB-M6-Hc3">
                     <rect key="frame" x="230" y="634" width="240" height="300"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -100,6 +104,14 @@
                         <constraint firstAttribute="width" constant="280" id="MPO-fP-S9z"/>
                     </constraints>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cD-eN-BMx" customClass="MarkView" customModule="RichMan" customModuleProvider="target">
+                    <rect key="frame" x="35" y="627" width="630" height="128"/>
+                    <color key="backgroundColor" systemColor="labelColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="630" id="5gz-Zn-UDC"/>
+                        <constraint firstAttribute="height" constant="128" id="Gqw-h5-y8X"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -112,9 +124,11 @@
                 <constraint firstItem="c0x-9K-0P0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8hT-mC-Zp8"/>
                 <constraint firstItem="f9j-4C-E8t" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.5" id="9Cz-Ws-aG8"/>
                 <constraint firstItem="cgA-5c-XUb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Hnj-VL-IiU"/>
+                <constraint firstItem="0cD-eN-BMx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="I7R-UX-lx3"/>
                 <constraint firstItem="AcB-M6-Hc3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="400" id="SGI-4U-gw3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EIa-iL-OSg" secondAttribute="trailing" constant="100" id="VCk-Ue-IUC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kER-nL-ZV1" secondAttribute="trailing" id="Xyk-rP-Wv8"/>
+                <constraint firstItem="0cD-eN-BMx" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.8" id="fES-7J-rNd"/>
                 <constraint firstAttribute="bottom" secondItem="kER-nL-ZV1" secondAttribute="bottom" id="fLN-eK-7L8"/>
                 <constraint firstItem="cgA-5c-XUb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="fWA-o2-7mr"/>
                 <constraint firstItem="AcB-M6-Hc3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iPq-KJ-FWh"/>
@@ -129,7 +143,7 @@
         </view>
     </objects>
     <resources>
-        <image name="Frame 1" width="337" height="460"/>
+        <image name="機會" width="320" height="440"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

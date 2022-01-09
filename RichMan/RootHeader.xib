@@ -9,8 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="crayon_1-1.ttf">
-            <string>Nagurigaki-Crayon</string>
+        <array key="TAKUMISFONT_L.ttf">
+            <string>takumi-syokeifont-L</string>
         </array>
     </customFonts>
     <objects>
@@ -22,7 +22,7 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="隊 伍 排 行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiH-s7-2WV">
                     <rect key="frame" x="50" y="20" width="220" height="40"/>
-                    <fontDescription key="fontDescription" name="Nagurigaki-Crayon" family="Nagurigaki Crayon" pointSize="40"/>
+                    <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="40"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>

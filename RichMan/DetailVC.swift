@@ -25,6 +25,12 @@ class DetailVC: UIViewController {
     
     @IBOutlet weak var blurView: UIView!
     
+    @IBOutlet weak var markView: MarkView!
+    @IBOutlet weak var markWidth: NSLayoutConstraint!
+    @IBOutlet weak var markHeight: NSLayoutConstraint!
+    @IBOutlet weak var markCenterY: NSLayoutConstraint!
+    
+    
     
     var text = ""
     var sec = 3
@@ -60,6 +66,7 @@ class DetailVC: UIViewController {
         fateCard.type = .fate
         chanceCard.backgroundColor = .clear
         fateCard.backgroundColor = .clear
+        markView.backgroundColor = .clear
         blurView.isHidden = true
         
         label.text = "\(sec)"
@@ -72,7 +79,8 @@ class DetailVC: UIViewController {
         chanceCard.addGestureRecognizer(tapCh)
         let tapFa = UITapGestureRecognizer(target: self, action: #selector(tapFateCard))
         fateCard.addGestureRecognizer(tapFa)
-        
+        let tapMa = UITapGestureRecognizer(target: self, action: #selector(tapMark))
+        markView.addGestureRecognizer(tapMa)
         
 
         
@@ -96,7 +104,13 @@ class DetailVC: UIViewController {
 //    }
     
     
-    
+    @objc func tapMark() {
+        guard isCanTapCir else {return}
+        isCanTapCir = false
+        
+        blurView.fadeIn(0.6)
+        popMark(i: 2)
+    }
     
     @objc func tapChanceCard() {
         tapCardType = .chance
@@ -227,6 +241,82 @@ class DetailVC: UIViewController {
 
 
         }
+    }
+    
+    func popMark(i: Int) {
+        let time = 0.18
+        let sprScale = 1.4
+        
+        markWidth.constant = markHeight.constant
+        
+        
+        view.bringSubviewToFront(blurView)
+        view.bringSubviewToFront(markView)
+        
+        let newConstraint = markCenterY.constraintWithMultiplier(1.1)
+        view.removeConstraint(markCenterY)
+        view.addConstraint(newConstraint)
+        markCenterY = newConstraint
+        
+        UIView.animate(withDuration: 0.5, delay: 0) {
+            self.markView.backImg.image = UIImage(named: "問號正")
+            self.view.layoutIfNeeded()
+        } completion: { bool in
+            
+            UIView.animate(withDuration: time, delay: 0) {
+                self.markView.transform = CGAffineTransform(scaleX: sprScale, y: sprScale)
+            } completion: { bool in
+                
+                // 波浪
+                let scale = 2.8
+                let view = MarkView(frame: self.markView.frame)
+                view.alpha = 0.8
+                view.backImg.image = UIImage(named: "問號正")
+                self.view.addSubview(view)
+                self.view.bringSubviewToFront(self.circleView)
+                
+                UIView.animate(withDuration: 1, delay: 0) {
+                    view.transform = CGAffineTransform(scaleX: scale, y: scale)
+                    view.alpha = 0.0
+                } completion: { bool in
+                    view.removeFromSuperview()
+                }
+                
+                UIView.animate(withDuration: time) {
+                    self.markView.transform = CGAffineTransform.identity
+                } completion: { bool in
+                    if i > 1 {
+                        DispatchQueue.main.asyncAfter(deadline: 0.6) {
+                            self.popMark(i: i-1)
+                        }
+                    } else {
+                        
+                        let width: CGFloat = 580
+                        self.markWidth.constant = width
+                        self.markHeight.constant = width
+                        self.markView.markWidth.constant = 260
+                        
+                        // 最終放大
+                        UIView.animate(withDuration: 0.6, delay: 0.8, usingSpringWithDamping: 0.5, initialSpringVelocity: 10, options: []) {
+                            
+//                            let s = 4.2
+//                            self.markView.transform = CGAffineTransform(scaleX: s, y: s)
+                            
+//                            self.markView.backImg.image = UIImage(named: "問號圖放大")
+                            self.view.layoutIfNeeded()
+                            
+                            
+                        } completion: { bool in
+                            
+                            self.isCanTapCir = true
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+            
     }
     
     func popTest(i: Int) {
