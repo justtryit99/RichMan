@@ -109,7 +109,7 @@ class DetailVC: UIViewController {
         isCanTapCir = false
         
         blurView.fadeIn(0.6)
-        popMark(i: 20)
+        popMark(i: 2)
     }
     
     @objc func tapChanceCard() {
@@ -265,22 +265,29 @@ class DetailVC: UIViewController {
             self.view.layoutIfNeeded()
         } completion: { bool in
             
+            // 波浪
+            let scale = 2.8
+            let view = MarkView(frame: self.markView.frame)
+            view.alpha = 0.8
+            view.backImg.image = UIImage(named: "問號正")
+            
             // 心跳放大
             UIView.animate(withDuration: time, delay: 0) {
                 self.markView.transform = CGAffineTransform(scaleX: sprScale, y: sprScale)
             } completion: { bool in
                 
                 // 波浪
-                let scale = 2.8
-                let view = MarkView(frame: self.markView.frame)
-                view.alpha = 0.8
-                view.backImg.image = UIImage(named: "問號正")
+//                let scale = 2.8
+//                let view = MarkView(frame: self.markView.frame)
+//                view.alpha = 0.8
+//                view.backImg.image = UIImage(named: "問號正")
                 self.view.addSubview(view)
                 self.view.bringSubviewToFront(self.circleView)
                 
                 UIView.animate(withDuration: 1, delay: 0) {
                     view.transform = CGAffineTransform(scaleX: scale, y: scale)
                     view.alpha = 0.0
+                    
                 } completion: { bool in
                     view.removeFromSuperview()
                 }
