@@ -85,7 +85,7 @@ extension UIButton {
     func setMainStyle() {
         
         self.setTitleColor(.black, for: .normal)
-        self.setBackgroundColor(Color.main, forState: .normal)
+        self.setBackgroundColor(.bear, forState: .normal)
         
         self.setTitleColor(.black, for: .highlighted)
         self.setBackgroundColor(Color.mainHightLight, forState: .highlighted)
@@ -94,16 +94,12 @@ extension UIButton {
         self.setBackgroundColor(Color.mainDisBG, forState: .disabled)
         self.layer.masksToBounds = true
         
-        self.setCorner(BGColor: Color.main,
-                       BDColor: Color.mainBorder)
+//        self.setCorner(BGColor: Color.main,
+//                       BDColor: Color.mainBorder)
         
-        if self.isEnabled {
-            self.setCorner(BGColor: Color.main,
-                           BDColor: Color.mainBorder)
-        } else {
-            self.setCorner(BGColor: Color.mainDisBG,
-                           BDColor: Color.mainDisBD)
-        }
+        self.setCorner(radius: 5)
+        
+        
     }
     
     /// 設定 isEnabled狀態、boderColor old

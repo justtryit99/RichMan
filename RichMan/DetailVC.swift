@@ -282,7 +282,7 @@ class DetailVC: UIViewController {
                     view.removeFromSuperview()
                 }
                 
-                UIView.animate(withDuration: time) {
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 10) {
                     self.markView.transform = CGAffineTransform.identity
                 } completion: { bool in
                     if i > 1 {
