@@ -23,6 +23,8 @@ class CardView: BaseView {
     @IBOutlet weak var buttonC: UIButton!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var textBaseView: UIView!
+    
+    // 直接替換背景圖不會淡出，再用一張圖片處理
     @IBOutlet weak var frontImg: UIImageView!
     
     var type: CardType = .chance {
@@ -34,11 +36,6 @@ class CardView: BaseView {
     
     var isFront = false {
         didSet {
-//            frontBaseView.isHidden = !isFront
-            
-//            let backName = type == .chance ? "機會" : "命運"
-//            let name = isFront ? "正面" : backName
-            
             let time = 0.8
             if isFront {
                 cardImg.fadeOut(time) {
@@ -50,20 +47,6 @@ class CardView: BaseView {
             } else {
                 
             }
-            
-            
-            
-            
-//            UIView.animate(withDuration: time) {
-//                self.cardImg.image = UIImage(named: name)
-//            } completion: { bool in
-//                if self.isFront {
-//                    self.frontBaseView.fadeIn(time)
-//                } else {
-//                    self.frontBaseView.fadeOut(time)
-//                }
-//            }
-            
             
         }
     }

@@ -149,6 +149,7 @@ class DetailVC: UIViewController {
             self.view.layoutIfNeeded()
         }
         
+        // 翻牌動畫
         transitionTest(i: timeAry.count, targetView: card)
         
         DispatchQueue.main.asyncAfter(deadline: 1) { [self] in
@@ -245,7 +246,7 @@ class DetailVC: UIViewController {
     
     func popMark(i: Int) {
         let time = 0.18
-        let sprScale = 1.4
+        let sprScale = 1.5
         
         markWidth.constant = markHeight.constant
         
@@ -286,7 +287,7 @@ class DetailVC: UIViewController {
                 // 波浪結束
                 
                 // 心跳縮小
-                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 10) {
+                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 10) {
                     self.markView.transform = CGAffineTransform.identity
                 } completion: { bool in
                     if i > 1 {
@@ -306,8 +307,8 @@ class DetailVC: UIViewController {
                             self.view.layoutIfNeeded()
                             
                         } completion: { bool in
-                            
-                            self.isCanTapCir = true
+                            self.markView.isFront = true
+//                            self.isCanTapCir = true
                         }
                     }
                     
