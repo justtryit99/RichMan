@@ -21,6 +21,7 @@
                 <outlet property="buttonB" destination="z7K-gP-4oU" id="hxf-8O-zDl"/>
                 <outlet property="buttonC" destination="uDw-mM-kiQ" id="gY4-VW-jUj"/>
                 <outlet property="cardImg" destination="XqA-97-86C" id="Yp0-aF-bXa"/>
+                <outlet property="contentImg" destination="Omk-9d-Tc1" id="ieq-SM-Ywu"/>
                 <outlet property="contentLabel" destination="lLg-49-vQL" id="8Ib-Oq-oeH"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="grZ-fD-jdh"/>
                 <outlet property="countLabel" destination="wYV-u9-ckP" id="rk6-gb-KOO"/>
@@ -119,7 +120,7 @@
                                         <constraint firstAttribute="trailing" secondItem="jjR-1E-ZBO" secondAttribute="trailing" id="u6g-fk-kmx"/>
                                     </constraints>
                                 </view>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="基紐" translatesAutoresizingMaskIntoConstraints="NO" id="Omk-9d-Tc1">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="基紐" translatesAutoresizingMaskIntoConstraints="NO" id="Omk-9d-Tc1">
                                     <rect key="frame" x="0.0" y="124" width="414" height="280"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="280" id="Iv9-jQ-O0J"/>
@@ -165,7 +166,7 @@
         </view>
     </objects>
     <resources>
-        <image name="基紐" width="855" height="718"/>
+        <image name="基紐" width="852" height="489"/>
         <image name="正面" width="320" height="440"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

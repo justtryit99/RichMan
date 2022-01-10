@@ -34,7 +34,7 @@ class DetailVC: UIViewController {
     
     var text = ""
     var sec = 10
-    let countDefault = 10
+    let countDefault = 11
     var secTimer = Timer()
     var tapCardType = CardType.chance
     
@@ -123,8 +123,8 @@ class DetailVC: UIViewController {
         popCard(type: tapCardType)
     }
     
+    // MARK: - 卡片位移
     func popCard(type: CardType) {
-        
         let card: CardView = type == .chance ? chanceCard : fateCard
         guard card.isFront == false else {return}
         blurView.fadeIn(0.6)
@@ -153,7 +153,7 @@ class DetailVC: UIViewController {
         // 翻牌動畫
         transitionTest(i: timeAry.count, targetView: card)
         
-        DispatchQueue.main.asyncAfter(deadline: 1) { [self] in
+        DispatchQueue.main.asyncAfter(deadline: 2) { [self] in
             secTimer.invalidate()
             sec = countDefault
             secTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(self.timeCount)), userInfo: nil, repeats: true)
@@ -223,12 +223,9 @@ class DetailVC: UIViewController {
 //        }
 //    }
     
-    /// 翻牌
+    // MARK: - 翻牌動畫
     func transitionTest(i: Int, targetView: CardView) {
-        
         UIView.transition(with: targetView, duration: self.timeAry[i-1], options: .transitionFlipFromRight) {
-//            self.cardView.backgroundColor = .random()
-            
 //            let isFront = self.cardView.image == UIImage(named: "Frame 6")
 //            let name = isFront ? "Frame 1" : "Frame 6"
 //            self.cardView.image = UIImage(named: name)
@@ -245,6 +242,7 @@ class DetailVC: UIViewController {
         }
     }
     
+    // MARK: - 問號動畫
     func popMark(i: Int) {
         let time = 0.18
         let sprScale = 1.5
@@ -299,7 +297,7 @@ class DetailVC: UIViewController {
                     self.markView.transform = CGAffineTransform.identity
                 } completion: { bool in
                     if i > 1 {
-                        DispatchQueue.main.asyncAfter(deadline: 0.6) {
+                        DispatchQueue.main.asyncAfter(deadline: 0.4) {
                             self.popMark(i: i-1)
                         }
                     } else {

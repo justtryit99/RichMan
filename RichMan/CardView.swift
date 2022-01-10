@@ -23,6 +23,7 @@ class CardView: BaseView {
     @IBOutlet weak var buttonC: UIButton!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var textBaseView: UIView!
+    @IBOutlet weak var contentImg: UIImageView!
     
     // 直接替換背景圖不會淡出，再用一張圖片處理
     @IBOutlet weak var frontImg: UIImageView!
@@ -65,6 +66,7 @@ class CardView: BaseView {
     
     func setupUI() {
         textBaseView.setCorner(radius: 10)
+        contentImg.setCorner(radius: 5)
         buttonA.setMainStyle()
         buttonB.setMainStyle()
         buttonC.setMainStyle()
