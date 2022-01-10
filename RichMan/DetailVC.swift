@@ -33,7 +33,8 @@ class DetailVC: UIViewController {
     
     
     var text = ""
-    var sec = 3
+    var sec = 10
+    let countDefault = 10
     var secTimer = Timer()
     var tapCardType = CardType.chance
     
@@ -154,7 +155,7 @@ class DetailVC: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: 1) { [self] in
             secTimer.invalidate()
-            sec = 3
+            sec = countDefault
             secTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(self.timeCount)), userInfo: nil, repeats: true)
         }
     }
