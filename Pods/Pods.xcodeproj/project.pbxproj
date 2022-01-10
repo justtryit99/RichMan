@@ -7,103 +7,247 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C9C37E5F9DC38970F68E3C618BEA6F5 /* Pods-RichMan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBEE4133A540F4A09A10860D96632D9 /* Pods-RichMan-dummy.m */; };
-		867A8505D9A2CDDE251BFA433B3051F7 /* Pods-RichMan-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 67A755F1945D5D41EFD3F260D5EF0774 /* Pods-RichMan-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE319F15873AF4094590638F1B437F25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		026205841156EB87EB7D74F66A086F71 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
+		055297C26F41F32213B41AD9B727ED4F /* Pods-RichMan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51105A869AB26E2EDA8345D4307D9BA9 /* Pods-RichMan-dummy.m */; };
+		0F827AC7BD2A5CDA1B683D52DC6D9CCF /* LTEmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF4B79ED0A5B1B7B20E7052CA29B37 /* LTEmitterView.swift */; };
+		153454C2DC82DCEAF3660C0233F83726 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */; };
+		34F3BF2072270851B72843768EBECB59 /* LTMorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E1063763EF01A013305784726AD84 /* LTMorphingLabel.swift */; };
+		41383A54AC4C15B59C98C6EAD6AE54BF /* LTMorphingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59D8D81371377F72C57551431FAE763E /* LTMorphingLabel-dummy.m */; };
+		58785A307922D8513DD099B8B1E3803C /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19DE735A73659580459E370A5C822D /* LTMorphingEffect.swift */; };
+		6637B1DAF6D424D039F2DB3CE741D2F3 /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 41191409D215C80ADAA30A783A1AD59D /* Sparkle.png */; };
+		86867D8E99691262F784AE24A7D953B6 /* LTMorphingLabel+Anvil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63331BE7053227AE015F051DA0AFD6C6 /* LTMorphingLabel+Anvil.swift */; };
+		AAF92F7ED3197B5AF7647AA739753683 /* Fragment.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E54B9DB90890DADE93A4D0B796A9FA8 /* Fragment.png */; };
+		AED184420156D8099D0CAB0CB219A126 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
+		B2008DD6915E291532A1CBEBE92039CE /* LTMorphingLabel+Burn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D97589A750DA2779B2AD0329507145 /* LTMorphingLabel+Burn.swift */; };
+		B351A6FBFE08F5C15FD5F9D853250CFD /* LTCharacterDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FBB2DBA50446B13ACC7C9F1104238A /* LTCharacterDiffResult.swift */; };
+		B51825EC515B623CA44A1E3D3C61188B /* LTEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F9C04EFE76BAAD358B3B1D66749AD6 /* LTEasing.swift */; };
+		B70823D221A44099F34E737C07B235E8 /* LTMorphingLabel+Sparkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93E1D3E24100EF515F368AA93B5A440 /* LTMorphingLabel+Sparkle.swift */; };
+		C08AD5F102DBC800719CB340FB22B7F1 /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 20919A5A92C5796F927B6484AB49632D /* Fire.png */; };
+		C4019001203BAA6F7569DD4BBAC0CB67 /* Pods-RichMan-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2B15C527C12593D733C05D80D2DD162 /* Pods-RichMan-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB59B5B8F6AFA347A7B09771B5244A36 /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6228E8DEA07B8BED0F772F1FF9E978 /* LTMorphingLabel+Pixelate.swift */; };
+		D7EC76C888837C2244145DDA750D5313 /* LTMorphingLabel+Evaporate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D510FF6C695F6CCC13697E18A395AF3 /* LTMorphingLabel+Evaporate.swift */; };
+		E332A090BABBFD027DBF3C1DAE99FDE8 /* LTCharacterLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE25F9B3FDE591DAEC9355B7E491A089 /* LTCharacterLimbo.swift */; };
+		E99149D5F39340E4D3B16F0EF68A30A1 /* LTMorphingLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43DF0FDD9F2CA8AEEC6EA411497C5472 /* LTMorphingLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDBC53BE7010EEF5DD0280629AF12990 /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6941B5CA901538A358C8A72A5D0ED7 /* LTMorphingLabel+Fall.swift */; };
+		EEFBF83E1E8F59C680CF96D3C32B4F31 /* LTMorphingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 11EB0BEC2D950CD44022B3820F2C0FD3 /* LTMorphingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB756A85E1AAA48531764C3BD0CF2DD8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */; };
+		FC834C03536DDFF1ADAE5F8ADDE33A81 /* Smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = E2FCA4FB2891A19B34DDAC388717078D /* Smoke.png */; };
+		FEA6E7FADADB27B9004A3BA86FC20EC8 /* LTStringDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57760815024757E18570B645F52F139A /* LTStringDiffResult.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		24C93BCB43C7E03F1988C0FEB7672655 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE08E97E291135F1A7FAF0D9D680D2BF;
+			remoteInfo = LTMorphingLabel;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		29C75C7A1EE20BCC188E4D0C79819812 /* Pods-RichMan-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RichMan-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4DBEE4133A540F4A09A10860D96632D9 /* Pods-RichMan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RichMan-dummy.m"; sourceTree = "<group>"; };
-		52ED44AF9CEF80B0C73E9F75A1C69E1E /* Pods-RichMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RichMan.release.xcconfig"; sourceTree = "<group>"; };
-		5A3CDACFB6954831874335F415287B45 /* Pods-RichMan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RichMan.debug.xcconfig"; sourceTree = "<group>"; };
-		67A755F1945D5D41EFD3F260D5EF0774 /* Pods-RichMan-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RichMan-umbrella.h"; sourceTree = "<group>"; };
-		6E06A9A53228B2E7795264D7594430DE /* Pods-RichMan.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RichMan.modulemap"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		114E15714C4F0BFF3DA186B34A174316 /* Pods-RichMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RichMan.release.xcconfig"; sourceTree = "<group>"; };
+		11EB0BEC2D950CD44022B3820F2C0FD3 /* LTMorphingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTMorphingLabel.h; path = LTMorphingLabel/LTMorphingLabel.h; sourceTree = "<group>"; };
+		1DEB649E213C2F96D711255CE363FDCC /* Pods-RichMan-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RichMan-frameworks.sh"; sourceTree = "<group>"; };
+		1EF89C2ADA96DB267929D5A7D3214302 /* LTMorphingLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LTMorphingLabel.framework; path = LTMorphingLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EFFC2288D30DD2483BC75D2937BF5A9 /* Pods-RichMan-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RichMan-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1F19DE735A73659580459E370A5C822D /* LTMorphingEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTMorphingEffect.swift; path = LTMorphingLabel/LTMorphingEffect.swift; sourceTree = "<group>"; };
+		206592BA5FAE3A89E9F84F924A2FCF48 /* Pods-RichMan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RichMan.debug.xcconfig"; sourceTree = "<group>"; };
+		20919A5A92C5796F927B6484AB49632D /* Fire.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Fire.png; path = LTMorphingLabel/Particles/Fire.png; sourceTree = "<group>"; };
+		30D97589A750DA2779B2AD0329507145 /* LTMorphingLabel+Burn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Burn.swift"; path = "LTMorphingLabel/LTMorphingLabel+Burn.swift"; sourceTree = "<group>"; };
+		41191409D215C80ADAA30A783A1AD59D /* Sparkle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Sparkle.png; path = LTMorphingLabel/Particles/Sparkle.png; sourceTree = "<group>"; };
+		43DF0FDD9F2CA8AEEC6EA411497C5472 /* LTMorphingLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LTMorphingLabel-umbrella.h"; sourceTree = "<group>"; };
+		4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		51105A869AB26E2EDA8345D4307D9BA9 /* Pods-RichMan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RichMan-dummy.m"; sourceTree = "<group>"; };
+		57760815024757E18570B645F52F139A /* LTStringDiffResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTStringDiffResult.swift; path = LTMorphingLabel/LTStringDiffResult.swift; sourceTree = "<group>"; };
+		59D8D81371377F72C57551431FAE763E /* LTMorphingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LTMorphingLabel-dummy.m"; sourceTree = "<group>"; };
+		5A2E1063763EF01A013305784726AD84 /* LTMorphingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTMorphingLabel.swift; path = LTMorphingLabel/LTMorphingLabel.swift; sourceTree = "<group>"; };
+		5E54B9DB90890DADE93A4D0B796A9FA8 /* Fragment.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Fragment.png; path = LTMorphingLabel/Particles/Fragment.png; sourceTree = "<group>"; };
+		5F6228E8DEA07B8BED0F772F1FF9E978 /* LTMorphingLabel+Pixelate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Pixelate.swift"; path = "LTMorphingLabel/LTMorphingLabel+Pixelate.swift"; sourceTree = "<group>"; };
+		63331BE7053227AE015F051DA0AFD6C6 /* LTMorphingLabel+Anvil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Anvil.swift"; path = "LTMorphingLabel/LTMorphingLabel+Anvil.swift"; sourceTree = "<group>"; };
+		6BDF4B79ED0A5B1B7B20E7052CA29B37 /* LTEmitterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTEmitterView.swift; path = LTMorphingLabel/LTEmitterView.swift; sourceTree = "<group>"; };
+		78E46115D46163BCE7AEE239BDEEEC7F /* LTMorphingLabel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LTMorphingLabel-Info.plist"; sourceTree = "<group>"; };
+		7BC293B5A48585DB39B7B8D9C316774D /* LTMorphingLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LTMorphingLabel.modulemap; sourceTree = "<group>"; };
+		7D510FF6C695F6CCC13697E18A395AF3 /* LTMorphingLabel+Evaporate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Evaporate.swift"; path = "LTMorphingLabel/LTMorphingLabel+Evaporate.swift"; sourceTree = "<group>"; };
+		87FBB2DBA50446B13ACC7C9F1104238A /* LTCharacterDiffResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTCharacterDiffResult.swift; path = LTMorphingLabel/LTCharacterDiffResult.swift; sourceTree = "<group>"; };
+		8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		9C51B1AB121F32BEBFBD87DD6745BC44 /* Pods-RichMan.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-RichMan.modulemap"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		A6ED6D8406A3B9AE44C3FA8D6BD06D5E /* LTMorphingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LTMorphingLabel-prefix.pch"; sourceTree = "<group>"; };
+		A81AA806D0FB4B1BFCE3FD98557A6084 /* LTMorphingLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LTMorphingLabel.debug.xcconfig; sourceTree = "<group>"; };
 		B06E8556AEDAAB09F34F8C5F028428A7 /* Pods_RichMan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_RichMan.framework; path = "Pods-RichMan.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB6B9ADD71C24146DC8DFCED4BEBB36D /* Pods-RichMan-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RichMan-Info.plist"; sourceTree = "<group>"; };
-		E0DE05CD95BED3202F0DDA6CC57B878E /* Pods-RichMan-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RichMan-acknowledgements.plist"; sourceTree = "<group>"; };
+		B2B15C527C12593D733C05D80D2DD162 /* Pods-RichMan-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-RichMan-umbrella.h"; sourceTree = "<group>"; };
+		D7F9C04EFE76BAAD358B3B1D66749AD6 /* LTEasing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTEasing.swift; path = LTMorphingLabel/LTEasing.swift; sourceTree = "<group>"; };
+		DF0066E7740E3B3F9E7BDC8D4C60660E /* Pods-RichMan-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RichMan-acknowledgements.plist"; sourceTree = "<group>"; };
+		E2FCA4FB2891A19B34DDAC388717078D /* Smoke.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Smoke.png; path = LTMorphingLabel/Particles/Smoke.png; sourceTree = "<group>"; };
+		E93E1D3E24100EF515F368AA93B5A440 /* LTMorphingLabel+Sparkle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Sparkle.swift"; path = "LTMorphingLabel/LTMorphingLabel+Sparkle.swift"; sourceTree = "<group>"; };
+		EE25F9B3FDE591DAEC9355B7E491A089 /* LTCharacterLimbo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTCharacterLimbo.swift; path = LTMorphingLabel/LTCharacterLimbo.swift; sourceTree = "<group>"; };
+		EE6941B5CA901538A358C8A72A5D0ED7 /* LTMorphingLabel+Fall.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Fall.swift"; path = "LTMorphingLabel/LTMorphingLabel+Fall.swift"; sourceTree = "<group>"; };
+		FB314F996FCA6A759C519A3F11B8E8C9 /* LTMorphingLabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LTMorphingLabel.release.xcconfig; sourceTree = "<group>"; };
+		FB324D42F4EF2B8D9CD91126A07D8EEF /* Pods-RichMan-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RichMan-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D04A4BCE9F5FCDBE7F7C46AEFFB7814E /* Frameworks */ = {
+		580B1A27F7E1401C9D8294461B757383 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE319F15873AF4094590638F1B437F25 /* Foundation.framework in Frameworks */,
+				AED184420156D8099D0CAB0CB219A126 /* Foundation.framework in Frameworks */,
+				FB756A85E1AAA48531764C3BD0CF2DD8 /* QuartzCore.framework in Frameworks */,
+				153454C2DC82DCEAF3660C0233F83726 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D705E14DE879CAC5E05755EFEC289DE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				026205841156EB87EB7D74F66A086F71 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D284771117D2ACD8C44EBBEAE28E099 /* Pods-RichMan */ = {
+		0041CAFB805F27CF5F67C00096B7F163 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6E06A9A53228B2E7795264D7594430DE /* Pods-RichMan.modulemap */,
-				29C75C7A1EE20BCC188E4D0C79819812 /* Pods-RichMan-acknowledgements.markdown */,
-				E0DE05CD95BED3202F0DDA6CC57B878E /* Pods-RichMan-acknowledgements.plist */,
-				4DBEE4133A540F4A09A10860D96632D9 /* Pods-RichMan-dummy.m */,
-				BB6B9ADD71C24146DC8DFCED4BEBB36D /* Pods-RichMan-Info.plist */,
-				67A755F1945D5D41EFD3F260D5EF0774 /* Pods-RichMan-umbrella.h */,
-				5A3CDACFB6954831874335F415287B45 /* Pods-RichMan.debug.xcconfig */,
-				52ED44AF9CEF80B0C73E9F75A1C69E1E /* Pods-RichMan.release.xcconfig */,
+				7BC293B5A48585DB39B7B8D9C316774D /* LTMorphingLabel.modulemap */,
+				59D8D81371377F72C57551431FAE763E /* LTMorphingLabel-dummy.m */,
+				78E46115D46163BCE7AEE239BDEEEC7F /* LTMorphingLabel-Info.plist */,
+				A6ED6D8406A3B9AE44C3FA8D6BD06D5E /* LTMorphingLabel-prefix.pch */,
+				43DF0FDD9F2CA8AEEC6EA411497C5472 /* LTMorphingLabel-umbrella.h */,
+				A81AA806D0FB4B1BFCE3FD98557A6084 /* LTMorphingLabel.debug.xcconfig */,
+				FB314F996FCA6A759C519A3F11B8E8C9 /* LTMorphingLabel.release.xcconfig */,
 			);
-			name = "Pods-RichMan";
-			path = "Target Support Files/Pods-RichMan";
+			name = "Support Files";
+			path = "../Target Support Files/LTMorphingLabel";
 			sourceTree = "<group>";
 		};
-		337650858A08F3B8C7850DF168DBAAE0 /* Targets Support Files */ = {
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0D284771117D2ACD8C44EBBEAE28E099 /* Pods-RichMan */,
+				F0A778C0229E9BF1FD97896B93F3272B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1EB2994E75944CA0100A3053FCCE761C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				20919A5A92C5796F927B6484AB49632D /* Fire.png */,
+				5E54B9DB90890DADE93A4D0B796A9FA8 /* Fragment.png */,
+				E2FCA4FB2891A19B34DDAC388717078D /* Smoke.png */,
+				41191409D215C80ADAA30A783A1AD59D /* Sparkle.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		23F89FD8D900B5A10F7735A703359906 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E69B4EA570A1E204D295A31CC083370A /* Pods-RichMan */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+		2EED9585E60160C94832F2F01D0906F7 /* LTMorphingLabel */ = {
 			isa = PBXGroup;
 			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+				87FBB2DBA50446B13ACC7C9F1104238A /* LTCharacterDiffResult.swift */,
+				EE25F9B3FDE591DAEC9355B7E491A089 /* LTCharacterLimbo.swift */,
+				D7F9C04EFE76BAAD358B3B1D66749AD6 /* LTEasing.swift */,
+				6BDF4B79ED0A5B1B7B20E7052CA29B37 /* LTEmitterView.swift */,
+				1F19DE735A73659580459E370A5C822D /* LTMorphingEffect.swift */,
+				11EB0BEC2D950CD44022B3820F2C0FD3 /* LTMorphingLabel.h */,
+				5A2E1063763EF01A013305784726AD84 /* LTMorphingLabel.swift */,
+				63331BE7053227AE015F051DA0AFD6C6 /* LTMorphingLabel+Anvil.swift */,
+				30D97589A750DA2779B2AD0329507145 /* LTMorphingLabel+Burn.swift */,
+				7D510FF6C695F6CCC13697E18A395AF3 /* LTMorphingLabel+Evaporate.swift */,
+				EE6941B5CA901538A358C8A72A5D0ED7 /* LTMorphingLabel+Fall.swift */,
+				5F6228E8DEA07B8BED0F772F1FF9E978 /* LTMorphingLabel+Pixelate.swift */,
+				E93E1D3E24100EF515F368AA93B5A440 /* LTMorphingLabel+Sparkle.swift */,
+				57760815024757E18570B645F52F139A /* LTStringDiffResult.swift */,
+				1EB2994E75944CA0100A3053FCCE761C /* Resources */,
+				0041CAFB805F27CF5F67C00096B7F163 /* Support Files */,
 			);
-			name = iOS;
+			name = LTMorphingLabel;
+			path = LTMorphingLabel;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				FC38529C67282938322CF94EA61556FE /* Products */,
-				337650858A08F3B8C7850DF168DBAAE0 /* Targets Support Files */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				EA427EB2995489DC497E654228FD819A /* Pods */,
+				EF1CE5D291DBAA0CC21898CB13B0E7CF /* Products */,
+				23F89FD8D900B5A10F7735A703359906 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		E69B4EA570A1E204D295A31CC083370A /* Pods-RichMan */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				9C51B1AB121F32BEBFBD87DD6745BC44 /* Pods-RichMan.modulemap */,
+				1EFFC2288D30DD2483BC75D2937BF5A9 /* Pods-RichMan-acknowledgements.markdown */,
+				DF0066E7740E3B3F9E7BDC8D4C60660E /* Pods-RichMan-acknowledgements.plist */,
+				51105A869AB26E2EDA8345D4307D9BA9 /* Pods-RichMan-dummy.m */,
+				1DEB649E213C2F96D711255CE363FDCC /* Pods-RichMan-frameworks.sh */,
+				FB324D42F4EF2B8D9CD91126A07D8EEF /* Pods-RichMan-Info.plist */,
+				B2B15C527C12593D733C05D80D2DD162 /* Pods-RichMan-umbrella.h */,
+				206592BA5FAE3A89E9F84F924A2FCF48 /* Pods-RichMan.debug.xcconfig */,
+				114E15714C4F0BFF3DA186B34A174316 /* Pods-RichMan.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Pods-RichMan";
+			path = "Target Support Files/Pods-RichMan";
 			sourceTree = "<group>";
 		};
-		FC38529C67282938322CF94EA61556FE /* Products */ = {
+		EA427EB2995489DC497E654228FD819A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				2EED9585E60160C94832F2F01D0906F7 /* LTMorphingLabel */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EF1CE5D291DBAA0CC21898CB13B0E7CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1EF89C2ADA96DB267929D5A7D3214302 /* LTMorphingLabel.framework */,
 				B06E8556AEDAAB09F34F8C5F028428A7 /* Pods_RichMan.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F0A778C0229E9BF1FD97896B93F3272B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */,
+				9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */,
+				8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B1138C923F2DEEA29B206DEBF2866A14 /* Headers */ = {
+		5BF8C649B48EC1804AAEE6EDC81CDBAC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				867A8505D9A2CDDE251BFA433B3051F7 /* Pods-RichMan-umbrella.h in Headers */,
+				EEFBF83E1E8F59C680CF96D3C32B4F31 /* LTMorphingLabel.h in Headers */,
+				E99149D5F39340E4D3B16F0EF68A30A1 /* LTMorphingLabel-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0A561A12E20D3B4A22FC8E755CF3C07 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4019001203BAA6F7569DD4BBAC0CB67 /* Pods-RichMan-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,20 +256,39 @@
 /* Begin PBXNativeTarget section */
 		ACE97645E983F00CC38FFE8103503941 /* Pods-RichMan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1AEB32ECB8D68CFB75B066DFF525FB49 /* Build configuration list for PBXNativeTarget "Pods-RichMan" */;
+			buildConfigurationList = 003FF7F1170D75C2ED7859B3ACC70DF0 /* Build configuration list for PBXNativeTarget "Pods-RichMan" */;
 			buildPhases = (
-				B1138C923F2DEEA29B206DEBF2866A14 /* Headers */,
-				B97DD6E5EF03F27BDD6623ACC6BFECE8 /* Sources */,
-				D04A4BCE9F5FCDBE7F7C46AEFFB7814E /* Frameworks */,
-				DEE42DE420FF97580236D37DB1E59C66 /* Resources */,
+				D0A561A12E20D3B4A22FC8E755CF3C07 /* Headers */,
+				B8B2C9C4490C8206CB6E372B925457AA /* Sources */,
+				D705E14DE879CAC5E05755EFEC289DE7 /* Frameworks */,
+				656B08AAFD6F0111FF9A28F0A60E4AD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7E64502FB9578477C7592E8E6F4B747 /* PBXTargetDependency */,
+			);
+			name = "Pods-RichMan";
+			productName = "Pods-RichMan";
+			productReference = B06E8556AEDAAB09F34F8C5F028428A7 /* Pods_RichMan.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BE08E97E291135F1A7FAF0D9D680D2BF /* LTMorphingLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDDCAB1EAB97F2E12AB1162F2E24450B /* Build configuration list for PBXNativeTarget "LTMorphingLabel" */;
+			buildPhases = (
+				5BF8C649B48EC1804AAEE6EDC81CDBAC /* Headers */,
+				0F9B87A93034173530907DE52803020B /* Sources */,
+				580B1A27F7E1401C9D8294461B757383 /* Frameworks */,
+				8697EB94719E84C7D614B72886B71E49 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-RichMan";
-			productName = "Pods-RichMan";
-			productReference = B06E8556AEDAAB09F34F8C5F028428A7 /* Pods_RichMan.framework */;
+			name = LTMorphingLabel;
+			productName = LTMorphingLabel;
+			productReference = 1EF89C2ADA96DB267929D5A7D3214302 /* LTMorphingLabel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -146,75 +309,79 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = FC38529C67282938322CF94EA61556FE /* Products */;
+			productRefGroup = EF1CE5D291DBAA0CC21898CB13B0E7CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				BE08E97E291135F1A7FAF0D9D680D2BF /* LTMorphingLabel */,
 				ACE97645E983F00CC38FFE8103503941 /* Pods-RichMan */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DEE42DE420FF97580236D37DB1E59C66 /* Resources */ = {
+		656B08AAFD6F0111FF9A28F0A60E4AD5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8697EB94719E84C7D614B72886B71E49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C08AD5F102DBC800719CB340FB22B7F1 /* Fire.png in Resources */,
+				AAF92F7ED3197B5AF7647AA739753683 /* Fragment.png in Resources */,
+				FC834C03536DDFF1ADAE5F8ADDE33A81 /* Smoke.png in Resources */,
+				6637B1DAF6D424D039F2DB3CE741D2F3 /* Sparkle.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B97DD6E5EF03F27BDD6623ACC6BFECE8 /* Sources */ = {
+		0F9B87A93034173530907DE52803020B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C9C37E5F9DC38970F68E3C618BEA6F5 /* Pods-RichMan-dummy.m in Sources */,
+				B351A6FBFE08F5C15FD5F9D853250CFD /* LTCharacterDiffResult.swift in Sources */,
+				E332A090BABBFD027DBF3C1DAE99FDE8 /* LTCharacterLimbo.swift in Sources */,
+				B51825EC515B623CA44A1E3D3C61188B /* LTEasing.swift in Sources */,
+				0F827AC7BD2A5CDA1B683D52DC6D9CCF /* LTEmitterView.swift in Sources */,
+				58785A307922D8513DD099B8B1E3803C /* LTMorphingEffect.swift in Sources */,
+				34F3BF2072270851B72843768EBECB59 /* LTMorphingLabel.swift in Sources */,
+				86867D8E99691262F784AE24A7D953B6 /* LTMorphingLabel+Anvil.swift in Sources */,
+				B2008DD6915E291532A1CBEBE92039CE /* LTMorphingLabel+Burn.swift in Sources */,
+				D7EC76C888837C2244145DDA750D5313 /* LTMorphingLabel+Evaporate.swift in Sources */,
+				EDBC53BE7010EEF5DD0280629AF12990 /* LTMorphingLabel+Fall.swift in Sources */,
+				CB59B5B8F6AFA347A7B09771B5244A36 /* LTMorphingLabel+Pixelate.swift in Sources */,
+				B70823D221A44099F34E737C07B235E8 /* LTMorphingLabel+Sparkle.swift in Sources */,
+				41383A54AC4C15B59C98C6EAD6AE54BF /* LTMorphingLabel-dummy.m in Sources */,
+				FEA6E7FADADB27B9004A3BA86FC20EC8 /* LTStringDiffResult.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8B2C9C4490C8206CB6E372B925457AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				055297C26F41F32213B41AD9B727ED4F /* Pods-RichMan-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin XCBuildConfiguration section */
-		2A809062D91ABA5F41F2A0AC19364CD7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52ED44AF9CEF80B0C73E9F75A1C69E1E /* Pods-RichMan.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-RichMan/Pods-RichMan-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-RichMan/Pods-RichMan.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
+/* Begin PBXTargetDependency section */
+		C7E64502FB9578477C7592E8E6F4B747 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LTMorphingLabel;
+			target = BE08E97E291135F1A7FAF0D9D680D2BF /* LTMorphingLabel */;
+			targetProxy = 24C93BCB43C7E03F1988C0FEB7672655 /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
 		4BC7450F9457737EE3E637BA155B56F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -281,6 +448,78 @@
 			};
 			name = Debug;
 		};
+		56304019E6345D81EACF824666441696 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 206592BA5FAE3A89E9F84F924A2FCF48 /* Pods-RichMan.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-RichMan/Pods-RichMan-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-RichMan/Pods-RichMan.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5E52FF1CB48F26D9A7A46E36F26B8B41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB314F996FCA6A759C519A3F11B8E8C9 /* LTMorphingLabel.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LTMorphingLabel/LTMorphingLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LTMorphingLabel/LTMorphingLabel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LTMorphingLabel/LTMorphingLabel.modulemap";
+				PRODUCT_MODULE_NAME = LTMorphingLabel;
+				PRODUCT_NAME = LTMorphingLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -343,9 +582,9 @@
 			};
 			name = Release;
 		};
-		B6B3C057EF484928E7A5580DC44C746C /* Debug */ = {
+		BCD53989E086E4111693E93A67CF52AE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5A3CDACFB6954831874335F415287B45 /* Pods-RichMan.debug.xcconfig */;
+			baseConfigurationReference = 114E15714C4F0BFF3DA186B34A174316 /* Pods-RichMan.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -375,6 +614,41 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CD8749C657273BBBE6E965844CFDAE3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A81AA806D0FB4B1BFCE3FD98557A6084 /* LTMorphingLabel.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LTMorphingLabel/LTMorphingLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LTMorphingLabel/LTMorphingLabel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LTMorphingLabel/LTMorphingLabel.modulemap";
+				PRODUCT_MODULE_NAME = LTMorphingLabel;
+				PRODUCT_NAME = LTMorphingLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -383,11 +657,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1AEB32ECB8D68CFB75B066DFF525FB49 /* Build configuration list for PBXNativeTarget "Pods-RichMan" */ = {
+		003FF7F1170D75C2ED7859B3ACC70DF0 /* Build configuration list for PBXNativeTarget "Pods-RichMan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B6B3C057EF484928E7A5580DC44C746C /* Debug */,
-				2A809062D91ABA5F41F2A0AC19364CD7 /* Release */,
+				56304019E6345D81EACF824666441696 /* Debug */,
+				BCD53989E086E4111693E93A67CF52AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -397,6 +671,15 @@
 			buildConfigurations = (
 				4BC7450F9457737EE3E637BA155B56F7 /* Debug */,
 				8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDDCAB1EAB97F2E12AB1162F2E24450B /* Build configuration list for PBXNativeTarget "LTMorphingLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD8749C657273BBBE6E965844CFDAE3C /* Debug */,
+				5E52FF1CB48F26D9A7A46E36F26B8B41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -16,21 +16,25 @@ public class RootTBModel: NSObject {
         var tmp = TeamData()
         tmp.key = .chick
         tmp.color = .main
+        tmp.score = 888
         data.append(tmp)
         
         tmp = TeamData()
         tmp.key = .marry
         tmp.color = .marry
+        tmp.score = 888
         data.append(tmp)
         
         tmp = TeamData()
         tmp.key = .bear
         tmp.color = .bear
+        tmp.score = 888
         data.append(tmp)
         
         tmp = TeamData()
         tmp.key = .tasker
         tmp.color = .tasker
+        tmp.score = 888
         data.append(tmp)
         
         
@@ -40,6 +44,7 @@ public class RootTBModel: NSObject {
 struct TeamData {
     var key = TeamKey.chick
     var color = UIColor.black
+    var score = 0
 }
 
 enum TeamKey: String {

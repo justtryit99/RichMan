@@ -45,7 +45,7 @@
                             <constraint firstAttribute="width" constant="160" id="yA1-q4-IAB"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5680" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSW-IH-hQx">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5680" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSW-IH-hQx" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
                         <rect key="frame" x="103" y="34.5" width="177.5" height="88"/>
                         <fontDescription key="fontDescription" name="GillSans-BoldItalic" family="Gill Sans" pointSize="76"/>
                         <nil key="textColor"/>
@@ -69,6 +69,11 @@
             <point key="canvasLocation" x="155.07246376811597" y="155.69196428571428"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="HSW-IH-hQx">
+            <size key="intrinsicContentSize" width="177.5" height="88"/>
+        </designable>
+    </designables>
     <resources>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

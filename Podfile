@@ -6,5 +6,7 @@ target 'RichMan' do
   use_frameworks!
 
   # Pods for RichMan
-
+  pod 'LTMorphingLabel', '~> 0.9.3'
+  
+  
 end

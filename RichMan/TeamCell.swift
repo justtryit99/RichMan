@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import LTMorphingLabel
 
 class TeamCell: BaseTableViewCell {
     
     @IBOutlet weak var headImageView: UIImageView!
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var scoreLabel: LTMorphingLabel!
     @IBOutlet weak var circleView: CircleView!
     
     
@@ -19,6 +20,7 @@ class TeamCell: BaseTableViewCell {
         
 //        scoreLabel.textColor = .white
         circleView.backgroundColor = .white
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

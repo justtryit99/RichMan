@@ -6,6 +6,7 @@
 //
 
 import UIKit
+//import LTMorphingLabel
 
 class RootTBVC: UITableViewController {
     
@@ -57,6 +58,7 @@ class RootTBVC: UITableViewController {
         let cell: TeamCell = tableView.createCell(indexPath: indexPath)
         cell.backgroundColor = cellData.color
         cell.headImageView.image = UIImage(named: cellData.key.rawValue)
+        cell.scoreLabel.text = "\(cellData.score)"
         return cell
     }
     
@@ -73,6 +75,86 @@ class RootTBVC: UITableViewController {
         let nav = UINavigationController(rootViewController: vc)
 //        vc.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         splitViewController?.showDetailViewController(nav, sender: nil)
+        
+        
+//        if let cell = tableView.cellForRow(at: indexPath) as? TeamCell {
+//
+//            let text = "\(Int.random(in: 1000...2000))"
+//            let result = text.compare(cell.scoreLabel.text.str, options: .numeric)
+//
+//            if result == .orderedDescending {
+//                // Descending 降序, 新 大於 舊
+//                cell.scoreLabel.morphingEffect = .evaporate
+//            } else {
+//                // 升序或相等, 新 小於 舊
+//                cell.scoreLabel.morphingEffect = .fall
+//            }
+//
+//            cell.scoreLabel.text = text
+//        }
+        
+        
+        // 記錄原始排名
+        var oldIndexAry = [TeamKey]()
+        for (_, cellData) in model.data.enumerated() {
+            oldIndexAry.append(cellData.key)
+        }
+        
+        for (index, _) in model.data.enumerated() {
+            let ranInt = Int.random(in: 1000...2000)
+            model.data[index].score = ranInt
+            
+            if let cell = tableView.cellForRow(at: IndexPath(row: index, section: 0)) as? TeamCell {
+//                let result = text.compare(cell.scoreLabel.text.str, options: .numeric)
+//                if result == .orderedDescending {
+//                    // Descending 降序, 新 大於 舊
+//                    cell.scoreLabel.morphingEffect = .evaporate
+//                } else {
+//                    // 升序或相等, 新 小於 舊
+//                    cell.scoreLabel.morphingEffect = .fall
+//                }
+                cell.scoreLabel.text = "\(ranInt)"
+                print("ranInt: \(ranInt), key: \(model.data[index].key)")
+            }
+        }
+        
+        model.data.sort { data1, data2 in
+            return data1.score > data2.score
+        }
+        
+        // 移動到新row
+//        for (oldIndex, key) in oldIndexAry.enumerated() {
+//            if let newIndex = model.data.firstIndex(where: { $0.key == key }) {
+//                tableView.moveRow(at: IndexPath(row: oldIndex, section: 0), to: IndexPath(row: newIndex, section: 0))
+//            }
+//        }
+        
+        for (newIndex, data) in model.data.enumerated() {
+            
+            DispatchQueue.main.asyncAfter(deadline: 1) {
+                
+                if let oldIndex = oldIndexAry.firstIndex(where: { $0 == data.key }) {
+                    tableView.moveRow(at: IndexPath(row: oldIndex, section: 0), to: IndexPath(row: newIndex, section: 0))
+                    oldIndexAry.swapAt(oldIndex, newIndex)
+                    print("oldIndexAry: \(oldIndexAry)")
+                }
+            }
+            
+            
+        }
+        
+        
+        
+        
+        
+        
+        dump(model.data)
+        
+        
+        
+        
+        
+        
         
         
         // test
@@ -180,4 +262,11 @@ class RootTBVC: UITableViewController {
     }
     */
 
+}
+
+
+extension Optional {
+    var str: String {
+        return ((self as? String) != nil) ? self as! String : ""
+    }
 }
