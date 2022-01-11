@@ -25,7 +25,6 @@
                 <outlet property="markHeight" destination="Gqw-h5-y8X" id="8zw-JJ-ey7"/>
                 <outlet property="markView" destination="0cD-eN-BMx" id="MHG-er-qRu"/>
                 <outlet property="markWidth" destination="5gz-Zn-UDC" id="6Fd-hK-E7l"/>
-                <outlet property="moneyImg" destination="0Y9-Li-mRO" id="Wuo-TK-jBQ"/>
                 <outlet property="teamImageView" destination="QhR-P1-u7q" id="89H-4b-cji"/>
                 <outlet property="teamImageView2" destination="oxM-kG-YhW" id="x8g-wl-dLp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -36,9 +35,6 @@
             <rect key="frame" x="0.0" y="0.0" width="700" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="鈔票" translatesAutoresizingMaskIntoConstraints="NO" id="0Y9-Li-mRO">
-                    <rect key="frame" x="0.0" y="0.0" width="700" height="768"/>
-                </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kER-nL-ZV1" userLabel="Blur">
                     <rect key="frame" x="0.0" y="0.0" width="700" height="768"/>
                     <subviews>
@@ -127,14 +123,11 @@
                 <constraint firstItem="QhR-P1-u7q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-40" id="89M-1g-kh2"/>
                 <constraint firstItem="c0x-9K-0P0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="8hT-mC-Zp8"/>
                 <constraint firstItem="f9j-4C-E8t" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.5" id="9Cz-Ws-aG8"/>
-                <constraint firstItem="0Y9-Li-mRO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9jh-nt-OcD"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Y9-Li-mRO" secondAttribute="trailing" id="FTr-tz-5h6"/>
                 <constraint firstItem="cgA-5c-XUb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Hnj-VL-IiU"/>
                 <constraint firstItem="0cD-eN-BMx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="I7R-UX-lx3"/>
                 <constraint firstItem="AcB-M6-Hc3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="400" id="SGI-4U-gw3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EIa-iL-OSg" secondAttribute="trailing" constant="100" id="VCk-Ue-IUC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kER-nL-ZV1" secondAttribute="trailing" id="Xyk-rP-Wv8"/>
-                <constraint firstItem="0Y9-Li-mRO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="e4v-SY-dVK"/>
                 <constraint firstItem="0cD-eN-BMx" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="1.8" id="fES-7J-rNd"/>
                 <constraint firstAttribute="bottom" secondItem="kER-nL-ZV1" secondAttribute="bottom" id="fLN-eK-7L8"/>
                 <constraint firstItem="cgA-5c-XUb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="fWA-o2-7mr"/>
@@ -144,7 +137,6 @@
                 <constraint firstItem="lMN-eT-ePk" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qBv-P3-Uuc"/>
                 <constraint firstItem="EIa-iL-OSg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="s67-v9-DIP"/>
                 <constraint firstItem="QhR-P1-u7q" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wyR-9x-rAV"/>
-                <constraint firstAttribute="bottom" secondItem="0Y9-Li-mRO" secondAttribute="bottom" id="yE4-le-YAJ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="228.51562499999997" y="128.90625"/>
@@ -152,7 +144,6 @@
     </objects>
     <resources>
         <image name="機會" width="320" height="440"/>
-        <image name="鈔票" width="1920" height="700"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

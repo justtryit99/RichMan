@@ -86,22 +86,6 @@ class DetailVC: UIViewController {
         let tapMa = UITapGestureRecognizer(target: self, action: #selector(tapMark))
         markView.addGestureRecognizer(tapMa)
         
-
-        
-        // 鈔票
-        let inputImage =  CIImage(image: UIImage(named: "鈔票")!)
-        //使用高斯模糊濾鏡
-        let filter = CIFilter(name: "CIGaussianBlur")!
-        filter.setValue(inputImage, forKey:kCIInputImageKey)
-        //設置模糊半徑值（越大越模糊）
-        filter.setValue(0, forKey: kCIInputRadiusKey)
-        let outputCIImage = filter.outputImage!
-        let rect = CGRect(origin: CGPoint.zero, size: UIImage(named: "鈔票")!.size)
-        let cgImage = context.createCGImage(outputCIImage, from: rect)
-        //顯示生成的模糊圖片
-        moneyImg.image = UIImage(cgImage: cgImage!)
-        
-        
         
         
 //        let tap = UITapGestureRecognizer(target: self, action: #selector(tapCardView))
@@ -123,6 +107,29 @@ class DetailVC: UIViewController {
 //        secTimer.invalidate()
 //    }
     
+    @IBAction func radiusChanged(_ sender: UISlider) {
+        print("radius: \(sender.value)")
+        // 鈔票
+        let inputImage =  CIImage(image: UIImage(named: "鈔票")!)
+        //使用高斯模糊濾鏡
+        let filter = CIFilter(name: "CIGaussianBlur")!
+        filter.setValue(inputImage, forKey:kCIInputImageKey)
+        //設置模糊半徑值（越大越模糊）
+        filter.setValue(sender.value, forKey: kCIInputRadiusKey)
+        let outputCIImage = filter.outputImage!
+        let rect = CGRect(origin: CGPoint.zero, size: UIImage(named: "鈔票")!.size)
+        let cgImage = context.createCGImage(outputCIImage, from: rect)
+        //顯示生成的模糊圖片
+        moneyImg.image = UIImage(cgImage: cgImage!)
+    }
+    
+    @IBAction func alphaChanged(_ sender: UISlider) {
+        print("alpha: \(sender.value)")
+        moneyImg.alpha = CGFloat(sender.value)
+    }
+    
+    
+    
     
     @objc func tapMark() {
         guard isCanTapCir else {return}
@@ -130,6 +137,12 @@ class DetailVC: UIViewController {
         
         blurView.fadeIn(0.6)
         popMark(i: 2)
+        
+        // 模糊效果，要刪除subview
+//        let effect = UIVisualEffectView(frame: blurView.bounds)
+//        effect.effect = UIBlurEffect(style: .light)
+//        blurView.addSubview(effect)
+        
     }
     
     @objc func tapChanceCard() {
