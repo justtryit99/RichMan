@@ -84,20 +84,23 @@ extension UIButton {
     /// 設定主色系按鈕 Jump
     func setMainStyle() {
         
+//        self.setTitleColor(.black, for: .normal)
+//        self.setBackgroundColor(.bear, forState: .normal)
+//
+//        self.setTitleColor(.black, for: .highlighted)
+//        self.setBackgroundColor(Color.mainHightLight, forState: .highlighted)
+//
+//        self.setTitleColor(Color.black_a10, for: .disabled)
+//        self.setBackgroundColor(Color.mainDisBG, forState: .disabled)
+//        self.layer.masksToBounds = true
+//
+////        self.setCorner(BGColor: Color.main,
+////                       BDColor: Color.mainBorder)
+//
+//        self.setCorner(radius: 5)
+        
+        
         self.setTitleColor(.black, for: .normal)
-        self.setBackgroundColor(.bear, forState: .normal)
-        
-        self.setTitleColor(.black, for: .highlighted)
-        self.setBackgroundColor(Color.mainHightLight, forState: .highlighted)
-        
-        self.setTitleColor(Color.black_a10, for: .disabled)
-        self.setBackgroundColor(Color.mainDisBG, forState: .disabled)
-        self.layer.masksToBounds = true
-        
-//        self.setCorner(BGColor: Color.main,
-//                       BDColor: Color.mainBorder)
-        
-        self.setCorner(radius: 5)
         
         
     }

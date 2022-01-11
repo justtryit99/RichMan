@@ -50,7 +50,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="474" height="661"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XQA-RM-9as">
-                            <rect key="frame" x="30" y="30" width="414" height="306"/>
+                            <rect key="frame" x="30" y="30" width="414" height="450"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwL-tl-80t" userLabel="textBaseView">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="134"/>
@@ -71,41 +71,41 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NM4-2l-Qbk">
-                                    <rect key="frame" x="0.0" y="154" width="414" height="152"/>
+                                    <rect key="frame" x="0.0" y="154" width="414" height="296"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jjR-1E-ZBO">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="152"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="296"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTc-5J-TQK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                                                    <color key="backgroundColor" red="0.94445437190000003" green="0.54835093020000003" blue="0.14914607999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="32"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTc-5J-TQK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="172"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="30"/>
                                                     <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="6"/>
                                                     <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="(A) 技術犯規">
+                                                    <state key="normal" title="(A) 技術犯規" backgroundImage="button">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7K-gP-4oU">
-                                                    <rect key="frame" x="0.0" y="54" width="414" height="44"/>
-                                                    <color key="backgroundColor" red="0.94445437190000003" green="0.54835093020000003" blue="0.14914607999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="32"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7K-gP-4oU">
+                                                    <rect key="frame" x="0.0" y="182" width="414" height="52"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="30"/>
                                                     <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="6"/>
                                                     <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="(B) 打手犯規">
+                                                    <state key="normal" title="(B) 打手犯規" backgroundImage="button">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDw-mM-kiQ">
-                                                    <rect key="frame" x="0.0" y="108" width="414" height="44"/>
-                                                    <color key="backgroundColor" red="0.94445437190000003" green="0.54835093020000003" blue="0.14914607999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="32"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDw-mM-kiQ">
+                                                    <rect key="frame" x="0.0" y="244" width="414" height="52"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="30"/>
                                                     <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="6"/>
                                                     <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="(C) 走步違例">
+                                                    <state key="normal" title="(C) 走步違例" backgroundImage="button">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
                                                 </button>
@@ -121,7 +121,7 @@
                                     </constraints>
                                 </view>
                                 <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="基紐" translatesAutoresizingMaskIntoConstraints="NO" id="Omk-9d-Tc1">
-                                    <rect key="frame" x="0.0" y="306" width="414" height="280"/>
+                                    <rect key="frame" x="0.0" y="450" width="414" height="280"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="280" id="Iv9-jQ-O0J"/>
                                     </constraints>
@@ -166,6 +166,7 @@
         </view>
     </objects>
     <resources>
+        <image name="button" width="422" height="52"/>
         <image name="基紐" width="852" height="489"/>
         <image name="正面" width="320" height="440"/>
         <systemColor name="systemBackgroundColor">
