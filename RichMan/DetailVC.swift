@@ -24,6 +24,7 @@ class DetailVC: UIViewController {
     @IBOutlet weak var chanceCenterX: NSLayoutConstraint!
     
     @IBOutlet weak var blurView: UIView!
+    @IBOutlet weak var effectView: UIImageView!
     
     @IBOutlet weak var markView: MarkView!
     @IBOutlet weak var markWidth: NSLayoutConstraint!
@@ -98,8 +99,6 @@ class DetailVC: UIViewController {
 //        circleView.isHidden = true
         
         
-//        secTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(timeCount)), userInfo: nil, repeats: true)
-        
     }
     
 //    override func viewWillDisappear(_ animated: Bool) {
@@ -130,27 +129,41 @@ class DetailVC: UIViewController {
     
     
     
+    func addEffect() {
+        // 模糊效果，要刪除subview
+        let effect = UIVisualEffectView(frame: UIScreen.main.bounds)
+        effect.effect = UIBlurEffect(style: .dark)
+        effect.tag = 5
+        for view in blurView.subviews {
+            if view.tag == 5 {
+                view.removeFromSuperview()
+            }
+        }
+        blurView.addSubview(effect)
+        blurView.sendSubviewToBack(effect)
+    }
     
     @objc func tapMark() {
         guard isCanTapCir else {return}
         isCanTapCir = false
         
+        addEffect()
         blurView.fadeIn(0.6)
         popMark(i: 2)
-        
-        // 模糊效果，要刪除subview
-//        let effect = UIVisualEffectView(frame: blurView.bounds)
-//        effect.effect = UIBlurEffect(style: .light)
-//        blurView.addSubview(effect)
         
     }
     
     @objc func tapChanceCard() {
+        addEffect()
         tapCardType = .chance
         popCard(type: tapCardType)
+        
+        // test
+        chanceCard.contentLabel.text = "NBA 籃球規則中規定個人犯規幾次即犯滿離場？"
     }
     
     @objc func tapFateCard() {
+        addEffect()
         tapCardType = .fate
         popCard(type: tapCardType)
     }
@@ -188,7 +201,15 @@ class DetailVC: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: 2) { [self] in
             secTimer.invalidate()
             sec = countDefault
-            secTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(self.timeCount)), userInfo: nil, repeats: true)
+            
+            if type == .chance {
+                secTimer = Timer.scheduledTimer(timeInterval: 1,
+                                                target: self,
+                                                selector: (#selector(self.timeCount)),
+                                                userInfo: nil,
+                                                repeats: true)
+            }
+            
         }
     }
     

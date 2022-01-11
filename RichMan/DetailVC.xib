@@ -11,12 +11,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailVC" customModule="RichMan" customModuleProvider="target">
             <connections>
-                <outlet property="blurView" destination="kER-nL-ZV1" id="EjB-tW-jkG"/>
+                <outlet property="blurView" destination="kER-nL-ZV1" id="0Yo-kO-AeS"/>
                 <outlet property="cardView" destination="AcB-M6-Hc3" id="Uwa-NP-FVL"/>
                 <outlet property="chanceCard" destination="c0x-9K-0P0" id="x8l-66-0ku"/>
                 <outlet property="chanceCenterX" destination="54m-PA-9hk" id="ENA-jo-t8C"/>
                 <outlet property="chanceWidth" destination="bG1-MC-G0V" id="RPn-7Z-5Yg"/>
                 <outlet property="circleView" destination="lMN-eT-ePk" id="I0T-3V-8PL"/>
+                <outlet property="effectView" destination="mLJ-PT-lQo" id="UKB-jx-tvR"/>
                 <outlet property="fateCard" destination="f9j-4C-E8t" id="EgJ-eL-IXV"/>
                 <outlet property="fateCenterX" destination="9Cz-Ws-aG8" id="NxW-UR-RMS"/>
                 <outlet property="fateWidth" destination="MPO-fP-S9z" id="dcr-fR-2dQ"/>
@@ -38,6 +39,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kER-nL-ZV1" userLabel="Blur">
                     <rect key="frame" x="0.0" y="0.0" width="700" height="768"/>
                     <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mLJ-PT-lQo">
+                            <rect key="frame" x="0.0" y="0.0" width="700" height="768"/>
+                        </imageView>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oxM-kG-YhW">
                             <rect key="frame" x="582" y="30" width="100" height="100"/>
                             <constraints>
@@ -46,10 +50,14 @@
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="oxM-kG-YhW" firstAttribute="top" secondItem="kER-nL-ZV1" secondAttribute="top" constant="30" id="9nL-Yg-rXm"/>
+                        <constraint firstItem="mLJ-PT-lQo" firstAttribute="width" secondItem="kER-nL-ZV1" secondAttribute="width" id="Dy1-Ey-Hhy"/>
                         <constraint firstAttribute="trailing" secondItem="oxM-kG-YhW" secondAttribute="trailing" constant="18" id="Fl6-hE-6U4"/>
+                        <constraint firstItem="mLJ-PT-lQo" firstAttribute="centerY" secondItem="kER-nL-ZV1" secondAttribute="centerY" id="cVQ-Gh-hJS"/>
+                        <constraint firstItem="mLJ-PT-lQo" firstAttribute="height" secondItem="kER-nL-ZV1" secondAttribute="height" id="iX2-Xj-TaV"/>
+                        <constraint firstItem="mLJ-PT-lQo" firstAttribute="centerX" secondItem="kER-nL-ZV1" secondAttribute="centerX" id="j9X-9Y-Nj3"/>
                     </constraints>
                 </view>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgA-5c-XUb">
