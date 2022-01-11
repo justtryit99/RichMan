@@ -50,13 +50,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="474" height="661"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XQA-RM-9as">
-                            <rect key="frame" x="30" y="30" width="414" height="404"/>
+                            <rect key="frame" x="30" y="30" width="414" height="306"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwL-tl-80t" userLabel="textBaseView">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="134"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLg-49-vQL">
-                                            <rect key="frame" x="16" y="10" width="388" height="84"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NBA 籃球規則中規定個人犯規幾次即犯滿離場？" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLg-49-vQL">
+                                            <rect key="frame" x="16" y="10" width="388" height="114"/>
                                             <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="38"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -70,14 +70,14 @@
                                         <constraint firstItem="lLg-49-vQL" firstAttribute="leading" secondItem="mwL-tl-80t" secondAttribute="leading" constant="16" id="tq8-Io-jE1"/>
                                     </constraints>
                                 </view>
-                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NM4-2l-Qbk">
-                                    <rect key="frame" x="0.0" y="114" width="414" height="20"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NM4-2l-Qbk">
+                                    <rect key="frame" x="0.0" y="154" width="414" height="152"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jjR-1E-ZBO">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="152"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTc-5J-TQK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                                     <color key="backgroundColor" red="0.94445437190000003" green="0.54835093020000003" blue="0.14914607999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="32"/>
                                                     <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="6"/>
@@ -88,7 +88,7 @@
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7K-gP-4oU">
-                                                    <rect key="frame" x="0.0" y="10" width="414" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="54" width="414" height="44"/>
                                                     <color key="backgroundColor" red="0.94445437190000003" green="0.54835093020000003" blue="0.14914607999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="32"/>
                                                     <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="6"/>
@@ -99,7 +99,7 @@
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDw-mM-kiQ">
-                                                    <rect key="frame" x="0.0" y="20" width="414" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="108" width="414" height="44"/>
                                                     <color key="backgroundColor" red="0.94445437190000003" green="0.54835093020000003" blue="0.14914607999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="32"/>
                                                     <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="6"/>
@@ -120,8 +120,8 @@
                                         <constraint firstAttribute="trailing" secondItem="jjR-1E-ZBO" secondAttribute="trailing" id="u6g-fk-kmx"/>
                                     </constraints>
                                 </view>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="基紐" translatesAutoresizingMaskIntoConstraints="NO" id="Omk-9d-Tc1">
-                                    <rect key="frame" x="0.0" y="124" width="414" height="280"/>
+                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="基紐" translatesAutoresizingMaskIntoConstraints="NO" id="Omk-9d-Tc1">
+                                    <rect key="frame" x="0.0" y="306" width="414" height="280"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="280" id="Iv9-jQ-O0J"/>
                                     </constraints>
