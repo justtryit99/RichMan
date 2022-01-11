@@ -30,7 +30,10 @@ class DetailVC: UIViewController {
     @IBOutlet weak var markHeight: NSLayoutConstraint!
     @IBOutlet weak var markCenterY: NSLayoutConstraint!
     
-    
+    @IBOutlet weak var moneyImg: UIImageView!
+    lazy var context: CIContext = {
+        return CIContext(options: nil)
+    }()
     
     var text = ""
     var sec = 10
@@ -84,6 +87,22 @@ class DetailVC: UIViewController {
         markView.addGestureRecognizer(tapMa)
         
 
+        
+        // 鈔票
+        let inputImage =  CIImage(image: UIImage(named: "鈔票")!)
+        //使用高斯模糊濾鏡
+        let filter = CIFilter(name: "CIGaussianBlur")!
+        filter.setValue(inputImage, forKey:kCIInputImageKey)
+        //設置模糊半徑值（越大越模糊）
+        filter.setValue(0, forKey: kCIInputRadiusKey)
+        let outputCIImage = filter.outputImage!
+        let rect = CGRect(origin: CGPoint.zero, size: UIImage(named: "鈔票")!.size)
+        let cgImage = context.createCGImage(outputCIImage, from: rect)
+        //顯示生成的模糊圖片
+        moneyImg.image = UIImage(cgImage: cgImage!)
+        
+        
+        
         
 //        let tap = UITapGestureRecognizer(target: self, action: #selector(tapCardView))
 //        cardView.addGestureRecognizer(tap)
