@@ -300,8 +300,8 @@ class DetailVC: UIViewController {
         let time = 0.18
         let sprScale = 1.5
         
+        markHeight.constant = 168
         markWidth.constant = markHeight.constant
-        
         
         view.bringSubviewToFront(blurView)
         view.bringSubviewToFront(markView)
