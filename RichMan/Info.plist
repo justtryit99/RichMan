@@ -5,7 +5,10 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>crayon_1–1.ttf</string>
+		<string>千图厚黑体.ttf</string>
 		<string>TAKUMISFONT_L.ttf</string>
+		<string>ZiTiQuanXinYiGuanHeiTi4.0-2.ttf</string>
+		<string>EEJI-CHAO-BeiMingGBT-Flash.ttf</string>
 	</array>
 </dict>
 </plist>

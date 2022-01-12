@@ -35,6 +35,9 @@
 		EE228094278673CC003BBFDE /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE228093278673CC003BBFDE /* UITableViewExtension.swift */; };
 		EE228096278673D4003BBFDE /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE228095278673D4003BBFDE /* UIViewExtension.swift */; };
 		EE82EEF52786991E00C2A655 /* RootTBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE82EEF42786991E00C2A655 /* RootTBModel.swift */; };
+		EEEA61BC278E7CBE003397D3 /* 千图厚黑体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEA61BB278E7CBD003397D3 /* 千图厚黑体.ttf */; };
+		EEEA61BE278E817D003397D3 /* ZiTiQuanXinYiGuanHeiTi4.0-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEA61BD278E817C003397D3 /* ZiTiQuanXinYiGuanHeiTi4.0-2.ttf */; };
+		EEEA61C0278E9569003397D3 /* EEJI-CHAO-BeiMingGBT-Flash.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEA61BF278E9569003397D3 /* EEJI-CHAO-BeiMingGBT-Flash.ttf */; };
 		EEF1EB112786E366009974D7 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF1EB102786E366009974D7 /* BaseView.swift */; };
 		EEF1EB132786E39E009974D7 /* RootHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF1EB122786E39E009974D7 /* RootHeader.swift */; };
 		EEF1EB152786E3AB009974D7 /* RootHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEF1EB142786E3AB009974D7 /* RootHeader.xib */; };
@@ -75,6 +78,9 @@
 		EE228093278673CC003BBFDE /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		EE228095278673D4003BBFDE /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		EE82EEF42786991E00C2A655 /* RootTBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTBModel.swift; sourceTree = "<group>"; };
+		EEEA61BB278E7CBD003397D3 /* 千图厚黑体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "千图厚黑体.ttf"; sourceTree = "<group>"; };
+		EEEA61BD278E817C003397D3 /* ZiTiQuanXinYiGuanHeiTi4.0-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZiTiQuanXinYiGuanHeiTi4.0-2.ttf"; sourceTree = "<group>"; };
+		EEEA61BF278E9569003397D3 /* EEJI-CHAO-BeiMingGBT-Flash.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EEJI-CHAO-BeiMingGBT-Flash.ttf"; sourceTree = "<group>"; };
 		EEF1EB102786E366009974D7 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		EEF1EB122786E39E009974D7 /* RootHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootHeader.swift; sourceTree = "<group>"; };
 		EEF1EB142786E3AB009974D7 /* RootHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RootHeader.xib; sourceTree = "<group>"; };
@@ -146,6 +152,9 @@
 		3C6BFFF42785EB77001AF291 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				EEEA61BF278E9569003397D3 /* EEJI-CHAO-BeiMingGBT-Flash.ttf */,
+				EEEA61BD278E817C003397D3 /* ZiTiQuanXinYiGuanHeiTi4.0-2.ttf */,
+				EEEA61BB278E7CBD003397D3 /* 千图厚黑体.ttf */,
 				3C87F125278A5F3100B5437B /* TAKUMISFONT_L.ttf */,
 				EEF1EB162786E582009974D7 /* crayon_1-1.ttf */,
 				3C6BFFA22785CCBF001AF291 /* LaunchScreen.storyboard */,
@@ -250,11 +259,14 @@
 			files = (
 				EEF1EB172786E582009974D7 /* crayon_1-1.ttf in Resources */,
 				3C183A45278B26F200360983 /* basic.json in Resources */,
+				EEEA61C0278E9569003397D3 /* EEJI-CHAO-BeiMingGBT-Flash.ttf in Resources */,
 				3C87F1242789AE0100B5437B /* MarkView.xib in Resources */,
 				3C6BFFFA2785ECAB001AF291 /* TeamCell.xib in Resources */,
+				EEEA61BC278E7CBE003397D3 /* 千图厚黑体.ttf in Resources */,
 				3C3D922327897E9E00D3E9EF /* TestVC.xib in Resources */,
 				3C3D921D27892DF300D3E9EF /* CardView.xib in Resources */,
 				3C87F126278A5F3100B5437B /* TAKUMISFONT_L.ttf in Resources */,
+				EEEA61BE278E817D003397D3 /* ZiTiQuanXinYiGuanHeiTi4.0-2.ttf in Resources */,
 				3C6BFFA42785CCBF001AF291 /* LaunchScreen.storyboard in Resources */,
 				EEF1EB1D2786F59D009974D7 /* DetailVC.xib in Resources */,
 				EEF1EB152786E3AB009974D7 /* RootHeader.xib in Resources */,

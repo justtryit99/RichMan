@@ -9,8 +9,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="TAKUMISFONT_L.ttf">
-            <string>takumi-syokeifont-L</string>
+        <array key="EEJI-CHAO-BeiMingGBT-Flash.ttf">
+            <string>REEJI-CHAO-BeiMingGBT-Flash</string>
         </array>
     </customFonts>
     <objects>
@@ -20,9 +20,9 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="隊 伍 排 行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiH-s7-2WV">
-                    <rect key="frame" x="50" y="20" width="220" height="40"/>
-                    <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="40"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="排 行 榜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiH-s7-2WV">
+                    <rect key="frame" x="70" y="15" width="200" height="50"/>
+                    <fontDescription key="fontDescription" name="REEJI-CHAO-BeiMingGBT-Flash" family="REEJI-CHAO-BeiMingGBT-Flash" pointSize="50"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>

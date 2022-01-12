@@ -77,7 +77,7 @@ class CardView: BaseView {
         let name = isFront ? "正面" : backName
         self.cardImg.image = UIImage(named: name)
         frontBaseView.isHidden = !isFront
-        contentLabel.text = "不服判決、延誤比賽、禮貌欠佳、服裝不整、抓住籃圈等以上動作所違反的規則稱之為？ "
+        contentLabel.text = "不服判決、延誤比賽、禮貌欠佳、服裝不整、抓住籃圈等以上動作所違反的規則稱之為？"
     }
 
 }

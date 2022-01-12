@@ -62,7 +62,7 @@ class MarkView: BaseView {
         
         frontImg.isHidden = true
         frontBaseView.isHidden = true
-        contentLabel.text = "不服判決、延誤比賽、禮貌欠佳、服裝不整、抓住籃圈等以上動作所違反的規則稱之為？ "
+        contentLabel.text = "上班途中搭丟賽，花費積分去買鞋"
     }
 
 }

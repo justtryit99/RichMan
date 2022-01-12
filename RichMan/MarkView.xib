@@ -9,8 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="TAKUMISFONT_L.ttf">
-            <string>takumi-syokeifont-L</string>
+        <array key="EEJI-CHAO-BeiMingGBT-Flash.ttf">
+            <string>REEJI-CHAO-BeiMingGBT-Flash</string>
+        </array>
+        <array key="ZiTiQuanXinYiGuanHeiTi4.0-2.ttf">
+            <string>FontquanXinYiGuanHeiTi-Regular</string>
         </array>
     </customFonts>
     <objects>
@@ -52,15 +55,15 @@
                     <rect key="frame" x="12" y="12" width="534" height="534"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JFG-RH-QZ3">
-                            <rect key="frame" x="30" y="30" width="474" height="345"/>
+                            <rect key="frame" x="30" y="30" width="474" height="334"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOk-YG-mHg" userLabel="textBaseView">
-                                    <rect key="frame" x="0.0" y="0.0" width="474" height="133"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="474" height="116"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恭喜！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKb-IX-El7">
-                                            <rect key="frame" x="16" y="10" width="448" height="113"/>
-                                            <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="80"/>
-                                            <color key="textColor" red="1" green="0.54582189173052043" blue="0.17590879439416973" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恭喜!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKb-IX-El7">
+                                            <rect key="frame" x="16" y="0.0" width="448" height="106"/>
+                                            <fontDescription key="fontDescription" name="REEJI-CHAO-BeiMingGBT-Flash" family="REEJI-CHAO-BeiMingGBT-Flash" pointSize="80"/>
+                                            <color key="textColor" red="1" green="0.33088696699387576" blue="0.29351506093638879" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -68,16 +71,16 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="ZKb-IX-El7" secondAttribute="trailing" constant="10" id="JRP-td-A6U"/>
                                         <constraint firstAttribute="bottom" secondItem="ZKb-IX-El7" secondAttribute="bottom" constant="10" id="WgV-Sb-SgI"/>
-                                        <constraint firstItem="ZKb-IX-El7" firstAttribute="top" secondItem="WOk-YG-mHg" secondAttribute="top" constant="10" id="ojK-Kq-TVO"/>
+                                        <constraint firstItem="ZKb-IX-El7" firstAttribute="top" secondItem="WOk-YG-mHg" secondAttribute="top" id="ojK-Kq-TVO"/>
                                         <constraint firstItem="ZKb-IX-El7" firstAttribute="leading" secondItem="WOk-YG-mHg" secondAttribute="leading" constant="16" id="qJk-k9-dQo"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFG-nX-eX6" userLabel="textBaseView">
-                                    <rect key="frame" x="0.0" y="153" width="474" height="113"/>
+                                    <rect key="frame" x="0.0" y="136" width="474" height="113"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWp-5D-C9G">
                                             <rect key="frame" x="16" y="10" width="448" height="93"/>
-                                            <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="38"/>
+                                            <fontDescription key="fontDescription" name="FontquanXinYiGuanHeiTi-Regular" family="FontquanXinYiGuanHeiTi" pointSize="38"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -91,16 +94,16 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3d-ma-5tD">
-                                    <rect key="frame" x="0.0" y="286" width="474" height="59"/>
+                                    <rect key="frame" x="0.0" y="269" width="474" height="65"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ehi-VR-Ytb">
-                                            <rect key="frame" x="0.0" y="0.0" width="474" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="474" height="65"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNv-gY-L0u">
-                                                    <rect key="frame" x="0.0" y="0.0" width="474" height="59"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="474" height="65"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="takumi-syokeifont-L" family="takumi-syokeifont-L" pointSize="30"/>
-                                                    <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="6"/>
+                                                    <fontDescription key="fontDescription" name="FontquanXinYiGuanHeiTi-Regular" family="FontquanXinYiGuanHeiTi" pointSize="30"/>
+                                                    <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="10"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" title="確定" backgroundImage="button">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
