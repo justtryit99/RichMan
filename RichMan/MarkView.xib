@@ -55,13 +55,16 @@
                     <rect key="frame" x="12" y="12" width="534" height="534"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="JFG-RH-QZ3">
-                            <rect key="frame" x="30" y="30" width="474" height="334"/>
+                            <rect key="frame" x="30" y="30" width="474" height="322"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOk-YG-mHg" userLabel="textBaseView">
-                                    <rect key="frame" x="0.0" y="0.0" width="474" height="116"/>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="恭喜" translatesAutoresizingMaskIntoConstraints="NO" id="4CJ-Y4-fQ3">
+                                    <rect key="frame" x="0.0" y="0.0" width="474" height="104"/>
+                                </imageView>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOk-YG-mHg" userLabel="textBaseView">
+                                    <rect key="frame" x="0.0" y="114" width="474" height="10"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恭喜!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKb-IX-El7">
-                                            <rect key="frame" x="16" y="0.0" width="448" height="106"/>
+                                            <rect key="frame" x="16" y="0.0" width="448" height="0.0"/>
                                             <fontDescription key="fontDescription" name="REEJI-CHAO-BeiMingGBT-Flash" family="REEJI-CHAO-BeiMingGBT-Flash" pointSize="80"/>
                                             <color key="textColor" red="1" green="0.33088696699387576" blue="0.29351506093638879" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
@@ -76,10 +79,10 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFG-nX-eX6" userLabel="textBaseView">
-                                    <rect key="frame" x="0.0" y="136" width="474" height="113"/>
+                                    <rect key="frame" x="0.0" y="124" width="474" height="113"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWp-5D-C9G">
-                                            <rect key="frame" x="16" y="10" width="448" height="93"/>
+                                            <rect key="frame" x="20" y="10" width="448" height="93"/>
                                             <fontDescription key="fontDescription" name="FontquanXinYiGuanHeiTi-Regular" family="FontquanXinYiGuanHeiTi" pointSize="38"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -89,12 +92,12 @@
                                     <constraints>
                                         <constraint firstItem="hWp-5D-C9G" firstAttribute="top" secondItem="VFG-nX-eX6" secondAttribute="top" constant="10" id="BG3-4Y-FU7"/>
                                         <constraint firstAttribute="bottom" secondItem="hWp-5D-C9G" secondAttribute="bottom" constant="10" id="Br5-AH-gw3"/>
-                                        <constraint firstItem="hWp-5D-C9G" firstAttribute="leading" secondItem="VFG-nX-eX6" secondAttribute="leading" constant="16" id="LUc-Vy-qX0"/>
-                                        <constraint firstAttribute="trailing" secondItem="hWp-5D-C9G" secondAttribute="trailing" constant="10" id="luf-mu-AFI"/>
+                                        <constraint firstItem="hWp-5D-C9G" firstAttribute="leading" secondItem="VFG-nX-eX6" secondAttribute="leading" constant="20" id="LUc-Vy-qX0"/>
+                                        <constraint firstAttribute="trailing" secondItem="hWp-5D-C9G" secondAttribute="trailing" constant="6" id="luf-mu-AFI"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3d-ma-5tD">
-                                    <rect key="frame" x="0.0" y="269" width="474" height="65"/>
+                                    <rect key="frame" x="0.0" y="257" width="474" height="65"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ehi-VR-Ytb">
                                             <rect key="frame" x="0.0" y="0.0" width="474" height="65"/>
@@ -152,6 +155,7 @@
         <image name="button" width="422" height="52"/>
         <image name="問號" width="90" height="90"/>
         <image name="問號正" width="300" height="300"/>
+        <image name="恭喜" width="190" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

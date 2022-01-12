@@ -9,13 +9,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var label: UILabel!
-    
-    var text = "333"
+    var testText = "test"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = text
+        
+        
     }
 
 

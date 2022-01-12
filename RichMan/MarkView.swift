@@ -16,7 +16,6 @@ class MarkView: BaseView {
     @IBOutlet weak var abcButtonView: UIView!
     @IBOutlet weak var buttonA: UIButton!
     
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     
@@ -63,6 +62,18 @@ class MarkView: BaseView {
         frontImg.isHidden = true
         frontBaseView.isHidden = true
         contentLabel.text = "上班途中搭丟賽，花費積分去買鞋"
+        
+
+        let red = UIImage(named: "red")!
+        titleLabel.textColor = UIColor(patternImage: red)
+        let strokeTextAttributes = [
+          NSAttributedString.Key.strokeColor : UIColor.black,
+          NSAttributedString.Key.foregroundColor : UIColor(patternImage: red),
+          NSAttributedString.Key.strokeWidth : -2,
+          NSAttributedString.Key.font : titleLabel.font]
+          as [NSAttributedString.Key : Any]
+        
+        titleLabel.attributedText = NSMutableAttributedString(string: titleLabel.text!, attributes: strokeTextAttributes)
     }
 
 }

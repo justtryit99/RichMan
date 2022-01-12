@@ -8,41 +8,51 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="crayon_1-1.ttf">
-            <string>Nagurigaki-Crayon</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="91L-wr-XFd">
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="cBC-lX-sel" customClass="ViewController" customModule="RichMan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YhH-cN-ACo">
-                        <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="703.5" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Teah Party" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZR-9C-ldJ">
-                                <rect key="frame" x="133" y="309" width="157" height="95"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Baj-Zh-AdH">
+                                <rect key="frame" x="301.5" y="688" width="364" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="LL6-51-2Ya"/>
+                                </constraints>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="g2m-mQ-qzq">
+                                <rect key="frame" x="301.5" y="634" width="364" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="2RY-8k-x0i"/>
+                                </constraints>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1A-lF-mnu">
+                                <rect key="frame" x="183" y="228" width="249" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rich Man" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Doc-cu-auy">
-                                <rect key="frame" x="207" y="501" width="290" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Nagurigaki-Crayon" family="Nagurigaki Crayon" pointSize="88"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="主圖" translatesAutoresizingMaskIntoConstraints="NO" id="iVq-OO-URA">
+                                <rect key="frame" x="0.0" y="0.0" width="703.5" height="768"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OjM-j1-BLG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iVq-OO-URA" firstAttribute="top" secondItem="YhH-cN-ACo" secondAttribute="top" id="4nP-QU-B8H"/>
+                            <constraint firstItem="Baj-Zh-AdH" firstAttribute="top" secondItem="g2m-mQ-qzq" secondAttribute="bottom" constant="24" id="MNf-8Y-lRc"/>
+                            <constraint firstItem="g2m-mQ-qzq" firstAttribute="trailing" secondItem="Baj-Zh-AdH" secondAttribute="trailing" id="ZkU-hs-QRU"/>
+                            <constraint firstAttribute="trailing" secondItem="iVq-OO-URA" secondAttribute="trailing" id="au1-Sf-pJG"/>
+                            <constraint firstItem="OjM-j1-BLG" firstAttribute="trailing" secondItem="Baj-Zh-AdH" secondAttribute="trailing" constant="40" id="kmB-zU-Qdy"/>
+                            <constraint firstAttribute="bottom" secondItem="iVq-OO-URA" secondAttribute="bottom" id="qDU-Fe-fNx"/>
+                            <constraint firstItem="OjM-j1-BLG" firstAttribute="bottom" secondItem="Baj-Zh-AdH" secondAttribute="bottom" constant="50" id="qjf-KJ-Nal"/>
+                            <constraint firstItem="iVq-OO-URA" firstAttribute="leading" secondItem="YhH-cN-ACo" secondAttribute="leading" id="uaI-gu-h1e"/>
+                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="label" destination="OZR-9C-ldJ" id="gip-T6-cut"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MIW-fj-d1j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -135,6 +145,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="主圖" width="700" height="768"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
