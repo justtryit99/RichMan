@@ -145,7 +145,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="主圖" width="700" height="768"/>
+        <image name="主圖" width="2100" height="2304"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
