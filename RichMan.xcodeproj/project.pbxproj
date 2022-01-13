@@ -14,6 +14,7 @@
 		3C3D921F2789643700D3E9EF /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D921E2789643700D3E9EF /* UIButtonExtension.swift */; };
 		3C3D922227897E9E00D3E9EF /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C3D922027897E9E00D3E9EF /* TestVC.swift */; };
 		3C3D922327897E9E00D3E9EF /* TestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C3D922127897E9E00D3E9EF /* TestVC.xib */; };
+		3C537E23278F0ACB00C6EAD7 /* UILabelExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C537E22278F0ACB00C6EAD7 /* UILabelExtension.swift */; };
 		3C6BFF982785CCBF001AF291 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFF972785CCBF001AF291 /* AppDelegate.swift */; };
 		3C6BFF9C2785CCBF001AF291 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6BFF9B2785CCBF001AF291 /* ViewController.swift */; };
 		3C6BFF9F2785CCBF001AF291 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C6BFF9D2785CCBF001AF291 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		3C3D921E2789643700D3E9EF /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		3C3D922027897E9E00D3E9EF /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
 		3C3D922127897E9E00D3E9EF /* TestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestVC.xib; sourceTree = "<group>"; };
+		3C537E22278F0ACB00C6EAD7 /* UILabelExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtension.swift; sourceTree = "<group>"; };
 		3C6BFF942785CCBF001AF291 /* RichMan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RichMan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C6BFF972785CCBF001AF291 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C6BFF9B2785CCBF001AF291 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				EE228093278673CC003BBFDE /* UITableViewExtension.swift */,
 				EE228095278673D4003BBFDE /* UIViewExtension.swift */,
 				3C3D921E2789643700D3E9EF /* UIButtonExtension.swift */,
+				3C537E22278F0ACB00C6EAD7 /* UILabelExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				EEF1EB132786E39E009974D7 /* RootHeader.swift in Sources */,
 				EEF1EB112786E366009974D7 /* BaseView.swift in Sources */,
 				3C6BFFF32785EB64001AF291 /* BaseTableViewCell.swift in Sources */,
+				3C537E23278F0ACB00C6EAD7 /* UILabelExtension.swift in Sources */,
 				3C6BFFAE2785E679001AF291 /* ShareData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

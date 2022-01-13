@@ -22,6 +22,11 @@ class MarkView: BaseView {
     @IBOutlet weak var contentBaseView: UIView!
     @IBOutlet weak var frontImg: UIImageView!
     
+    @IBOutlet weak var actionLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var scoreTitle: UILabel!
+    
+    
     
     var isFront = false {
         didSet {
@@ -61,11 +66,16 @@ class MarkView: BaseView {
         
         frontImg.isHidden = true
         frontBaseView.isHidden = true
-        contentLabel.text = "上班途中搭丟賽，花費積分去買鞋"
+        contentLabel.text = "上班途中搭丟賽，花費積分去買鞋上班途中搭丟賽，花費積分去買鞋上班途中搭丟賽，花費積分去買鞋"
         
 
         let red = UIImage(named: "red")!
         titleLabel.textColor = UIColor(patternImage: red)
+        
+        scoreTitle.setBGColor(.gold)
+        scoreLabel.setBGColor(.gold)
+        actionLabel.setBGColor(.gold)
+        
         let strokeTextAttributes = [
           NSAttributedString.Key.strokeColor : UIColor.black,
           NSAttributedString.Key.foregroundColor : UIColor(patternImage: red),

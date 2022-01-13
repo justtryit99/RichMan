@@ -25,6 +25,13 @@ class CardView: BaseView {
     @IBOutlet weak var textBaseView: UIView!
     @IBOutlet weak var contentImg: UIImageView!
     
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var scoreTitle: UILabel!
+    @IBOutlet weak var twoButtonView: UIView!
+    @IBOutlet weak var vsView: UIView!
+    @IBOutlet weak var vsLabel: UILabel!
+    
+    
     // 直接替換背景圖不會淡出，再用一張圖片處理
     @IBOutlet weak var frontImg: UIImageView!
     
@@ -32,6 +39,20 @@ class CardView: BaseView {
         didSet {
             let backName = type == .chance ? "機會" : "命運"
             cardImg.image = UIImage(named: backName)
+            
+            switch type {
+            case .chance:
+                twoButtonView.isHidden = true
+                vsView.isHidden = true
+                
+            case .fate:
+                countLabel.isHidden = true
+                abcButtonView.isHidden = true
+                contentImg.isHidden = true
+                vsView.isHidden = false
+                twoButtonView.isHidden = true
+                
+            }
         }
     }
     
@@ -71,13 +92,18 @@ class CardView: BaseView {
         buttonB.setMainStyle()
         buttonC.setMainStyle()
         
-        
         frontImg.isHidden = true
         let backName = type == .chance ? "機會" : "命運"
         let name = isFront ? "正面" : backName
         self.cardImg.image = UIImage(named: name)
         frontBaseView.isHidden = !isFront
         contentLabel.text = "不服判決、延誤比賽、禮貌欠佳、服裝不整、抓住籃圈等以上動作所違反的規則稱之為？"
+        
+        scoreLabel.setBGColor(.gold)
+        scoreTitle.setBGColor(.gold)
+        vsLabel.setBGColor(.red)
+        
+        
     }
 
 }
