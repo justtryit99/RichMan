@@ -30,8 +30,10 @@
                 <outlet property="countLabel" destination="wYV-u9-ckP" id="rk6-gb-KOO"/>
                 <outlet property="frontBaseView" destination="6bP-lH-kNn" id="ccq-D3-gmV"/>
                 <outlet property="frontImg" destination="iDj-DD-MJf" id="Zzo-0r-s5C"/>
+                <outlet property="mainTeamImg" destination="qOA-aj-c6n" id="HFx-Gq-Kw1"/>
                 <outlet property="scoreLabel" destination="314-mF-sKK" id="u5a-ZD-5kR"/>
                 <outlet property="scoreTitle" destination="syp-BD-CBh" id="ugA-Tg-msW"/>
+                <outlet property="subTeamImg" destination="MMa-xj-4Wu" id="eT8-ae-fM6"/>
                 <outlet property="textBaseView" destination="mwL-tl-80t" id="AM6-0J-sJ2"/>
                 <outlet property="twoButtonView" destination="ehb-t2-HDp" id="hCf-Nt-LzI"/>
                 <outlet property="vsLabel" destination="ng7-kf-OzW" id="tbv-ie-6pb"/>
@@ -64,7 +66,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不服判決、延誤比賽、禮貌欠佳、服裝不整、抓住籃圈" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLg-49-vQL">
-                                            <rect key="frame" x="16" y="10" width="388" height="133"/>
+                                            <rect key="frame" x="16" y="4" width="388" height="139"/>
                                             <fontDescription key="fontDescription" name="FontquanXinYiGuanHeiTi-Regular" family="FontquanXinYiGuanHeiTi" pointSize="38"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -74,11 +76,11 @@
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="lLg-49-vQL" secondAttribute="trailing" constant="10" id="COW-MJ-OyD"/>
                                         <constraint firstAttribute="bottom" secondItem="lLg-49-vQL" secondAttribute="bottom" constant="10" id="QLz-Cq-FyH"/>
-                                        <constraint firstItem="lLg-49-vQL" firstAttribute="top" secondItem="mwL-tl-80t" secondAttribute="top" constant="10" id="Sjl-JU-CYe"/>
+                                        <constraint firstItem="lLg-49-vQL" firstAttribute="top" secondItem="mwL-tl-80t" secondAttribute="top" constant="4" id="Sjl-JU-CYe"/>
                                         <constraint firstItem="lLg-49-vQL" firstAttribute="leading" secondItem="mwL-tl-80t" secondAttribute="leading" constant="16" id="tq8-Io-jE1"/>
                                     </constraints>
                                 </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NM4-2l-Qbk">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NM4-2l-Qbk" userLabel="abcButtonView">
                                     <rect key="frame" x="0.0" y="173" width="414" height="176"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jjR-1E-ZBO">
@@ -128,7 +130,7 @@
                                         <constraint firstAttribute="trailing" secondItem="jjR-1E-ZBO" secondAttribute="trailing" id="u6g-fk-kmx"/>
                                     </constraints>
                                 </view>
-                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="基紐" translatesAutoresizingMaskIntoConstraints="NO" id="Omk-9d-Tc1">
+                                <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="基紐" translatesAutoresizingMaskIntoConstraints="NO" id="Omk-9d-Tc1">
                                     <rect key="frame" x="0.0" y="349" width="414" height="280"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="280" id="Iv9-jQ-O0J"/>
@@ -142,7 +144,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwU-pH-2Dh">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OwU-pH-2Dh" userLabel="ScoreView">
                             <rect key="frame" x="154" y="449" width="300" height="80"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="314-mF-sKK">
@@ -169,7 +171,7 @@
                             </constraints>
                         </view>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="SnE-ty-8vQ">
-                            <rect key="frame" x="10" y="523" width="454" height="128"/>
+                            <rect key="frame" x="10" y="407" width="454" height="244"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0Y-kZ-rTo" userLabel="VSView">
                                     <rect key="frame" x="0.0" y="0.0" width="454" height="128"/>
@@ -203,8 +205,8 @@
                                         <constraint firstItem="MMa-xj-4Wu" firstAttribute="centerX" secondItem="z0Y-kZ-rTo" secondAttribute="centerX" multiplier="1.55" id="l0H-fe-wUD"/>
                                     </constraints>
                                 </view>
-                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehb-t2-HDp" userLabel="TwoButtonView">
-                                    <rect key="frame" x="0.0" y="0.0" width="454" height="116"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehb-t2-HDp" userLabel="TwoButtonView">
+                                    <rect key="frame" x="0.0" y="128" width="454" height="116"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6S-DY-0CM">
                                             <rect key="frame" x="30" y="32" width="177" height="52"/>
@@ -212,7 +214,7 @@
                                             <fontDescription key="fontDescription" name="FontquanXinYiGuanHeiTi-Regular" family="FontquanXinYiGuanHeiTi" pointSize="30"/>
                                             <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="10"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" title="通過" backgroundImage="button">
+                                            <state key="normal" title="通過" backgroundImage="goldButtonS">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                         </button>
@@ -222,7 +224,7 @@
                                             <fontDescription key="fontDescription" name="FontquanXinYiGuanHeiTi-Regular" family="FontquanXinYiGuanHeiTi" pointSize="30"/>
                                             <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="10"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" title="失敗" backgroundImage="button">
+                                            <state key="normal" title="失敗" backgroundImage="grayButtonS">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                         </button>
@@ -282,6 +284,8 @@
     </objects>
     <resources>
         <image name="button" width="422" height="52"/>
+        <image name="goldButtonS" width="184" height="52"/>
+        <image name="grayButtonS" width="184" height="52"/>
         <image name="marry" width="80" height="80"/>
         <image name="tasker" width="80" height="80"/>
         <image name="基紐" width="852" height="489"/>

@@ -31,12 +31,16 @@ class DetailVC: UIViewController {
     @IBOutlet weak var markHeight: NSLayoutConstraint!
     @IBOutlet weak var markCenterY: NSLayoutConstraint!
     
-    @IBOutlet weak var moneyImg: UIImageView!
+    
+    
     lazy var context: CIContext = {
         return CIContext(options: nil)
     }()
     
-    var text = ""
+//    var text = ""
+    
+    var teamKey = TeamKey.chick
+    
     var sec = 10
     let countDefault = 11
     var secTimer = Timer()
@@ -74,11 +78,15 @@ class DetailVC: UIViewController {
         markView.backgroundColor = .clear
         blurView.isHidden = true
         
+        chanceCard.delegate = self
+        fateCard.delegate = self
+        
+        
         label.text = "\(sec)"
         label.isHidden = true
         
-        teamImageView.image = UIImage(named: text)
-        teamImageView2.image = UIImage(named: text)
+        teamImageView.image = UIImage(named: teamKey.rawValue)
+        teamImageView2.image = UIImage(named: teamKey.rawValue)
         
         let tapCh = UITapGestureRecognizer(target: self, action: #selector(tapChanceCard))
         chanceCard.addGestureRecognizer(tapCh)
@@ -86,18 +94,6 @@ class DetailVC: UIViewController {
         fateCard.addGestureRecognizer(tapFa)
         let tapMa = UITapGestureRecognizer(target: self, action: #selector(tapMark))
         markView.addGestureRecognizer(tapMa)
-        
-        
-        
-//        let tap = UITapGestureRecognizer(target: self, action: #selector(tapCardView))
-//        cardView.addGestureRecognizer(tap)
-////        cardView.isHidden = true
-//
-//        let tapCir = UITapGestureRecognizer(target: self, action: #selector(tapCircleView))
-//        circleView.addGestureRecognizer(tapCir)
-//        circleView.backgroundColor = .black
-//        circleView.isHidden = true
-        
         
     }
     
@@ -119,12 +115,12 @@ class DetailVC: UIViewController {
         let rect = CGRect(origin: CGPoint.zero, size: UIImage(named: "鈔票")!.size)
         let cgImage = context.createCGImage(outputCIImage, from: rect)
         //顯示生成的模糊圖片
-        moneyImg.image = UIImage(cgImage: cgImage!)
+//        moneyImg.image = UIImage(cgImage: cgImage!)
     }
     
     @IBAction func alphaChanged(_ sender: UISlider) {
         print("alpha: \(sender.value)")
-        moneyImg.alpha = CGFloat(sender.value)
+//        moneyImg.alpha = CGFloat(sender.value)
     }
     
     
@@ -154,17 +150,24 @@ class DetailVC: UIViewController {
     }
     
     @objc func tapChanceCard() {
+        // 要加翻牌後無法再觸發
+        chanceCard.teamKey = teamKey
+        
         addEffect()
         tapCardType = .chance
         popCard(type: tapCardType)
         
         // test
-        chanceCard.contentLabel.text = "NBA 籃球規則中規定個人犯規幾次即犯滿離場？"
+        chanceCard.contentLabel.text = "不服判決、延誤比賽、禮貌欠佳、服裝不整、抓住籃圈等以上動作所違反的規則稱之為？"
     }
     
     @objc func tapFateCard() {
+        // 要加翻牌後無法再觸發
+        fateCard.teamKey = teamKey
+        
         addEffect()
         tapCardType = .fate
+        fateCard.fateType = FateType.allCases.randomElement()!
         popCard(type: tapCardType)
     }
     
@@ -433,92 +436,13 @@ class DetailVC: UIViewController {
         
         guard isCanTapCir else {return}
         
-//        let count: Float = 2
-//        let time = 0.1
-//        let sprScale = 1.2
-        
-//        UIView.animate(withDuration: time, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 10, options: []) {
-//
-//            UIView.setAnimationRepeatCount(count)
-//            self.circleView.transform = CGAffineTransform(scaleX: sprScale, y: sprScale)
-//            self.circleView.transform = CGAffineTransform.identity
-//        } completion: { bool in
-//
-//            UIView.animate(withDuration: time, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 10, options: []) {
-//                let s = 3.0
-//                self.circleView.transform = CGAffineTransform(scaleX: s, y: s)
-//            } completion: { bool in
-//
-//            }
-//
-//        }
         isCanTapCir = false
         popTest(i: 2)
         
         
-        
-//        UIView.animate(withDuration: time) {
-////            UIView.setAnimationRepeatCount(count)
-//            self.circleView.transform = CGAffineTransform(scaleX: sprScale, y: sprScale)
-//
-//
-//
-//        } completion: { bool in
-//            UIView.animate(withDuration: time) {
-////                UIView.setAnimationRepeatCount(count)
-//                self.circleView.transform = CGAffineTransform.identity
-//
-//            } completion: { bool in
-//
-//            }
-//        }
-        
-
-        
-//
-//        UIView.animate(withDuration: 0.8,
-//                       delay: 0,
-//                       usingSpringWithDamping: 0.5,
-//                       initialSpringVelocity: 10,
-//                       options: [],
-//                       animations: {
-//            print("0.6")
-//            UIView.setAnimationRepeatCount(2)
-//            self.circleView.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
-//        })
-//
-//
-//        UIView.animate(withDuration: 0.8,
-//                       delay: 0,
-//                       usingSpringWithDamping: 0.5,
-//                       initialSpringVelocity: 10,
-//                       options: [],
-//                       animations: {
-//            print("identity")
-//            UIView.setAnimationRepeatCount(2)
-//                        self.circleView.transform = CGAffineTransform.identity
-//                       })
-//
-//        let scale = 2.8
-//        let view = CircleView(frame: circleView.frame)
-//        view.backgroundColor = .orange
-//        self.view.addSubview(view)
-//
-//        UIView.animate(withDuration: time) {
-//            UIView.setAnimationRepeatCount(count)
-//            view.transform = CGAffineTransform(scaleX: scale, y: scale)
-//
-//            view.alpha = 0.0
-//        } completion: { bool in
-//            view.removeFromSuperview()
-//        }
-        
-
-        
     }
     
     @objc func tapCardView() {
-        
         let scale = 2.0
         UIView.animate(withDuration: 1.2) {
             self.cardView.transform = CGAffineTransform(scaleX: scale, y: scale)

@@ -47,9 +47,24 @@ struct TeamData {
     var score = 0
 }
 
-enum TeamKey: String {
+enum TeamKey: String, CaseIterable {
     case bear
     case chick
     case marry
     case tasker
+    
+    func ToName() -> String {
+        switch self {
+        case .bear:
+            return "熊班"
+        case .chick:
+            return "小雞"
+        case .marry:
+            return "啾喜"
+        case .tasker:
+            return "阿姆"
+        }
+    }
 }
+
+

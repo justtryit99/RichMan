@@ -70,11 +70,12 @@ class RootTBVC: UITableViewController {
         
         let vc = DetailVC()
 
-        vc.text = cellData.key.rawValue
+        vc.teamKey = cellData.key
         // 加了nac，sb的detailVC就會消失，不會一直push下去
         let nav = UINavigationController(rootViewController: vc)
 //        vc.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
         splitViewController?.showDetailViewController(nav, sender: nil)
+        
         
         // 記錄原始排名
         var oldIndexAry = [TeamKey]()

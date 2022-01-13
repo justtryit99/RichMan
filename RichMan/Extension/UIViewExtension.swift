@@ -243,3 +243,13 @@ extension UINavigationBar {
         }
     }
 }
+
+extension UIViewController {
+    /// 圖片預覽
+    func showImageViewer(_ imageView: UIImageView) {
+        let configuration = ImageViewerConfiguration { config in
+            config.imageView = imageView
+        }
+        present(ImageViewerController(configuration: configuration), animated: true)
+    }
+}
