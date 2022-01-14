@@ -170,12 +170,18 @@ class DetailVC: UIViewController {
     
     @objc func tapTeam2() {
         
+        switch tapCardType {
+        case .chance, .fate:
+            closeCard(type: tapCardType)
+        case .mark:
+            closeMark()
+        }
     }
     
     @objc func tapMark() {
         guard isCanTapCir else {return}
         isCanTapCir = false
-        
+        tapCardType = .mark
         addEffect()
         blurView.fadeIn(0.6)
         popMark(i: 2)
@@ -204,50 +210,7 @@ class DetailVC: UIViewController {
         popCard(type: tapCardType)
     }
     
-    // MARK: - 卡片位移
-    func popCard(type: CardType) {
-        let card: CardView = type == .chance ? chanceCard : fateCard
-        guard card.isFront == false else {return}
-        blurView.fadeIn(0.6)
-        let centerX: NSLayoutConstraint = type == .chance ? chanceCenterX : fateCenterX
-        let width: NSLayoutConstraint = type == .chance ? chanceWidth : fateWidth
-        
-        view.bringSubviewToFront(blurView)
-        view.bringSubviewToFront(card)
-        width.constant = 498
-        
-        let newConstraint = centerX.constraintWithMultiplier(1)
-        view.removeConstraint(centerX)
-        view.addConstraint(newConstraint)
-        
-        switch type {
-        case .chance:
-            chanceCenterX = newConstraint
-        case .fate:
-            fateCenterX = newConstraint
-        }
-        
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
-        
-        // 翻牌動畫
-        transitionTest(i: timeAry.count, targetView: card)
-        
-        DispatchQueue.main.asyncAfter(deadline: 2) { [self] in
-            secTimer.invalidate()
-            sec = countDefault
-            
-            if type == .chance {
-                secTimer = Timer.scheduledTimer(timeInterval: 1,
-                                                target: self,
-                                                selector: (#selector(self.timeCount)),
-                                                userInfo: nil,
-                                                repeats: true)
-            }
-            
-        }
-    }
+    
     
     @objc func timeCount() {
         sec -= 1
@@ -312,107 +275,9 @@ class DetailVC: UIViewController {
 //        }
 //    }
     
-    // MARK: - 翻牌動畫
-    func transitionTest(i: Int, targetView: CardView) {
-        UIView.transition(with: targetView, duration: self.timeAry[i-1], options: .transitionFlipFromRight) {
-//            let isFront = self.cardView.image == UIImage(named: "Frame 6")
-//            let name = isFront ? "Frame 1" : "Frame 6"
-//            self.cardView.image = UIImage(named: name)
-            
-        } completion: { finish in
-
-            if i > 1 {
-                self.transitionTest(i: i-1, targetView: targetView)
-            } else {
-                targetView.isFront = true
-            }
-
-
-        }
-    }
     
-    // MARK: - 問號動畫
-    func popMark(i: Int) {
-        let time = 0.18
-        let sprScale = 1.5
-        
-        markHeight.constant = 168
-        markWidth.constant = markHeight.constant
-        
-        view.bringSubviewToFront(blurView)
-        view.bringSubviewToFront(markView)
-        
-        let newConstraint = markCenterY.constraintWithMultiplier(1.1)
-        view.removeConstraint(markCenterY)
-        view.addConstraint(newConstraint)
-        markCenterY = newConstraint
-        
-        // 位移到中心
-        UIView.animate(withDuration: 0.5, delay: 0) {
-            self.markView.backImg.image = UIImage(named: "問號正")
-            self.view.layoutIfNeeded()
-        } completion: { bool in
-            
-            // 波浪
-            let scale = 2.8
-            let view = MarkView(frame: self.markView.frame)
-            view.alpha = 0.8
-            view.backImg.image = UIImage(named: "問號正")
-            
-            // 心跳放大
-            UIView.animate(withDuration: time, delay: 0) {
-                self.markView.transform = CGAffineTransform(scaleX: sprScale, y: sprScale)
-            } completion: { bool in
-                
-                // 波浪
-//                let scale = 2.8
-//                let view = MarkView(frame: self.markView.frame)
-//                view.alpha = 0.8
-//                view.backImg.image = UIImage(named: "問號正")
-                self.view.addSubview(view)
-                self.view.bringSubviewToFront(self.circleView)
-                
-                UIView.animate(withDuration: 1, delay: 0) {
-                    view.transform = CGAffineTransform(scaleX: scale, y: scale)
-                    view.alpha = 0.0
-                    
-                } completion: { bool in
-                    view.removeFromSuperview()
-                }
-                // 波浪結束
-                
-                // 心跳縮小
-                UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 10) {
-                    self.markView.transform = CGAffineTransform.identity
-                } completion: { bool in
-                    if i > 1 {
-                        DispatchQueue.main.asyncAfter(deadline: 0.4) {
-                            self.popMark(i: i-1)
-                        }
-                    } else {
-                        
-                        let width: CGFloat = 580
-                        self.markWidth.constant = width
-                        self.markHeight.constant = width
-                        self.markView.markWidth.constant = 260
-                        
-                        // 最終放大
-                        UIView.animate(withDuration: 0.6, delay: 0.8, usingSpringWithDamping: 0.5, initialSpringVelocity: 10, options: []) {
-                            
-                            self.view.layoutIfNeeded()
-                            
-                        } completion: { bool in
-                            self.markView.isFront = true
-//                            self.isCanTapCir = true
-                        }
-                    }
-                    
-                }
-            }
-            
-        }
-            
-    }
+    
+    
     
     func popTest(i: Int) {
 //        let count: Float = 2

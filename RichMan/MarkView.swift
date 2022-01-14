@@ -40,7 +40,10 @@ class MarkView: BaseView {
                     self.frontBaseView.fadeIn(0.3)
                 }
             } else {
-                
+                markImg.fadeIn()
+                backImg.fadeIn()
+                frontBaseView.fadeOut()
+                frontImg.fadeOut()
             }
             
         }

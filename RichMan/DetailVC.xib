@@ -43,7 +43,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HjP-In-6PL" userLabel="HeadBase">
-                    <rect key="frame" x="269" y="40" width="162.5" height="100"/>
+                    <rect key="frame" x="263" y="40" width="174" height="100"/>
                     <subviews>
                         <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chick" translatesAutoresizingMaskIntoConstraints="NO" id="QhR-P1-u7q">
                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
@@ -53,7 +53,7 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TQB-TO-dHh">
-                            <rect key="frame" x="100" y="16" width="62.5" height="68"/>
+                            <rect key="frame" x="100" y="21" width="74" height="58"/>
                             <fontDescription key="fontDescription" name="REEJI-CHAO-BeiMingGBT-Flash" family="REEJI-CHAO-BeiMingGBT-Flash" pointSize="58"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>

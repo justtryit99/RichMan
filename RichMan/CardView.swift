@@ -10,6 +10,7 @@ import UIKit
 enum CardType {
     case chance
     case fate
+    case mark
 }
 
 enum FateType: CaseIterable {
@@ -93,6 +94,8 @@ class CardView: BaseView {
                 countLabel.isHidden = true
                 abcButtonView.isHidden = true
                 
+            default:
+                break
             }
         }
     }
@@ -108,7 +111,10 @@ class CardView: BaseView {
                     self.frontBaseView.fadeIn(0.3)
                 }
             } else {
-                
+                countLabel.text = "10"
+                cardImg.fadeIn()
+                frontImg.fadeOut()
+                frontBaseView.fadeOut()
             }
             
         }
