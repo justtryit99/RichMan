@@ -31,6 +31,7 @@ class DetailVC: UIViewController {
     @IBOutlet weak var markHeight: NSLayoutConstraint!
     @IBOutlet weak var markCenterY: NSLayoutConstraint!
     
+    @IBOutlet weak var numberTimes: UILabel!
     
     
     lazy var context: CIContext = {
@@ -87,6 +88,9 @@ class DetailVC: UIViewController {
         
         teamImageView.image = UIImage(named: teamKey.rawValue)
         teamImageView2.image = UIImage(named: teamKey.rawValue)
+        
+//        numberTimes.setBGColor(.gold)
+        numberTimes.setTextBorder(color: .black, textColor: .gold68, width: -2)
         
         let tapCh = UITapGestureRecognizer(target: self, action: #selector(tapChanceCard))
         chanceCard.addGestureRecognizer(tapCh)
