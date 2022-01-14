@@ -89,16 +89,23 @@ class DetailVC: UIViewController {
         teamImageView.image = UIImage(named: teamKey.rawValue)
         teamImageView2.image = UIImage(named: teamKey.rawValue)
         
-//        numberTimes.setBGColor(.gold)
-        numberTimes.setTextBorder(color: .black, textColor: .gold68, width: -2)
+        numberTimes.setTextBorder(color: .black, textColor: .silvery68, width: -2)
         
+        
+        setTap()
+    }
+    
+    func setTap() {
         let tapCh = UITapGestureRecognizer(target: self, action: #selector(tapChanceCard))
         chanceCard.addGestureRecognizer(tapCh)
         let tapFa = UITapGestureRecognizer(target: self, action: #selector(tapFateCard))
         fateCard.addGestureRecognizer(tapFa)
         let tapMa = UITapGestureRecognizer(target: self, action: #selector(tapMark))
         markView.addGestureRecognizer(tapMa)
-        
+        let tapTeam1 = UITapGestureRecognizer(target: self, action: #selector(tapTeam1))
+        teamImageView.addGestureRecognizer(tapTeam1)
+        let tapTeam2 = UITapGestureRecognizer(target: self, action: #selector(tapTeam2))
+        teamImageView2.addGestureRecognizer(tapTeam2)
     }
     
 //    override func viewWillDisappear(_ animated: Bool) {
@@ -141,6 +148,28 @@ class DetailVC: UIViewController {
         }
         blurView.addSubview(effect)
         blurView.sendSubviewToBack(effect)
+    }
+    
+    /// 測試用
+    var numberForTest = 0
+    
+    @objc func tapTeam1() {
+        numberForTest+=1
+        numberTimes.text = "x\(numberForTest)"
+        let overStart = UIAlertAction(title: "通過起點", style: .`default`) { action in
+            
+        }
+        let prison = UIAlertAction(title: "進入監獄", style: .destructive) { action in
+            
+        }
+        UIAlertController.show(title: "選擇事件", style: .actionSheet,
+                               actions: [overStart, prison],
+                               sourceView: teamImageView)
+        
+    }
+    
+    @objc func tapTeam2() {
+        
     }
     
     @objc func tapMark() {

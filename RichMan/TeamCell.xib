@@ -46,7 +46,7 @@
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5680" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSW-IH-hQx" customClass="LTMorphingLabel" customModule="LTMorphingLabel">
-                        <rect key="frame" x="103" y="34.5" width="177.5" height="88"/>
+                        <rect key="frame" x="102.5" y="34.5" width="177.5" height="88"/>
                         <fontDescription key="fontDescription" name="GillSans-BoldItalic" family="Gill Sans" pointSize="76"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -55,8 +55,8 @@
                 <constraints>
                     <constraint firstItem="G4E-la-ffD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="-80" id="8f4-KH-mHE"/>
                     <constraint firstItem="G4E-la-ffD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="-5" id="Dp0-IK-T2F"/>
+                    <constraint firstAttribute="trailing" secondItem="HSW-IH-hQx" secondAttribute="trailing" constant="40" id="ETi-1t-3XC"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="G4E-la-ffD" secondAttribute="bottom" constant="-5" id="HYL-p3-nUZ"/>
-                    <constraint firstItem="HSW-IH-hQx" firstAttribute="leading" secondItem="G4E-la-ffD" secondAttribute="trailing" constant="23" id="ZSp-XY-VLJ"/>
                     <constraint firstItem="HSW-IH-hQx" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yhF-2z-pjW"/>
                 </constraints>
             </tableViewCellContentView>

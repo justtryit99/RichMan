@@ -11,6 +11,7 @@ enum ColorType: String {
     case red
     case gold
     case gold68
+    case silvery68
 }
 
 extension UILabel {

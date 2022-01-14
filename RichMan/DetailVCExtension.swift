@@ -24,7 +24,7 @@ extension DetailVC: CardViewDelegate {
         
         UIAlertController.show(title: "選擇對戰隊伍", msg: nil,
                                style: .actionSheet, actions: actions,
-                               sourceView: imageView, isMid: false)
+                               sourceView: imageView)
         
     }
     
