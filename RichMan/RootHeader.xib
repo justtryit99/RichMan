@@ -20,8 +20,8 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="富 比 士" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiH-s7-2WV">
-                    <rect key="frame" x="80" y="15" width="200" height="50"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="富比士排行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiH-s7-2WV">
+                    <rect key="frame" x="32" y="15" width="250" height="50"/>
                     <fontDescription key="fontDescription" name="REEJI-CHAO-BeiMingGBT-Flash" family="REEJI-CHAO-BeiMingGBT-Flash" pointSize="50"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -31,7 +31,7 @@
             <color key="backgroundColor" systemColor="labelColor"/>
             <constraints>
                 <constraint firstItem="TiH-s7-2WV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="NRc-sr-0mb"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TiH-s7-2WV" secondAttribute="trailing" constant="40" id="ncu-SL-kQ4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="TiH-s7-2WV" secondAttribute="trailing" constant="38" id="ncu-SL-kQ4"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="137.68115942028987" y="126.89732142857142"/>

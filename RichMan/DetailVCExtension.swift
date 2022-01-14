@@ -41,12 +41,8 @@ extension DetailVC: CardViewDelegate {
 extension DetailVC {
     
     func closeMark() {
-        
-        
         // 先放大再縮小
         self.markView.isFront = false
-        
-        
         
         
         let scale = 1.1

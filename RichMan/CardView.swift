@@ -57,7 +57,7 @@ class CardView: BaseView {
     var teamKey = TeamKey.chick {
         didSet {
             mainTeamImg.image = UIImage(named: teamKey.rawValue)
-            subTeamImg.image = UIImage(named: teamKey.rawValue)
+//            subTeamImg.image = UIImage(named: teamKey.rawValue)
         }
     }
     
