@@ -75,14 +75,6 @@ extension DetailVC {
 
         }
         
-        
-        
-        
-        
-        
-        
-        
-        
     }
     
     /// 問號動畫

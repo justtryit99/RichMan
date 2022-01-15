@@ -38,8 +38,6 @@ class DetailVC: UIViewController {
         return CIContext(options: nil)
     }()
     
-//    var text = ""
-    
     var teamKey = TeamKey.chick
     
     var sec = 10
@@ -58,7 +56,6 @@ class DetailVC: UIViewController {
         }
         return ary.reversed()
     }()
-    
     
     
     deinit {
@@ -108,33 +105,6 @@ class DetailVC: UIViewController {
         teamImageView2.addGestureRecognizer(tapTeam2)
     }
     
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        secTimer.invalidate()
-//    }
-    
-    @IBAction func radiusChanged(_ sender: UISlider) {
-        print("radius: \(sender.value)")
-        // 鈔票
-        let inputImage =  CIImage(image: UIImage(named: "鈔票")!)
-        //使用高斯模糊濾鏡
-        let filter = CIFilter(name: "CIGaussianBlur")!
-        filter.setValue(inputImage, forKey:kCIInputImageKey)
-        //設置模糊半徑值（越大越模糊）
-        filter.setValue(sender.value, forKey: kCIInputRadiusKey)
-        let outputCIImage = filter.outputImage!
-        let rect = CGRect(origin: CGPoint.zero, size: UIImage(named: "鈔票")!.size)
-        let cgImage = context.createCGImage(outputCIImage, from: rect)
-        //顯示生成的模糊圖片
-//        moneyImg.image = UIImage(cgImage: cgImage!)
-    }
-    
-    @IBAction func alphaChanged(_ sender: UISlider) {
-        print("alpha: \(sender.value)")
-//        moneyImg.alpha = CGFloat(sender.value)
-    }
-    
-    
     
     func addEffect() {
         // 模糊效果，要刪除subview
@@ -169,7 +139,6 @@ class DetailVC: UIViewController {
     }
     
     @objc func tapTeam2() {
-        
         switch tapCardType {
         case .chance, .fate:
             closeCard(type: tapCardType)
@@ -243,40 +212,11 @@ class DetailVC: UIViewController {
         }
     }
     
-    
-    
-    
 
     @IBAction func clickButton(_ sender: Any) {
         let popupVC: PopVC = MainSB.with(id: .popVC)
         present(popupVC, animated: true, completion: nil)
     }
-    
-//    @objc func timeCount() {
-//        sec -= 1
-//        print("waitSec: \(sec)")
-//
-//        let text = "\(sec)"
-//        label.text = text
-//
-//        let scale = 5.0
-//        UIView.animate(withDuration: 0.98, delay: 0) {
-//            self.label.transform = CGAffineTransform(scaleX: scale, y: scale)
-//            self.label.alpha = 0.0
-//        } completion: { bool in
-//            self.label.transform = .identity
-//            self.label.alpha = 1.0
-//        }
-//
-//        //倒數計時結束
-//        if sec == 0 {
-//            label.text = "時間到"
-//            secTimer.invalidate()
-//        }
-//    }
-    
-    
-    
     
     
     func popTest(i: Int) {
@@ -346,6 +286,27 @@ class DetailVC: UIViewController {
             self.cardView.transform = CGAffineTransform(scaleX: scale, y: scale)
         }
         
+    }
+    
+    @IBAction func radiusChanged(_ sender: UISlider) {
+        print("radius: \(sender.value)")
+        // 鈔票
+        let inputImage =  CIImage(image: UIImage(named: "鈔票")!)
+        //使用高斯模糊濾鏡
+        let filter = CIFilter(name: "CIGaussianBlur")!
+        filter.setValue(inputImage, forKey:kCIInputImageKey)
+        //設置模糊半徑值（越大越模糊）
+        filter.setValue(sender.value, forKey: kCIInputRadiusKey)
+        let outputCIImage = filter.outputImage!
+        let rect = CGRect(origin: CGPoint.zero, size: UIImage(named: "鈔票")!.size)
+        let cgImage = context.createCGImage(outputCIImage, from: rect)
+        //顯示生成的模糊圖片
+//        moneyImg.image = UIImage(cgImage: cgImage!)
+    }
+    
+    @IBAction func alphaChanged(_ sender: UISlider) {
+        print("alpha: \(sender.value)")
+//        moneyImg.alpha = CGFloat(sender.value)
     }
 
 }
