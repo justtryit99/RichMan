@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol DetailVCDelegate: AnyObject {
+    func detatilSendReload()
+}
+
 class DetailVC: UIViewController {
     
+    weak var delegate: DetailVCDelegate?
     
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var cardView: UIImageView!
@@ -39,6 +44,10 @@ class DetailVC: UIViewController {
     }()
     
     var teamKey = TeamKey.chick
+    var teamData: TeamData {
+        return share.dataAry[getTeamRow(key: teamKey)]
+    }
+    
     
     var sec = 10
     let countDefault = 11
@@ -87,7 +96,7 @@ class DetailVC: UIViewController {
         teamImageView2.image = UIImage(named: teamKey.rawValue)
         
         numberTimes.setTextBorder(color: .black, textColor: .silvery68, width: -2)
-        
+        numberTimes.text = "x\(teamData.numberTimes)"
         
         setTap()
     }
@@ -120,18 +129,17 @@ class DetailVC: UIViewController {
         blurView.sendSubviewToBack(effect)
     }
     
-    /// 測試用
-    var numberForTest = 0
     
     @objc func tapTeam1() {
-        numberForTest+=1
-        numberTimes.text = "x\(numberForTest)"
-        let overStart = UIAlertAction(title: "通過起點", style: .`default`) { action in
-            
+        let overStart = UIAlertAction(title: "通過起點", style: .default) { action in
+            let row = getTeamRow(key: self.teamKey)
+            share.dataAry[row].score += 200
+            self.delegate?.detatilSendReload()
         }
         let prison = UIAlertAction(title: "進入監獄", style: .destructive) { action in
-            
+            self.addNumberTimes()
         }
+        
         UIAlertController.show(title: "選擇事件", style: .actionSheet,
                                actions: [overStart, prison],
                                sourceView: teamImageView)
@@ -212,7 +220,14 @@ class DetailVC: UIViewController {
         }
     }
     
-
+    func addNumberTimes() {
+        let row = getTeamRow(key: self.teamKey)
+        share.dataAry[row].numberTimes += 1
+        self.numberTimes.text = "x\(share.dataAry[row].numberTimes)"
+    }
+    
+    
+    // MARK: - Test Code
     @IBAction func clickButton(_ sender: Any) {
         let popupVC: PopVC = MainSB.with(id: .popVC)
         present(popupVC, animated: true, completion: nil)

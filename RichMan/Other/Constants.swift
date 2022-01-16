@@ -14,6 +14,7 @@ import AdSupport
 public let Defaults = UserDefaults.standard
 let AppShared = UIApplication.shared
 let shareData = ShareData.instance
+let share = ShareData.instance
 let NotificationDefault = NotificationCenter.default
 
 let KeyWindow = UIApplication.shared.keyWindow

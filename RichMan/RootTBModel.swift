@@ -44,7 +44,8 @@ public class RootTBModel: NSObject {
 struct TeamData {
     var key = TeamKey.chick
     var color = UIColor.black
-    var score = 0
+    var score = 888
+    var numberTimes = 0
 }
 
 enum TeamKey: String, CaseIterable {
