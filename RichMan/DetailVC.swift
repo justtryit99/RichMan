@@ -129,7 +129,7 @@ class DetailVC: UIViewController {
         blurView.sendSubviewToBack(effect)
     }
     
-    
+    // MARK: 點擊隊伍頭像 (起點、監獄)
     @objc func tapTeam1() {
         let overStart = UIAlertAction(title: "通過起點", style: .default) { action in
             let row = getTeamRow(key: self.teamKey)
@@ -155,6 +155,7 @@ class DetailVC: UIViewController {
         }
     }
     
+    // MARK: 點擊問號
     @objc func tapMark() {
         guard isCanTapCir else {return}
         isCanTapCir = false
@@ -165,6 +166,7 @@ class DetailVC: UIViewController {
         
     }
     
+    // MARK: 點擊機會
     @objc func tapChanceCard() {
         // 要加翻牌後無法再觸發
         chanceCard.teamKey = teamKey
@@ -172,11 +174,14 @@ class DetailVC: UIViewController {
         addEffect()
         tapCardType = .chance
         popCard(type: tapCardType)
+        addNumberTimes()
         
-        // test
-        chanceCard.contentLabel.text = "不服判決、延誤比賽、禮貌欠佳、服裝不整、抓住籃圈等以上動作所違反的規則稱之為？"
+        if let data = share.testSource.chance.randomElement() {
+            chanceCard.setChanceData(data)
+        }
     }
     
+    // MARK: 點擊命運
     @objc func tapFateCard() {
         // 要加翻牌後無法再觸發
         fateCard.teamKey = teamKey
@@ -191,7 +196,7 @@ class DetailVC: UIViewController {
     
     @objc func timeCount() {
         sec -= 1
-        print("waitSec: \(sec)")
+        //print("waitSec: \(sec)")
         
         let card: CardView = tapCardType == .chance ? chanceCard : fateCard
         

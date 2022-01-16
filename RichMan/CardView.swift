@@ -13,15 +13,17 @@ enum CardType {
     case mark
 }
 
-enum FateType: CaseIterable {
-    case twoButton
-    case vsView
+enum FateType: Int, CaseIterable {
+    case twoButton = 1
+    case vsView = 2
 }
 
 protocol CardViewDelegate: AnyObject {
     func tapImageView(_ imageView: UIImageView)
     func tapMainTeam(_ imageView: UIImageView)
     func tapSubTeam(_ imageView: UIImageView)
+    func clickABCbutton(isSuccess: Bool, title: String, data: SourceData.Chance)
+    
 }
 
 class CardView: BaseView {
@@ -48,6 +50,7 @@ class CardView: BaseView {
     @IBOutlet weak var subTeamImg: UIImageView!
     
     
+    var chanceData = SourceData.Chance()
     
     
     // 直接替換背景圖不會淡出，再用一張圖片處理
@@ -174,6 +177,47 @@ class CardView: BaseView {
     
     @objc func tapSubTeam() {
         delegate?.tapSubTeam(subTeamImg)
+    }
+    
+    func setChanceData(_ data: SourceData.Chance) {
+        chanceData = data
+        
+        contentLabel.text = data.question
+        for (i, opt) in data.options.enumerated() {
+            switch i {
+            case 0:
+                buttonA.setTitle("(A) \(opt)", for: .normal)
+            case 1:
+                buttonB.setTitle("(B) \(opt)", for: .normal)
+            case 2:
+                buttonC.setTitle("(C) \(opt)", for: .normal)
+            default:
+                break
+            }
+        }
+        scoreLabel.text = "\(data.score)"
+    }
+    
+    @IBAction func clickABCbutton(_ sender: UIButton) {
+        let index = sender.tag
+        if let choice =  chanceData.options[safe: index] {
+            delegate?.clickABCbutton(isSuccess: choice == chanceData.answer,
+                                     title: sender.titleLabel?.text ?? "",
+                                     data: chanceData)
+        } else  {
+            print("** 點擊選項超出options")
+        }
+    }
+    
+    
+}
+
+
+
+
+public extension Array {
+    subscript (safe index: Int) -> Element? {
+        return self.indices ~= index ? self[index] : nil
     }
     
 }

@@ -9,6 +9,19 @@ import UIKit
 
 // MARK: - CardViewDelegate
 extension DetailVC: CardViewDelegate {
+    func clickABCbutton(isSuccess: Bool, title: String, data: SourceData.Chance) {
+        showAlert(title: "選擇答案\n\(title)") { action in
+            // 跳答對/答錯
+            
+            let text = isSuccess ? "恭喜答對！" : "答錯啦..\n答案是：\(data.answer)"
+            let row = getTeamRow(key: self.teamKey)
+            share.dataAry[row].score += isSuccess ? data.score : -data.score
+            self.delegate?.detatilSendReload()
+            showAlert(title: text, confirmHandle: nil)
+            
+        }
+    }
+    
     func tapMainTeam(_ imageView: UIImageView) {
         
     }

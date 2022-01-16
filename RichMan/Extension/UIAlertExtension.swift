@@ -33,7 +33,7 @@ extension UIAlertController {
         let alertController = UIAlertController(title: title, message: msg, preferredStyle: style)
         
         alertController.setTint(color: .black)
-        alertController.setTitlet(font: UIFont.systemFont(ofSize: 16, weight: .medium),
+        alertController.setTitlet(font: UIFont.systemFont(ofSize: 26, weight: .medium),
                                   color: nil)
         
         for action in actions {
