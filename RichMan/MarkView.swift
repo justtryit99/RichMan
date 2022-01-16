@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol MarkViewDelegate: AnyObject {
+    func clickButtonA(view: MarkView, data: SourceData.Funny)
+}
+
 class MarkView: BaseView {
+    
+    weak var delegate: MarkViewDelegate?
     
     @IBOutlet weak var backImg: UIImageView!
     @IBOutlet weak var markImg: UIImageView!
@@ -26,7 +32,7 @@ class MarkView: BaseView {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var scoreTitle: UILabel!
     
-    
+    var funnyData = SourceData.Funny()
     
     var isFront = false {
         didSet {
@@ -47,6 +53,18 @@ class MarkView: BaseView {
             }
             
         }
+    }
+    
+    // MARK: - Func
+    func setMarkData(_ data: SourceData.Funny) {
+        self.funnyData = data
+        contentLabel.text = data.description
+        scoreLabel.text = "\(data.score)"
+        
+    }
+    
+    @IBAction func clickButtonA(_ sender: UIButton) {
+        delegate?.clickButtonA(view: self, data: self.funnyData)
     }
     
     //初始化時將xib中的view添加進來

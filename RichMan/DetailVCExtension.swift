@@ -88,6 +88,19 @@ extension DetailVC: CardViewDelegate {
     
 }
 
+// MARK: - MarkViewDelegate
+extension DetailVC: MarkViewDelegate {
+    func clickButtonA(view: MarkView, data: SourceData.Funny) {
+        let text = data.score > 0 ? "增加" : "減少"
+        
+        showAlert(title: "\(teamKey.ToName()) \(text) \(abs(data.score)) 積分") { action in
+            let row = getTeamRow(key: self.teamKey)
+            share.dataAry[row].score += data.score
+            self.delegate?.detatilSendReload()
+        }
+    }
+}
+    
 // MARK: - 動畫相關
 extension DetailVC {
     

@@ -186,7 +186,7 @@ struct SourceData {
         var number: String = ""
         var type: Int?
         var description: String = ""
-        var score: Int?
+        var score: Int = 0
         var action: String = ""
 
     }

@@ -87,6 +87,7 @@ class DetailVC: UIViewController {
         
         chanceCard.delegate = self
         fateCard.delegate = self
+        markView.delegate = self
         
         
         label.text = "\(sec)"
@@ -165,6 +166,9 @@ class DetailVC: UIViewController {
         popMark(i: 2)
         addNumberTimes()
         
+        if let data = share.testSource.funny.randomElement() {
+            markView.setMarkData(data)
+        }
     }
     
     // MARK: 點擊機會

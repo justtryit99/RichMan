@@ -147,6 +147,9 @@
                                                     <state key="normal" title="確定" backgroundImage="button">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="clickButtonA:" destination="-1" eventType="touchUpInside" id="eUu-2h-ANB"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
