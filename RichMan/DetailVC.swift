@@ -163,6 +163,7 @@ class DetailVC: UIViewController {
         addEffect()
         blurView.fadeIn(0.6)
         popMark(i: 2)
+        addNumberTimes()
         
     }
     
@@ -188,8 +189,12 @@ class DetailVC: UIViewController {
         
         addEffect()
         tapCardType = .fate
-        fateCard.fateType = FateType.allCases.randomElement()!
         popCard(type: tapCardType)
+        addNumberTimes()
+        
+        if let data = share.testSource.fate.randomElement() {
+            fateCard.setFateData(data)
+        }
     }
     
     

@@ -9,6 +9,18 @@ import UIKit
 
 // MARK: - CardViewDelegate
 extension DetailVC: CardViewDelegate {
+    func clickTwoButton(isSuccess: Bool, data: SourceData.Fate) {
+        let title = isSuccess ? "確定通過命運考驗？" : "命運坎坷失敗了？"
+        showAlert(title: title) { action in
+            let subTitle = isSuccess ? "獲得 \(data.score) 積分" : "減少 \(data.score) 積分"
+            showAlert(title: subTitle, confirmHandle: nil)
+            let row = getTeamRow(key: self.teamKey)
+            share.dataAry[row].score += isSuccess ? data.score : -data.score
+            self.delegate?.detatilSendReload()
+            
+        }
+    }
+    
     func clickABCbutton(isSuccess: Bool, title: String, data: SourceData.Chance) {
         showAlert(title: "選擇答案\n\(title)") { action in
             // 跳答對/答錯
@@ -22,23 +34,49 @@ extension DetailVC: CardViewDelegate {
         }
     }
     
-    func tapMainTeam(_ imageView: UIImageView) {
+    func tapMainTeam(cardView: CardView) {
+        // 主隊？客隊
+        let score = cardView.fateData.score
+        let main = cardView.teamKey.ToName()
+        let sub = cardView.subTeamKey.ToName()
+        let row = getTeamRow(key: cardView.teamKey)
+        let subRow = getTeamRow(key: cardView.subTeamKey)
         
+        let mainAction = UIAlertAction(title: "主：\(main)", style: .destructive) { action in
+            let text = "\(main)獲得 \(score) 積分\n\(sub)減少 \(score)積分\n執行？"
+            showAlert(title: text) { action in
+                
+                share.dataAry[row].score += score
+                share.dataAry[subRow].score -= score
+                self.delegate?.detatilSendReload()
+            }
+        }
+        let subAction = UIAlertAction(title: "客：\(sub)", style: .default) { action in
+            let text = "\(main)減少 \(score) 積分\n\(sub)獲得 \(score)積分\n執行？"
+            showAlert(title: text) { action in
+                share.dataAry[row].score -= score
+                share.dataAry[subRow].score += score
+                self.delegate?.detatilSendReload()
+            }
+        }
+        UIAlertController.show(title: "勝利方是？", style: .actionSheet,
+                               actions: [mainAction, subAction],
+                               sourceView: cardView.mainTeamImg)
     }
     
-    func tapSubTeam(_ imageView: UIImageView) {
+    func tapSubTeam(cardView: CardView) {
         let teamAry = TeamKey.allCases
         var actions = [UIAlertAction]()
         
         for key in teamAry {
             actions.append(UIAlertAction(title: key.ToName(), style: .default, handler: { action in
-                imageView.image = UIImage(named: key.rawValue)
+                cardView.subTeamKey = key
             }))
         }
         
         UIAlertController.show(title: "選擇對戰隊伍", msg: nil,
                                style: .actionSheet, actions: actions,
-                               sourceView: imageView)
+                               sourceView: cardView.subTeamImg)
         
     }
     

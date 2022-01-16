@@ -217,7 +217,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehb-t2-HDp" userLabel="TwoButtonView">
                                     <rect key="frame" x="0.0" y="128" width="454" height="116"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6S-DY-0CM">
+                                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6S-DY-0CM">
                                             <rect key="frame" x="30" y="32" width="177" height="52"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" name="FontquanXinYiGuanHeiTi-Regular" family="FontquanXinYiGuanHeiTi" pointSize="30"/>
@@ -226,6 +226,9 @@
                                             <state key="normal" title="通過" backgroundImage="goldButtonS">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="clickTwoButton:" destination="-1" eventType="touchUpInside" id="WAb-4p-yqN"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrV-X6-1G8">
                                             <rect key="frame" x="247" y="32" width="177" height="52"/>
@@ -236,6 +239,9 @@
                                             <state key="normal" title="失敗" backgroundImage="grayButtonS">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="clickTwoButton:" destination="-1" eventType="touchUpInside" id="mYH-Gn-rFs"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

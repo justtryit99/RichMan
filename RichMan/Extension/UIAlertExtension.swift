@@ -15,6 +15,7 @@ func showAlert(title: String? = nil, msg: String? = nil, confirmHandle: ((UIAler
     let confirmAction = UIAlertAction(title: "確定", style: .default, handler: confirmHandle)
     let cancelAction = UIAlertAction(title: "取消", style: .cancel)
     
+    
     UIAlertController.show(title: title, msg: msg,
                            style: .alert,
                            actions: [cancelAction, confirmAction])

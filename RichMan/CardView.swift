@@ -20,10 +20,10 @@ enum FateType: Int, CaseIterable {
 
 protocol CardViewDelegate: AnyObject {
     func tapImageView(_ imageView: UIImageView)
-    func tapMainTeam(_ imageView: UIImageView)
-    func tapSubTeam(_ imageView: UIImageView)
+    func tapMainTeam(cardView: CardView)
+    func tapSubTeam(cardView: CardView)
     func clickABCbutton(isSuccess: Bool, title: String, data: SourceData.Chance)
-    
+    func clickTwoButton(isSuccess: Bool, data: SourceData.Fate)
 }
 
 class CardView: BaseView {
@@ -51,7 +51,7 @@ class CardView: BaseView {
     
     
     var chanceData = SourceData.Chance()
-    
+    var fateData = SourceData.Fate()
     
     // 直接替換背景圖不會淡出，再用一張圖片處理
     @IBOutlet weak var frontImg: UIImageView!
@@ -64,6 +64,12 @@ class CardView: BaseView {
         }
     }
     
+    var subTeamKey = TeamKey.chick {
+        didSet {
+            subTeamImg.image = UIImage(named: subTeamKey.rawValue)
+        }
+    }
+    
     
     var fateType = FateType.twoButton {
         didSet {
@@ -72,13 +78,11 @@ class CardView: BaseView {
                 contentImg.isHidden = false
                 vsView.isHidden = true
                 twoButtonView.isHidden = false
-                contentLabel.text = "請依照圖片動作拍照，通過即可得分"
                 
             case .vsView:
                 contentImg.isHidden = true
                 vsView.isHidden = false
                 twoButtonView.isHidden = true
-                contentLabel.text = "拳法：海帶拳\n請指定任一隊伍對戰\n生死有命，富貴在天"
             }
         }
     }
@@ -123,6 +127,7 @@ class CardView: BaseView {
         }
     }
     
+    // MARK: - Func
     //初始化時將xib中的view添加進來
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -172,11 +177,11 @@ class CardView: BaseView {
     }
     
     @objc func tapMainTeam() {
-        delegate?.tapMainTeam(mainTeamImg)
+        delegate?.tapMainTeam(cardView: self)
     }
     
     @objc func tapSubTeam() {
-        delegate?.tapSubTeam(subTeamImg)
+        delegate?.tapSubTeam(cardView: self)
     }
     
     func setChanceData(_ data: SourceData.Chance) {
@@ -198,6 +203,13 @@ class CardView: BaseView {
         scoreLabel.text = "\(data.score)"
     }
     
+    func setFateData(_ data: SourceData.Fate) {
+        fateData = data
+        contentLabel.text = data.description
+        fateType = data.type
+        scoreLabel.text = "\(data.score)"
+    }
+    
     @IBAction func clickABCbutton(_ sender: UIButton) {
         let index = sender.tag
         if let choice =  chanceData.options[safe: index] {
@@ -208,6 +220,12 @@ class CardView: BaseView {
             print("** 點擊選項超出options")
         }
     }
+    
+    @IBAction func clickTwoButton(_ sender: UIButton) {
+        let isSucces = sender.tag == 1
+        delegate?.clickTwoButton(isSuccess: isSucces, data: fateData)
+    }
+    
     
     
 }
