@@ -188,9 +188,23 @@ class DetailVC: UIViewController {
         popCard(type: tapCardType)
         addNumberTimes()
         
-        if let data = share.testSource.chance.randomElement() {
-            chanceCard.setChanceData(data)
-        }
+//        if let data = share.testSource.chance.randomElement() {
+//            print("機會還有：\(share.testSource.chance.count) 題")
+//            share.testSource.chance = share.testSource.chance.filter { $0.question != data.question }
+//            print("刪除後，機會還有：\(share.testSource.chance.count) 題")
+//            chanceCard.setChanceData(data)
+//        } else {
+//            print("題目沒了，重新讀取來源")
+//            share.resetChance()
+//            if let data = share.testSource.chance.randomElement() {
+//                print("機會還有：\(share.testSource.chance.count) 題")
+//                share.testSource.chance = share.testSource.chance.filter { $0.question != data.question }
+//                print("刪除後，機會還有：\(share.testSource.chance.count) 題")
+//                chanceCard.setChanceData(data)
+//            }
+//        }
+        
+        chanceCard.setChanceData(share.getChanceData())
     }
     
     // MARK: 點擊命運

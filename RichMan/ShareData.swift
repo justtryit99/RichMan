@@ -23,8 +23,6 @@ class ShareData: NSObject {
     }
     
     
-    
-    
     func setData() {
         var tmp = TeamData()
         tmp.key = .chick
@@ -47,6 +45,46 @@ class ShareData: NSObject {
         dataAry.append(tmp)
         
         oldDataAry = dataAry
+    }
+    
+    func getChanceData() -> SourceData.Chance {
+        var chance = SourceData.Chance()
+        if let data = testSource.chance.randomElement() {
+            print("機會還有：\(testSource.chance.count) 題")
+            testSource.chance = testSource.chance.filter { $0.question != data.question }
+            print("刪除後，機會還有：\(testSource.chance.count) 題")
+            chance = data
+        } else {
+            print("題目沒了，重新讀取來源")
+            resetChance()
+            chance = getChanceData()
+        }
+        return chance
+    }
+    
+    func resetChance() {
+        let path = Bundle.main.path(forResource: "TestSource", ofType: "json")
+        if let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: .alwaysMapped), let decoder = try? JSONDecoder().decode(SourceCodable.self, from: data) {
+            
+            //print("decoder: \(decoder)")
+            for c in decoder.chance ?? [] {
+                var options = [String]()
+                for opt in c.options ?? [] {
+                    options.append(opt.uppercased())
+                }
+                let data = SourceData.Chance(number: c.number.str,
+                                             type: 0, question: c.question.str.uppercased(),
+                                             options: options,
+                                             answer: c.answer.str.uppercased(),
+                                             score: c.score ?? 0)
+                testSource.chance.append(data)
+            }
+            
+        } else {
+            print("** getTestSource 解析失敗 ** ")
+            print("** getTestSource 解析失敗 ** ")
+            print("** getTestSource 解析失敗 ** ")
+        }
     }
     
     func getTestSource() {
