@@ -11,12 +11,12 @@ import Foundation
 
 
 
-func showAlert(title: String? = nil, msg: String? = nil, confirmHandle: ((UIAlertAction) -> Void)?) {
+func showAlert(title: String? = nil, confirmHandle: ((UIAlertAction) -> Void)?) {
     let confirmAction = UIAlertAction(title: "確定", style: .default, handler: confirmHandle)
     let cancelAction = UIAlertAction(title: "取消", style: .cancel)
     
     
-    UIAlertController.show(title: title, msg: msg,
+    UIAlertController.show(title: title, msg: nil,
                            style: .alert,
                            actions: [cancelAction, confirmAction])
 }

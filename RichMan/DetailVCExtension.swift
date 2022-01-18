@@ -10,26 +10,28 @@ import UIKit
 // MARK: - CardViewDelegate
 extension DetailVC: CardViewDelegate {
     func clickTwoButton(isSuccess: Bool, data: SourceData.Fate) {
-        let title = isSuccess ? "確定通過命運考驗？" : "命運坎坷失敗了？"
+        let successStr = "確定通過命運考驗？\n增加 \(data.score) 積分"
+        let failStr = "命運坎坷失敗了？\n減少 \(data.score) 積分"
+        let title = isSuccess ? successStr : failStr
         showAlert(title: title) { action in
-            let subTitle = isSuccess ? "獲得 \(data.score) 積分" : "減少 \(data.score) 積分"
-            showAlert(title: subTitle, confirmHandle: nil)
             let row = getTeamRow(key: self.teamKey)
             share.dataAry[row].score += isSuccess ? data.score : -data.score
             self.delegate?.detatilSendReload()
-            
         }
     }
     
     func clickABCbutton(isSuccess: Bool, title: String, data: SourceData.Chance) {
         showAlert(title: "選擇答案\n\(title)") { action in
             // 跳答對/答錯
+            let successStr = "恭喜答對！\n增加 \(data.score) 積分"
+            let failStr = "答錯啦..\n答案是：\(data.answer)\n減少 \(data.score) 積分"
+            let text = isSuccess ? successStr : failStr
             
-            let text = isSuccess ? "恭喜答對！" : "答錯啦..\n答案是：\(data.answer)"
-            let row = getTeamRow(key: self.teamKey)
-            share.dataAry[row].score += isSuccess ? data.score : -data.score
-            self.delegate?.detatilSendReload()
-            showAlert(title: text, confirmHandle: nil)
+            showAlert(title: text) { action in
+                let row = getTeamRow(key: self.teamKey)
+                share.dataAry[row].score += isSuccess ? data.score : -data.score
+                self.delegate?.detatilSendReload()
+            }
             
         }
     }
