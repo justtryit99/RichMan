@@ -132,19 +132,26 @@ class DetailVC: UIViewController {
     
     // MARK: 點擊隊伍頭像 (起點、監獄)
     @objc func tapTeam1() {
+        let row = getTeamRow(key: self.teamKey)
+        
         let overStart = UIAlertAction(title: "通過起點", style: .default) { action in
             
             let score = 200
+            
             showAlert(title: "\(self.teamKey.ToName()) 通過起點\n增加 \(score) 積分") { action in
-                let row = getTeamRow(key: self.teamKey)
+                
+                logEvent(row: row, score: score ,msg: "通過起點")
+                
                 share.dataAry[row].score += score
                 self.delegate?.detatilSendReload()
+                
             }
             
         }
         let prison = UIAlertAction(title: "進入監獄", style: .destructive) { action in
             showAlert(title: "\(self.teamKey.ToName()) 進入監獄\n增加回合一次") { action in
                 self.addNumberTimes()
+                logEvent(row: row, score: 0, msg: "進入監獄，增加回合一次")
             }
         }
         

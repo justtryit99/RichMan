@@ -43,6 +43,10 @@
 		3C87F1242789AE0100B5437B /* MarkView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C87F1232789AE0100B5437B /* MarkView.xib */; };
 		3C87F126278A5F3100B5437B /* TAKUMISFONT_L.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C87F125278A5F3100B5437B /* TAKUMISFONT_L.ttf */; };
 		3CB23B9D2798657A00FFD28F /* FormalSource.json in Resources */ = {isa = PBXBuildFile; fileRef = 3CB23B9C2798657A00FFD28F /* FormalSource.json */; };
+		3CB23BA027999BF400FFD28F /* LogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB23B9E27999BF400FFD28F /* LogVC.swift */; };
+		3CB23BA127999BF400FFD28F /* LogVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB23B9F27999BF400FFD28F /* LogVC.xib */; };
+		3CB23BA427999D7300FFD28F /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB23BA227999D7300FFD28F /* LogCell.swift */; };
+		3CB23BA527999D7300FFD28F /* LogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB23BA327999D7300FFD28F /* LogCell.xib */; };
 		A90B6D3055277FD12A050765 /* Pods_RichMan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F553D9F5B1B7AB44C32C3B3B /* Pods_RichMan.framework */; };
 		EE228092278673BD003BBFDE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE228091278673BD003BBFDE /* UIColorExtension.swift */; };
 		EE228094278673CC003BBFDE /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE228093278673CC003BBFDE /* UITableViewExtension.swift */; };
@@ -99,6 +103,10 @@
 		3C87F1232789AE0100B5437B /* MarkView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarkView.xib; sourceTree = "<group>"; };
 		3C87F125278A5F3100B5437B /* TAKUMISFONT_L.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = TAKUMISFONT_L.ttf; sourceTree = "<group>"; };
 		3CB23B9C2798657A00FFD28F /* FormalSource.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FormalSource.json; sourceTree = "<group>"; };
+		3CB23B9E27999BF400FFD28F /* LogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogVC.swift; sourceTree = "<group>"; };
+		3CB23B9F27999BF400FFD28F /* LogVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogVC.xib; sourceTree = "<group>"; };
+		3CB23BA227999D7300FFD28F /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
+		3CB23BA327999D7300FFD28F /* LogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogCell.xib; sourceTree = "<group>"; };
 		5FBB01BF50963199981DCC31 /* Pods-RichMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichMan.release.xcconfig"; path = "Target Support Files/Pods-RichMan/Pods-RichMan.release.xcconfig"; sourceTree = "<group>"; };
 		E8FD8CFC7E7021CDB487B89C /* Pods-RichMan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichMan.debug.xcconfig"; path = "Target Support Files/Pods-RichMan/Pods-RichMan.debug.xcconfig"; sourceTree = "<group>"; };
 		EE228091278673BD003BBFDE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -200,6 +208,10 @@
 				3C3D921C27892DF300D3E9EF /* CardView.xib */,
 				3C87F1212789ADF000B5437B /* MarkView.swift */,
 				3C87F1232789AE0100B5437B /* MarkView.xib */,
+				3CB23B9E27999BF400FFD28F /* LogVC.swift */,
+				3CB23B9F27999BF400FFD28F /* LogVC.xib */,
+				3CB23BA227999D7300FFD28F /* LogCell.swift */,
+				3CB23BA327999D7300FFD28F /* LogCell.xib */,
 				3C3D921827873CED00D3E9EF /* PopVC.swift */,
 				3C3D922027897E9E00D3E9EF /* TestVC.swift */,
 				3C3D922127897E9E00D3E9EF /* TestVC.xib */,
@@ -333,6 +345,8 @@
 				3C3D921D27892DF300D3E9EF /* CardView.xib in Resources */,
 				3C87F126278A5F3100B5437B /* TAKUMISFONT_L.ttf in Resources */,
 				EEEA61BE278E817D003397D3 /* ZiTiQuanXinYiGuanHeiTi4.0-2.ttf in Resources */,
+				3CB23BA127999BF400FFD28F /* LogVC.xib in Resources */,
+				3CB23BA527999D7300FFD28F /* LogCell.xib in Resources */,
 				3C6BFFA42785CCBF001AF291 /* LaunchScreen.storyboard in Resources */,
 				EEF1EB1D2786F59D009974D7 /* DetailVC.xib in Resources */,
 				3CB23B9D2798657A00FFD28F /* FormalSource.json in Resources */,
@@ -395,6 +409,7 @@
 				3C6BFFB02785E6BA001AF291 /* Utility.swift in Sources */,
 				3C537E3B2790533900C6EAD7 /* ImageViewerPresentationTransition.swift in Sources */,
 				3C6BFF9C2785CCBF001AF291 /* ViewController.swift in Sources */,
+				3CB23BA027999BF400FFD28F /* LogVC.swift in Sources */,
 				3C3D921F2789643700D3E9EF /* UIButtonExtension.swift in Sources */,
 				3C6BFF982785CCBF001AF291 /* AppDelegate.swift in Sources */,
 				3C6BFFF92785ECAB001AF291 /* TeamCell.swift in Sources */,
@@ -414,6 +429,7 @@
 				EE82EEF52786991E00C2A655 /* RootTBModel.swift in Sources */,
 				3C3D921927873CED00D3E9EF /* PopVC.swift in Sources */,
 				EEF1EB132786E39E009974D7 /* RootHeader.swift in Sources */,
+				3CB23BA427999D7300FFD28F /* LogCell.swift in Sources */,
 				3C537E392790533900C6EAD7 /* ImageViewerTransitioningHandler.swift in Sources */,
 				EEF1EB112786E366009974D7 /* BaseView.swift in Sources */,
 				3C6BFFF32785EB64001AF291 /* BaseTableViewCell.swift in Sources */,

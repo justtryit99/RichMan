@@ -46,6 +46,7 @@ struct TeamData {
     var color = UIColor.black
     var score = 888
     var numberTimes = 0
+    var log = [String]()
 }
 
 enum TeamKey: String, CaseIterable {

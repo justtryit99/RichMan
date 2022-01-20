@@ -122,6 +122,31 @@ class RootTBVC: UITableViewController {
         
     }
 
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let row = indexPath.row
+        let cellData = shareData.dataAry[row]
+        
+        let editAction = UIContextualAction(style: .normal, title: "修改") { (action, view, completionHandler) in
+            
+            completionHandler(true)
+        }
+        editAction.backgroundColor = UIColor(255, 171, 69, 1)
+        
+        let logAction = UIContextualAction(style: .normal, title: "Log") { (action, view, completionHandler) in
+            let vc = LogVC()
+            vc.teamKey = cellData.key
+            vc.logAry = cellData.log
+            // 加了nac，sb的detailVC就會消失，不會一直push下去
+            let nav = UINavigationController(rootViewController: vc)
+            self.splitViewController?.showDetailViewController(nav, sender: nil)
+            completionHandler(true)
+        }
+        logAction.backgroundColor = .lightRed
+        
+        let configuration = UISwipeActionsConfiguration(actions: [editAction, logAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
+    }
     
 }
 

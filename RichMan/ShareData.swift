@@ -208,6 +208,7 @@ class ShareData: NSObject {
     
 }
 
+// MARK: - Public Func
 func getTeamRow(key: TeamKey) -> Int {
     for (i, cellData) in share.dataAry.enumerated() {
         if cellData.key == key {
@@ -218,7 +219,11 @@ func getTeamRow(key: TeamKey) -> Int {
     return 0
 }
 
-
+func logEvent(row: Int, score: Int, msg: String) {
+    let data = share.dataAry[row]
+    let text = "\(msg)\n\(data.score) 增加 \(score) 積分為 \(data.score+score)"
+    share.dataAry[row].log.append(text)
+}
 
 
 

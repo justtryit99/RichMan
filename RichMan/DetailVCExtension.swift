@@ -29,6 +29,8 @@ extension DetailVC: CardViewDelegate {
             
             showAlert(title: text) { action in
                 let row = getTeamRow(key: self.teamKey)
+                logEvent(row: row, score: isSuccess ? data.score : -data.score,
+                         msg: "\(isSuccess ? "答對" : "答錯")機會第\(data.number)題")
                 share.dataAry[row].score += isSuccess ? data.score : -data.score
                 self.delegate?.detatilSendReload()
             }

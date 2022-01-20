@@ -12,6 +12,6 @@ enum XibType: String {
     case normal 
     
     case teamCell = "TeamCell"
-    
+    case logCell = "LogCell"
     
 }
