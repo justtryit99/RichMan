@@ -173,9 +173,8 @@ class DetailVC: UIViewController {
         popMark(i: 2)
         addNumberTimes()
         
-        if let data = share.dataSource.funny.randomElement() {
-            markView.setMarkData(data)
-        }
+        markView.setMarkData(share.getFunnyData())
+        
     }
     
     // MARK: 點擊機會
@@ -189,6 +188,13 @@ class DetailVC: UIViewController {
         addNumberTimes()
         
         chanceCard.setChanceData(share.getChanceData())
+        
+        
+//        chanceCard.setChanceData(share.getCardData(type: .chance))
+        
+//        let card: SourceData.Chance = shareData.dataSource.chance.getData(type: .chance)
+//        chanceCard.setChanceData(card)
+        
     }
     
     // MARK: 點擊命運
@@ -201,9 +207,7 @@ class DetailVC: UIViewController {
         popCard(type: tapCardType)
         addNumberTimes()
         
-        if let data = share.dataSource.fate.randomElement() {
-            fateCard.setFateData(data)
-        }
+        fateCard.setFateData(share.getFateData())
     }
     
     

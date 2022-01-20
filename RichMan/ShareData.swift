@@ -86,21 +86,37 @@ class ShareData: NSObject {
         }
         return chance
     }
-//    func with<T: UIViewController>(id: StoryboardID) -> T {
-//    func getCardData(type: DataType) {
-//        var chance = SourceData.Chance()
-//        if let data = dataSource.chance.randomElement() {
-//            print("機會還有：\(dataSource.chance.count) 題")
-//            dataSource.chance = dataSource.chance.filter { $0.question != data.question }
-//            print("刪除後，機會還有：\(dataSource.chance.count) 題")
-//            chance = data
-//        } else {
-//            print("題目沒了，重新讀取來源")
-//            getDataSource(type: .chance)
-//            chance = getChanceData()
-//        }
-//        return chance
-//    }
+    
+    func getFateData() -> SourceData.Fate {
+        var chance = SourceData.Fate()
+        if let data = dataSource.fate.randomElement() {
+            print("命運還有：\(dataSource.fate.count) 題")
+            dataSource.fate = dataSource.fate.filter { $0.description != data.description }
+            print("刪除後，命運還有：\(dataSource.fate.count) 題")
+            chance = data
+        } else {
+            print("題目沒了，重新讀取來源")
+            getDataSource(type: .fate)
+            chance = getFateData()
+        }
+        return chance
+    }
+    
+    func getFunnyData() -> SourceData.Funny {
+        var chance = SourceData.Funny()
+        if let data = dataSource.funny.randomElement() {
+            print("問號還有：\(dataSource.funny.count) 題")
+            dataSource.funny = dataSource.funny.filter { $0.description != data.description }
+            print("刪除後，問號還有：\(dataSource.funny.count) 題")
+            chance = data
+        } else {
+            print("題目沒了，重新讀取來源")
+            getDataSource(type: .mark)
+            chance = getFunnyData()
+        }
+        return chance
+    }
+    
     
     func getDataSource(type: DataType) {
         let path = Bundle.main.path(forResource: sourceType.rawValue, ofType: "json")
@@ -253,13 +269,19 @@ struct SourceCodable: Codable {
     }
 }
 
+public protocol Card {
+    var key: String { get set }
+}
+
 // MARK: - Data
 struct SourceData {
     var chance: [Chance] = []
     var fate: [Fate] = []
     var funny: [Funny] = []
     
-    struct Chance {
+    struct Chance: Card {
+        var key: String = ""
+        
         var number: String = ""
         var type: Int = 0
         var question: String = ""
@@ -268,7 +290,9 @@ struct SourceData {
         var score: Int = 0
     }
     
-    struct Fate {
+    struct Fate: Card {
+        var key: String = ""
+        
         var number: String = ""
         var type = FateType.twoButton
         var image : String = ""
@@ -277,7 +301,9 @@ struct SourceData {
 
     }
     
-    struct Funny {
+    struct Funny: Card {
+        var key: String = ""
+        
         var number: String = ""
         var type: Int?
         var description: String = ""
@@ -286,3 +312,83 @@ struct SourceData {
 
     }
 }
+
+extension Array {
+//    mutating func getData<T>(type: DataType) -> T {
+//        print("getData self: \(self)")
+//        if let data = self.randomElement() as? Card {
+//            print("機會還有：\(self.count) 題")
+//            self = self.filter({ element in
+//                if let e = element as? Card {
+//                    data.key != e.key
+//                } else {
+//                    return true
+//                }
+//            })
+//            print("刪除後，機會還有：\(self.count) 題")
+//            return data as! T
+//        } else {
+//            print("題目沒了，重新讀取來源")
+//            share.getDataSource(type: type)
+//            return self.getData(type: type)
+//        }
+//
+//    }
+}
+
+
+// test
+/*
+ func getCardData<T: Card>(type: DataType) -> T {
+//        var chance = SourceData.Chance()
+//        if let data = dataSource.chance.randomElement() {
+//            print("機會還有：\(dataSource.chance.count) 題")
+//            dataSource.chance = dataSource.chance.filter { $0.question != data.question }
+//            print("刪除後，機會還有：\(dataSource.chance.count) 題")
+//            chance = data
+//        } else {
+//            print("題目沒了，重新讀取來源")
+//            getDataSource(type: .chance)
+//            chance = getChanceData()
+//        }
+//        return chance
+     
+     var ary = [Any]()
+     switch type {
+     case .chance:
+         ary = dataSource.chance
+     case .fate:
+         ary = dataSource.fate
+     case .mark:
+         ary = dataSource.funny
+     default:
+         break
+     }
+     
+     var chance: T?
+     if let data = ary.randomElement() {
+         print("機會還有：\(dataSource.chance.count) 題")
+//            ary = ary.filter { $0 != data }
+//            print("刪除後，機會還有：\(dataSource.chancecount) 題")
+         
+         chance = data as? T
+         
+//            ary = ary.filter({ any in
+//                if let tmp = any as? T {
+//                    return tmp != data as! T
+//                } else {
+//                    return true
+//                }
+//            })
+         print("刪除後，機會還有：\(dataSource.chance.count) 題")
+         
+     } else {
+         print("題目沒了，重新讀取來源")
+//            getDataSource(type: .chance)
+         chance = getCardData(type: type)
+     }
+     
+     
+     return chance!
+ }
+ */
