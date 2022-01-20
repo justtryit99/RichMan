@@ -8,22 +8,48 @@
 
 import UIKit
 
+
+
+enum DataType {
+    case chance
+    case fate
+    case mark
+    case all
+}
+
+enum SourceType: String {
+    case test = "TestSource"
+    case formal = "FormalSource"
+}
+
+var sourceType = SourceType.test {
+    didSet {
+        share.resetData(type: sourceType)
+        
+    }
+}
+
 class ShareData: NSObject {
     static let instance = ShareData()
     
     var dataAry = [TeamData]()
-    var oldDataAry = [TeamData]()
     
-    var testSource = SourceData()
+    var dataSource = SourceData()
     
     override init() {
         super.init()
         
-        getTestSource()
+        getDataSource(type: .all)
     }
     
+    func resetData(type: SourceType) {
+        setData()
+        getDataSource(type: .all)
+    }
     
     func setData() {
+        dataAry = []
+        
         var tmp = TeamData()
         tmp.key = .chick
         tmp.color = .main
@@ -44,85 +70,116 @@ class ShareData: NSObject {
         tmp.color = .tasker
         dataAry.append(tmp)
         
-        oldDataAry = dataAry
     }
     
     func getChanceData() -> SourceData.Chance {
         var chance = SourceData.Chance()
-        if let data = testSource.chance.randomElement() {
-            print("機會還有：\(testSource.chance.count) 題")
-            testSource.chance = testSource.chance.filter { $0.question != data.question }
-            print("刪除後，機會還有：\(testSource.chance.count) 題")
+        if let data = dataSource.chance.randomElement() {
+            print("機會還有：\(dataSource.chance.count) 題")
+            dataSource.chance = dataSource.chance.filter { $0.question != data.question }
+            print("刪除後，機會還有：\(dataSource.chance.count) 題")
             chance = data
         } else {
             print("題目沒了，重新讀取來源")
-            resetChance()
+            getDataSource(type: .chance)
             chance = getChanceData()
         }
         return chance
     }
+//    func with<T: UIViewController>(id: StoryboardID) -> T {
+//    func getCardData(type: DataType) {
+//        var chance = SourceData.Chance()
+//        if let data = dataSource.chance.randomElement() {
+//            print("機會還有：\(dataSource.chance.count) 題")
+//            dataSource.chance = dataSource.chance.filter { $0.question != data.question }
+//            print("刪除後，機會還有：\(dataSource.chance.count) 題")
+//            chance = data
+//        } else {
+//            print("題目沒了，重新讀取來源")
+//            getDataSource(type: .chance)
+//            chance = getChanceData()
+//        }
+//        return chance
+//    }
     
-    func resetChance() {
-        let path = Bundle.main.path(forResource: "TestSource", ofType: "json")
+    func getDataSource(type: DataType) {
+        let path = Bundle.main.path(forResource: sourceType.rawValue, ofType: "json")
         if let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: .alwaysMapped), let decoder = try? JSONDecoder().decode(SourceCodable.self, from: data) {
             
             //print("decoder: \(decoder)")
-            for c in decoder.chance ?? [] {
-                var options = [String]()
-                for opt in c.options ?? [] {
-                    options.append(opt.uppercased())
+            
+            switch type {
+            case .chance:
+                dataSource.chance = []
+                for c in decoder.chance ?? [] {
+                    var options = [String]()
+                    for opt in c.options ?? [] {
+                        options.append(opt.uppercased())
+                    }
+                    let data = SourceData.Chance(number: c.number.str,
+                                                 type: 0, question: c.question.str.uppercased(),
+                                                 options: options,
+                                                 answer: c.answer.str.uppercased(),
+                                                 score: c.score ?? 0)
+                    dataSource.chance.append(data)
                 }
-                let data = SourceData.Chance(number: c.number.str,
-                                             type: 0, question: c.question.str.uppercased(),
-                                             options: options,
-                                             answer: c.answer.str.uppercased(),
-                                             score: c.score ?? 0)
-                testSource.chance.append(data)
-            }
-            
-        } else {
-            print("** getTestSource 解析失敗 ** ")
-            print("** getTestSource 解析失敗 ** ")
-            print("** getTestSource 解析失敗 ** ")
-        }
-    }
-    
-    func getTestSource() {
-        let path = Bundle.main.path(forResource: "TestSource", ofType: "json")
-        if let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: .alwaysMapped), let decoder = try? JSONDecoder().decode(SourceCodable.self, from: data) {
-            
-            //print("decoder: \(decoder)")
-            for c in decoder.chance ?? [] {
-                var options = [String]()
-                for opt in c.options ?? [] {
-                    options.append(opt.uppercased())
+            case .fate:
+                dataSource.fate = []
+                for f in decoder.fate ?? [] {
+                    let data = SourceData.Fate(number: f.number.str,
+                                               type: FateType(rawValue: f.type ?? 0) ?? .twoButton,
+                                               image: f.image.str,
+                                               description: f.description.str,
+                                               score: f.score ?? 0)
+                    dataSource.fate.append(data)
                 }
-                let data = SourceData.Chance(number: c.number.str,
-                                             type: 0, question: c.question.str.uppercased(),
-                                             options: options,
-                                             answer: c.answer.str.uppercased(),
-                                             score: c.score ?? 0)
-                testSource.chance.append(data)
+            case .mark:
+                dataSource.funny = []
+                for f in decoder.funny ?? [] {
+                    let data = SourceData.Funny(number: f.number.str,
+                                                type: 0, description: f.description.str,
+                                                score: f.score ?? 0,
+                                                action: f.action.str)
+                    dataSource.funny.append(data)
+                }
+            case .all:
+                dataSource = .init()
+                
+                for c in decoder.chance ?? [] {
+                    var options = [String]()
+                    for opt in c.options ?? [] {
+                        options.append(opt.uppercased())
+                    }
+                    let data = SourceData.Chance(number: c.number.str,
+                                                 type: 0, question: c.question.str.uppercased(),
+                                                 options: options,
+                                                 answer: c.answer.str.uppercased(),
+                                                 score: c.score ?? 0)
+                    dataSource.chance.append(data)
+                }
+                
+                for f in decoder.fate ?? [] {
+                    let data = SourceData.Fate(number: f.number.str,
+                                               type: FateType(rawValue: f.type ?? 0) ?? .twoButton,
+                                               image: f.image.str,
+                                               description: f.description.str,
+                                               score: f.score ?? 0)
+                    dataSource.fate.append(data)
+                }
+                
+                for f in decoder.funny ?? [] {
+                    let data = SourceData.Funny(number: f.number.str,
+                                                type: 0, description: f.description.str,
+                                                score: f.score ?? 0,
+                                                action: f.action.str)
+                    dataSource.funny.append(data)
+                }
             }
             
-            for f in decoder.fate ?? [] {
-                let data = SourceData.Fate(number: f.number.str,
-                                           type: FateType(rawValue: f.type ?? 0) ?? .twoButton,
-                                           image: f.image.str,
-                                           description: f.description.str,
-                                           score: f.score ?? 0)
-                testSource.fate.append(data)
-            }
             
-            for f in decoder.funny ?? [] {
-                let data = SourceData.Funny(number: f.number.str,
-                                            type: 0, description: f.description.str,
-                                            score: f.score ?? 0,
-                                            action: f.action.str)
-                testSource.funny.append(data)
-            }
+            
 
-            dump(testSource)
+//            dump(testSource)
             
         } else {
             print("** getTestSource 解析失敗 ** ")

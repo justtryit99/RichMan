@@ -12,6 +12,14 @@ class RootTBVC: UITableViewController {
     
 //    let model = RootTBModel()
     
+    lazy var sourceItem: UIBarButtonItem = {
+        let item = UIBarButtonItem()
+        let button = UIButton(type: .detailDisclosure)
+        button.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
+        button.addTarget(self, action: #selector(clickSourceItem(_:)), for: .touchUpInside)
+        item.customView = button
+        return item
+    }()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -37,6 +45,7 @@ class RootTBVC: UITableViewController {
         let barAppearance =  UINavigationBarAppearance()
         barAppearance.configureWithTransparentBackground()
         navigationController?.navigationBar.standardAppearance = barAppearance
+        navigationItem.leftBarButtonItem = sourceItem
         
         tableView.separatorStyle = .none
         tableView.backgroundColor = .black
@@ -46,6 +55,38 @@ class RootTBVC: UITableViewController {
         
         
     }
+    
+    @objc func clickSourceItem(_ sender: UIButton) {
+        let testAction = UIAlertAction(title: "測試", style: .default) { action in
+            showAlert(title: "切『 測試 』資料") { _ in
+                sourceType = .test
+                self.tableView.reloadData()
+            }
+        }
+        let formalAction = UIAlertAction(title: "正式", style: .default) { action in
+            showAlert(title: "切『 正式 』資料") { _ in
+                sourceType = .formal
+                self.tableView.reloadData()
+            }
+        }
+        UIAlertController.show(title: "Source", style: .actionSheet,
+                               actions: [testAction, formalAction],
+                               sourceView: sender)
+    }
+    
+    @IBAction func clickFileItem(_ sender: UIBarButtonItem) {
+//        sender.customView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
+        let testAction = UIAlertAction(title: "測試", style: .default) { action in
+            
+        }
+        let formalAction = UIAlertAction(title: "正式", style: .default) { action in
+            
+        }
+        UIAlertController.show(title: "Source", style: .actionSheet,
+                               actions: [testAction, formalAction],
+                               sourceView: self.view, isMid: true)
+    }
+    
     
     // MARK: - Table view data source
 
