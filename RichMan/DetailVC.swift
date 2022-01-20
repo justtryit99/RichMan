@@ -148,15 +148,25 @@ class DetailVC: UIViewController {
             }
             
         }
+        
         let prison = UIAlertAction(title: "進入監獄", style: .destructive) { action in
-            showAlert(title: "\(self.teamKey.ToName()) 進入監獄\n增加回合一次") { action in
+            showAlert(title: "\(self.teamKey.ToName()) 進入監獄\n減少遊玩一次") { action in
                 self.addNumberTimes()
-                logEvent(row: row, score: 0, msg: "進入監獄，增加回合一次")
+                self.addNumberTimes()
+                logEvent(row: row, score: 0, msg: "進入監獄，減少遊玩一次")
             }
         }
         
+        let inStart = UIAlertAction(title: "剛好到起點", style: .default) { action in
+            showAlert(title: "\(self.teamKey.ToName()) 剛好到起點") { action in
+                self.addNumberTimes()
+                logEvent(row: row, score: 0 ,msg: "剛好到起點")
+            }
+            
+        }
+        
         UIAlertController.show(title: "選擇事件", style: .actionSheet,
-                               actions: [overStart, prison],
+                               actions: [overStart, prison, inStart],
                                sourceView: teamImageView)
         
     }
