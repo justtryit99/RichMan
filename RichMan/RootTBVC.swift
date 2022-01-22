@@ -68,7 +68,7 @@ class RootTBVC: UITableViewController {
         
         // 測試用
         sourceType = .formal
-        
+        testSource()
         
     }
     

@@ -51,6 +51,7 @@
 		EE228092278673BD003BBFDE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE228091278673BD003BBFDE /* UIColorExtension.swift */; };
 		EE228094278673CC003BBFDE /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE228093278673CC003BBFDE /* UITableViewExtension.swift */; };
 		EE228096278673D4003BBFDE /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE228095278673D4003BBFDE /* UIViewExtension.swift */; };
+		EE6D3A4D279C053700812296 /* PublicFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE6D3A4C279C053600812296 /* PublicFunc.swift */; };
 		EE82EEF52786991E00C2A655 /* RootTBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE82EEF42786991E00C2A655 /* RootTBModel.swift */; };
 		EEEA61BC278E7CBE003397D3 /* 千图厚黑体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEA61BB278E7CBD003397D3 /* 千图厚黑体.ttf */; };
 		EEEA61BE278E817D003397D3 /* ZiTiQuanXinYiGuanHeiTi4.0-2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEEA61BD278E817C003397D3 /* ZiTiQuanXinYiGuanHeiTi4.0-2.ttf */; };
@@ -112,6 +113,7 @@
 		EE228091278673BD003BBFDE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		EE228093278673CC003BBFDE /* UITableViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		EE228095278673D4003BBFDE /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		EE6D3A4C279C053600812296 /* PublicFunc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicFunc.swift; sourceTree = "<group>"; };
 		EE82EEF42786991E00C2A655 /* RootTBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTBModel.swift; sourceTree = "<group>"; };
 		EEEA61BB278E7CBD003397D3 /* 千图厚黑体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "千图厚黑体.ttf"; sourceTree = "<group>"; };
 		EEEA61BD278E817C003397D3 /* ZiTiQuanXinYiGuanHeiTi4.0-2.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZiTiQuanXinYiGuanHeiTi4.0-2.ttf"; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				3C3D922027897E9E00D3E9EF /* TestVC.swift */,
 				3C3D922127897E9E00D3E9EF /* TestVC.xib */,
 				3C6BFFAD2785E679001AF291 /* ShareData.swift */,
+				EE6D3A4C279C053600812296 /* PublicFunc.swift */,
 				3C6BFFA52785CCBF001AF291 /* Info.plist */,
 				3C183A44278B26F200360983 /* TestSource.json */,
 				3CB23B9C2798657A00FFD28F /* FormalSource.json */,
@@ -416,6 +419,7 @@
 				3C6BFFF12785EB1A001AF291 /* RootTBVC.swift in Sources */,
 				EEF1EB1C2786F59D009974D7 /* DetailVC.swift in Sources */,
 				3C537E362790533900C6EAD7 /* AnimatableImageView.swift in Sources */,
+				EE6D3A4D279C053700812296 /* PublicFunc.swift in Sources */,
 				EE228094278673CC003BBFDE /* UITableViewExtension.swift in Sources */,
 				EE228096278673D4003BBFDE /* UIViewExtension.swift in Sources */,
 				3C537E3A2790533900C6EAD7 /* ImageViewerDismissalInteractor.swift in Sources */,
