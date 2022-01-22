@@ -29,6 +29,8 @@ extension DetailVC: CardViewDelegate {
         let title = isSuccess ? successStr : failStr
         showAlert(title: title) { action in
             let row = getTeamRow(key: self.teamKey)
+            logEvent(row: row, score: isSuccess ? data.score : -data.score,
+                     msg: "\(isSuccess ? "通過" : "失敗")命運第\(data.number)題")
             share.dataAry[row].score += isSuccess ? data.score : -data.score
             self.delegate?.detatilSendReload()
         }
@@ -55,6 +57,7 @@ extension DetailVC: CardViewDelegate {
     func tapMainTeam(cardView: CardView) {
         // 主隊？客隊
         let score = cardView.fateData.score
+        let number = cardView.fateData.number
         let main = cardView.teamKey.ToName()
         let sub = cardView.subTeamKey.ToName()
         let row = getTeamRow(key: cardView.teamKey)
@@ -64,6 +67,11 @@ extension DetailVC: CardViewDelegate {
             let text = "\(main)獲得 \(score) 積分\n\(sub)減少 \(score)積分\n執行？"
             showAlert(title: text) { action in
                 
+                logEvent(row: row, score: score,
+                         msg: "與\(sub)對戰命運\(number)勝利")
+                logEvent(row: subRow, score: -score,
+                         msg: "與\(main)對戰命運\(number)慘敗")
+                
                 share.dataAry[row].score += score
                 share.dataAry[subRow].score -= score
                 self.delegate?.detatilSendReload()
@@ -72,6 +80,12 @@ extension DetailVC: CardViewDelegate {
         let subAction = UIAlertAction(title: "客：\(sub)", style: .default) { action in
             let text = "\(main)減少 \(score) 積分\n\(sub)獲得 \(score)積分\n執行？"
             showAlert(title: text) { action in
+                
+                logEvent(row: row, score: -score,
+                         msg: "與\(sub)對戰命運\(number)慘敗")
+                logEvent(row: subRow, score: score,
+                         msg: "與\(main)對戰命運\(number)勝利")
+                
                 share.dataAry[row].score -= score
                 share.dataAry[subRow].score += score
                 self.delegate?.detatilSendReload()
@@ -114,6 +128,10 @@ extension DetailVC: MarkViewDelegate {
         
         showAlert(title: "\(teamKey.ToName()) \(text) \(abs(data.score)) 積分") { action in
             let row = getTeamRow(key: self.teamKey)
+            
+            // 問號的分數已含正負符號
+            logEvent(row: row, score: data.score,
+                     msg: "問號第\(data.number)題")
             share.dataAry[row].score += data.score
             self.delegate?.detatilSendReload()
         }
