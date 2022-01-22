@@ -143,6 +143,11 @@ class RootTBVC: UITableViewController {
                 let text = alert.textFields?.first?.text ?? ""
                 if let score = Int(text) {
                     
+                    let count = score - share.dataAry[row].score
+                    logEvent(row: row, score: count,
+                             msg: "修改積分")
+                    share.dataAry[row].score += count
+                    self.detatilSendReload()
                 } else {
                     showAlert(title: "不是數字", confirmHandle: nil)
                 }
