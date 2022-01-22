@@ -61,6 +61,7 @@ extension DetailVC: CardViewDelegate {
                 share.dataAry[row].score -= score
                 share.dataAry[subRow].score += score
                 self.delegate?.detatilSendReload()
+                
             }
         }
         UIAlertController.show(title: "勝利方是？", style: .actionSheet,

@@ -13,7 +13,7 @@ enum CardType {
     case mark
 }
 
-enum FateType: Int, CaseIterable {
+enum FateType: Int, CaseIterable, Codable {
     case twoButton = 1
     case vsView = 2
 }

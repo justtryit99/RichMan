@@ -54,6 +54,19 @@ class RootTBVC: UITableViewController {
         //print("preferredDisplayMode: \(splitViewController?.preferredDisplayMode.rawValue)")
         
         
+        // *** 正式開始記得打開 ***
+        if let _ = Defaults[.dataAry] {
+            // 是否讀取舊資料
+            showAlert(title: "是否讀取舊資料") { action in
+                // 如果讀取存檔資料，應該是正式資料
+                sourceType = .formal
+                getDefaults()
+                self.tableView.reloadData()
+            }
+        }
+        
+        
+        
     }
     
     @objc func clickSourceItem(_ sender: UIButton) {
@@ -61,30 +74,19 @@ class RootTBVC: UITableViewController {
             showAlert(title: "切『 測試 』資料") { _ in
                 sourceType = .test
                 self.tableView.reloadData()
+                Defaults.removeAll()
             }
         }
         let formalAction = UIAlertAction(title: "正式", style: .default) { action in
             showAlert(title: "切『 正式 』資料") { _ in
                 sourceType = .formal
                 self.tableView.reloadData()
+                Defaults.removeAll()
             }
         }
         UIAlertController.show(title: "Source", style: .actionSheet,
                                actions: [testAction, formalAction],
                                sourceView: sender)
-    }
-    
-    @IBAction func clickFileItem(_ sender: UIBarButtonItem) {
-//        sender.customView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        let testAction = UIAlertAction(title: "測試", style: .default) { action in
-            
-        }
-        let formalAction = UIAlertAction(title: "正式", style: .default) { action in
-            
-        }
-        UIAlertController.show(title: "Source", style: .actionSheet,
-                               actions: [testAction, formalAction],
-                               sourceView: self.view, isMid: true)
     }
     
     
@@ -100,7 +102,7 @@ class RootTBVC: UITableViewController {
         
         let cellData = shareData.dataAry[row]
         let cell: TeamCell = tableView.createCell(indexPath: indexPath)
-        cell.backgroundColor = cellData.color
+        cell.backgroundColor = cellData.key.toColor()
         cell.headImageView.image = UIImage(named: cellData.key.rawValue)
         cell.scoreLabel.text = "\(cellData.score)"
         return cell
@@ -195,7 +197,11 @@ extension RootTBVC: DetailVCDelegate {
             }
         }
         print("oldIndexAry: \(oldIndexAry)")
+        
+        saveToDefaults()
+        
     }
+    
 }
 
 

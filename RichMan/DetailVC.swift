@@ -144,7 +144,6 @@ class DetailVC: UIViewController {
                 
                 share.dataAry[row].score += score
                 self.delegate?.detatilSendReload()
-                
             }
             
         }
@@ -154,6 +153,7 @@ class DetailVC: UIViewController {
                 self.addNumberTimes()
                 self.addNumberTimes()
                 logEvent(row: row, score: 0, msg: "進入監獄，減少遊玩一次")
+                saveToDefaults()
             }
         }
         
@@ -161,6 +161,7 @@ class DetailVC: UIViewController {
             showAlert(title: "\(self.teamKey.ToName()) 剛好到起點") { action in
                 self.addNumberTimes()
                 logEvent(row: row, score: 0 ,msg: "剛好到起點")
+                saveToDefaults()
             }
             
         }
@@ -191,7 +192,7 @@ class DetailVC: UIViewController {
         addNumberTimes()
         
         markView.setMarkData(share.getFunnyData())
-        
+        saveToDefaults()
     }
     
     // MARK: 點擊機會
@@ -205,12 +206,7 @@ class DetailVC: UIViewController {
         addNumberTimes()
         
         chanceCard.setChanceData(share.getChanceData())
-        
-        
-//        chanceCard.setChanceData(share.getCardData(type: .chance))
-        
-//        let card: SourceData.Chance = shareData.dataSource.chance.getData(type: .chance)
-//        chanceCard.setChanceData(card)
+        saveToDefaults()
         
     }
     
@@ -225,6 +221,7 @@ class DetailVC: UIViewController {
         addNumberTimes()
         
         fateCard.setFateData(share.getFateData())
+        saveToDefaults()
     }
     
     

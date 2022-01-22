@@ -32,8 +32,10 @@ var sourceType = SourceType.test {
 class ShareData: NSObject {
     static let instance = ShareData()
     
+    /// 隊伍資料源
     var dataAry = [TeamData]()
     
+    /// 題庫資料源
     var dataSource = SourceData()
     
     override init() {
@@ -52,22 +54,18 @@ class ShareData: NSObject {
         
         var tmp = TeamData()
         tmp.key = .chick
-        tmp.color = .main
         dataAry.append(tmp)
         
         tmp = TeamData()
         tmp.key = .marry
-        tmp.color = .marry
         dataAry.append(tmp)
         
         tmp = TeamData()
         tmp.key = .bear
-        tmp.color = .bear
         dataAry.append(tmp)
         
         tmp = TeamData()
         tmp.key = .tasker
-        tmp.color = .tasker
         dataAry.append(tmp)
         
     }
@@ -225,6 +223,38 @@ func logEvent(row: Int, score: Int, msg: String) {
     share.dataAry[row].log.append(text)
 }
 
+func saveToDefaults() {
+    Defaults[.dataSource] = try? PropertyListEncoder().encode(share.dataSource)
+    
+    Defaults[.dataAry] = []
+    for teamData in share.dataAry {
+        let encodeData = try? PropertyListEncoder().encode(teamData)
+        if let encodeData = encodeData {
+            Defaults[.dataAry]?.append(encodeData)
+        }
+    }
+    
+    print("Defaults[.dataAry]: \(Defaults[.dataAry])")
+}
+
+func getDefaults() {
+    if let defaultsSource = Defaults[.dataSource] {
+        if let dataSource = try? PropertyListDecoder().decode(SourceData.self, from: defaultsSource) {
+            share.dataSource = dataSource
+        }
+    }
+    
+    if let defaultsAry = Defaults[.dataAry] {
+        share.dataAry = []
+        for dataTmp in defaultsAry {
+            if let teamTmp = try? PropertyListDecoder().decode(TeamData.self, from: dataTmp) {
+                share.dataAry.append(teamTmp)
+            }
+        }
+    }
+    
+}
+
 
 
 // MARK: - Enum
@@ -274,12 +304,12 @@ struct SourceCodable: Codable {
     }
 }
 
-public protocol Card {
+public protocol Card: Codable {
     var key: String { get set }
 }
 
 // MARK: - Data
-struct SourceData {
+struct SourceData: Codable {
     var chance: [Chance] = []
     var fate: [Fate] = []
     var funny: [Funny] = []
