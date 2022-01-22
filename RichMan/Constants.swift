@@ -8,7 +8,14 @@
 
 import UIKit
 import AdSupport
-//import SwiftyUserDefaults
+import SwiftyUserDefaults
+
+
+extension DefaultsKeys {
+    static let dataSource = DefaultsKey<Data?>("dataSource")
+    static let dataAry = DefaultsKey<[Data]?>("dataAry")
+}
+
 
 
 public let Defaults = UserDefaults.standard

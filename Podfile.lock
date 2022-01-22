@@ -1,16 +1,20 @@
 PODS:
   - LTMorphingLabel (0.9.3)
+  - SwiftyUserDefaults (3.0.1)
 
 DEPENDENCIES:
-  - LTMorphingLabel
+  - LTMorphingLabel (~> 0.9.3)
+  - SwiftyUserDefaults (~> 3.0.1)
 
 SPEC REPOS:
   trunk:
     - LTMorphingLabel
+    - SwiftyUserDefaults
 
 SPEC CHECKSUMS:
   LTMorphingLabel: f2b256e4fe665aac27f0d0e8ccdcd79590f0cd70
+  SwiftyUserDefaults: 3d273b1739b68ada3145dc754a70ec775bc5c8be
 
-PODFILE CHECKSUM: a8b9e2b84e1e5288c2026fdbfb31095c4e075add
+PODFILE CHECKSUM: f7b93aef1662cdce4a7806f84e57aa6c100a6fac
 
 COCOAPODS: 1.10.2
