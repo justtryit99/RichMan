@@ -133,6 +133,27 @@ class RootTBVC: UITableViewController {
         
         let editAction = UIContextualAction(style: .normal, title: "修改") { (action, view, completionHandler) in
             
+            let alert = UIAlertController(title: "修改積分", message: nil, preferredStyle: .alert)
+            
+            alert.addTextField { textField in
+                textField.keyboardType = .numberPad
+            }
+            
+            let okAction = UIAlertAction(title: "修改", style: .default) { action in
+                let text = alert.textFields?.first?.text ?? ""
+                if let score = Int(text) {
+                    
+                } else {
+                    showAlert(title: "不是數字", confirmHandle: nil)
+                }
+            }
+            
+            alert.addAction(okAction)
+            
+            let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+            alert.addAction(cancelAction)
+            
+            self.present(alert, animated: true, completion: nil)
             completionHandler(true)
         }
         editAction.backgroundColor = UIColor(255, 171, 69, 1)
