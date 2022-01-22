@@ -183,7 +183,7 @@ extension RootTBVC: DetailVCDelegate {
         shareData.dataAry.sort { data1, data2 in
             return data1.score > data2.score
         }
-        dump(shareData.dataAry)
+        //dump(shareData.dataAry)
         
         DispatchQueue.main.asyncAfter(deadline: 0.8) {
             for (newIndex, data) in shareData.dataAry.enumerated() {
@@ -196,7 +196,7 @@ extension RootTBVC: DetailVCDelegate {
                 }
             }
         }
-        print("oldIndexAry: \(oldIndexAry)")
+        //print("oldIndexAry: \(oldIndexAry)")
         
         saveToDefaults()
         

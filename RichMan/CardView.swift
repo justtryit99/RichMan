@@ -23,6 +23,7 @@ protocol CardViewDelegate: AnyObject {
     func tapMainTeam(cardView: CardView)
     func tapSubTeam(cardView: CardView)
     func clickABCbutton(isSuccess: Bool, title: String, data: SourceData.Chance)
+    func clickTimeLabel(data: SourceData.Chance)
     func clickTwoButton(isSuccess: Bool, data: SourceData.Fate)
 }
 
@@ -164,9 +165,12 @@ class CardView: BaseView {
         mainTeamImg.addGestureRecognizer(tapMainTeam)
         let tapSubTeam = UITapGestureRecognizer(target: self, action: #selector(tapSubTeam))
         subTeamImg.addGestureRecognizer(tapSubTeam)
-        
+        let tapTime = UITapGestureRecognizer(target: self, action: #selector(tapTimeLabel))
+        countLabel.addGestureRecognizer(tapTime)
         
     }
+    
+    
     
     @objc func tapImageView(_ sender: UITapGestureRecognizer) {
         guard let img = sender.view as? UIImageView else {
@@ -226,7 +230,9 @@ class CardView: BaseView {
         delegate?.clickTwoButton(isSuccess: isSucces, data: fateData)
     }
     
-    
+    @objc func tapTimeLabel() {
+        delegate?.clickTimeLabel(data: chanceData)
+    }
     
 }
 

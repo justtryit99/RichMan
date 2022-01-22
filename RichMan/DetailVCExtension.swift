@@ -9,6 +9,20 @@ import UIKit
 
 // MARK: - CardViewDelegate
 extension DetailVC: CardViewDelegate {
+    func clickTimeLabel(data: SourceData.Chance) {
+        showAlert(title: "是否超出時間？") { action in
+            let text = "超出時間！\n答案是：\(data.answer)\n減少 \(data.score) 積分"
+            
+            showAlert(title: text) { action in
+                let row = getTeamRow(key: self.teamKey)
+                logEvent(row: row, score: -data.score,
+                         msg: "機會第\(data.number)題 超時")
+                share.dataAry[row].score += -data.score
+                self.delegate?.detatilSendReload()
+            }
+        }
+    }
+    
     func clickTwoButton(isSuccess: Bool, data: SourceData.Fate) {
         let successStr = "確定通過命運考驗？\n增加 \(data.score) 積分"
         let failStr = "命運坎坷失敗了？\n減少 \(data.score) 積分"
