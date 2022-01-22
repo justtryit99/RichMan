@@ -1,28 +1,604 @@
 {
     "chance" : [
         {
-            "number" : "1",
-            "type" : 0,
-            "question" : "正式請問誰是kobe?",
-            "options" : ["kobe", "jordan", "curry"],
-            "answer" : "kobe",
-            "score" : 100
+            "number": "1",
+            "type": 0,
+            "question": "小雞利用何種方式實現新轉場動畫？",
+            "options": [
+                "共享尿素",
+                "共享元素",
+                "共享激素"
+            ],
+            "answer": "共享元素",
+            "score": 100
         },
         {
-            "number" : "2",
-            "type" : 0,
-            "question" : "正式請問誰是jordan?",
-            "options" : ["kobe", "jordan", "curry"],
-            "answer" : "jordan",
-            "score" : 100
+            "number": "2",
+            "type": 0,
+            "question": "小雞使用什麼工具，達到API解析失敗時通知？",
+            "options": [
+                "Slack",
+                "Line bot",
+                "RTX"
+            ],
+            "answer": "Slack",
+            "score": 100
         },
         {
-            "number" : "3",
-            "type" : 0,
-            "question" : "正式請問誰是curry?",
-            "options" : ["kobe", "jordan", "curry"],
-            "answer" : "curry",
-            "score" : 100
+            "number": "3",
+            "type": 0,
+            "question": "哪一項不是小雞APP的報告項目？",
+            "options": [
+                "社群文章文繞圖",
+                "訊息收回功能",
+                "使用SPM"
+            ],
+            "answer": "使用SPM",
+            "score": 100
+        },
+        {
+            "number": "4",
+            "type": 0,
+            "question": "哪一項沒有在小雞slack提醒的內容？",
+            "options": [
+                "api name",
+                "app version",
+                "api version"
+            ],
+            "answer": "api version",
+            "score": 100
+        },
+        {
+            "number": "5",
+            "type": 0,
+            "question": "小雞開發流程加入了什麼改善開發？",
+            "options": [
+                "搜尋引擎",
+                "資料表關聯圖",
+                "新主機"
+            ],
+            "answer": "資料表關聯圖",
+            "score": 100
+        },
+        {
+            "number": "6",
+            "type": 0,
+            "question": "小雞超前部屬了何種搜尋引擎？",
+            "options": [
+                "Elapsesearch",
+                "Eaglesearch",
+                "Elasticsearch"
+            ],
+            "answer": "Elasticsearch",
+            "score": 100
+        },
+        {
+            "number": "7",
+            "type": 0,
+            "question": "小雞使用了何種框架打造聊天室？",
+            "options": [
+                "Vue.js",
+                "React",
+                "AngularJS"
+            ],
+            "answer": "Vue.js",
+            "score": 100
+        },
+        {
+            "number": "8",
+            "type": 0,
+            "question": "小雞這次活動頁使用什麼動畫技術？",
+            "options": [
+                "GIF",
+                "lotte",
+                "LOTTIE"
+            ],
+            "answer": "LOTTIE",
+            "score": 100
+        },
+        {
+            "number": "9",
+            "type": 0,
+            "question": "哪一項不是小雞未來展望？",
+            "options": [
+                "技術交流",
+                "完善開發規範",
+                "UI元件畫"
+            ],
+            "answer": "完善開發規範",
+            "score": 100
+        },
+        {
+            "number": "10",
+            "type": 0,
+            "question": "小雞APP現在request只能使用何種型別？",
+            "options": [
+                "String",
+                "Dictionary",
+                "都可以"
+            ],
+            "answer": "都可以",
+            "score": 100
+        },
+        {
+            "number": "11",
+            "type": 0,
+            "question": "熊班前端的Vue採用什麼框架?",
+            "options": [
+                "MVC",
+                "MVVM",
+                "MVP"
+            ],
+            "answer": "MVVM",
+            "score": 100
+        },
+        {
+            "number": "12",
+            "type": 0,
+            "question": "熊班Vue解決了什麼痛點?",
+            "options": [
+                "UI體驗",
+                "UA體驗",
+                "UX體驗"
+            ],
+            "answer": "UX體驗",
+            "score": 100
+        },
+        {
+            "number": "13",
+            "type": 0,
+            "question": "熊班iOS使用了什麼管理工具?",
+            "options": [
+                "SPA",
+                "SPN",
+                "SPM"
+            ],
+            "answer": "SPM",
+            "score": 100
+        },
+        {
+            "number": "14",
+            "type": 0,
+            "question": "熊班Web使用了哪種爬蟲工具?",
+            "options": [
+                "VisualScraper",
+                "Selenium",
+                "ParseHub"
+            ],
+            "answer": "Selenium",
+            "score": 100
+        },
+        {
+            "number": "15",
+            "type": 0,
+            "question": "熊班Android Launcher Icon 需要前後景size為?",
+            "options": [
+                "108x108",
+                "118x118",
+                "128x128"
+            ],
+            "answer": "108x108",
+            "score": 100
+        },
+        {
+            "number": "16",
+            "type": 0,
+            "question": "熊班Android 在哪個版本引入了 adaptive icons?",
+            "options": [
+                "M",
+                "O",
+                "Q"
+            ],
+            "answer": "O",
+            "score": 100
+        },
+        {
+            "number": "17",
+            "type": 0,
+            "question": "熊班使用Vue遇到的最大難題?",
+            "options": [
+                "開發時間增加",
+                "開發過程繁瑣",
+                "學習門檻高"
+            ],
+            "answer": "開發時間增加",
+            "score": 100
+        },
+        {
+            "number": "18",
+            "type": 0,
+            "question": "熊班前端的Vue中切換頁面不卡頓是因為什麼應用?",
+            "options": [
+                "單頁面應用",
+                "雙葉面應用",
+                "多頁面應用"
+            ],
+            "answer": "單頁面應用",
+            "score": 100
+        },
+        {
+            "number": "19",
+            "type": 0,
+            "question": "熊班iOS用 SPM的缺點?",
+            "options": [
+                "需另外安裝工具",
+                "分享困難",
+                "不支援所有套件"
+            ],
+            "answer": "不支援所有套件",
+            "score": 100
+        },
+        {
+            "number": "20",
+            "type": 0,
+            "question": "熊班履歷編輯使用Vue的優點是哪個?",
+            "options": [
+                "快速存取",
+                "即時性的操作回饋",
+                "不用打Api"
+            ],
+            "answer": "即時性的操作回饋",
+            "score": 100
+        },
+        {
+            "number": "21",
+            "type": 0,
+            "question": "結婚吧簡報中，Sitemap未壓縮時的檔案大小上限為多少MB？",
+            "options": [
+                "40",
+                "50",
+                "60"
+            ],
+            "answer": "50",
+            "score": 100
+        },
+        {
+            "number": "22",
+            "type": 0,
+            "question": "結婚吧簡報中，Google提出的三大指標不包含哪一個？",
+            "options": [
+                "LCP",
+                "CLS",
+                "LPC"
+            ],
+            "answer": "LPC",
+            "score": 100
+        },
+        {
+            "number": "23",
+            "type": 0,
+            "question": "結婚吧簡報中，LCP飆高的原因？",
+            "options": [
+                "版面位移",
+                "蓋台",
+                "站台被攻擊"
+            ],
+            "answer": "蓋台",
+            "score": 100
+        },
+        {
+            "number": "24",
+            "type": 0,
+            "question": "結婚吧簡報中，什麼情境會使CLS升高？",
+            "options": [
+                "骨盆位移",
+                "版面位移",
+                "板塊位移"
+            ],
+            "answer": "版面位移",
+            "score": 100
+        },
+        {
+            "number": "25",
+            "type": 0,
+            "question": "結婚吧為了新人，沒有做哪件事？",
+            "options": [
+                "電子喜帖改版",
+                "婚禮預算表",
+                "聯誼相親"
+            ],
+            "answer": "聯誼相親",
+            "score": 100
+        },
+        {
+            "number": "26",
+            "type": 0,
+            "question": "結婚吧ANDROID被退審的原因，不包括下列哪一個？",
+            "options": [
+                "未提供有效的示範帳戶",
+                "未提供對創作者的檢舉及刪除功能",
+                "未提供有效的銀行帳戶"
+            ],
+            "answer": "未提供有效的銀行帳戶",
+            "score": 100
+        },
+        {
+            "number": "27",
+            "type": 0,
+            "question": "結婚吧IOS電子喜帖照片上傳失敗的原因，是因為下列哪個副檔名？",
+            "options": [
+                "HERO",
+                "HEIC",
+                "HERE"
+            ],
+            "answer": "HEIC",
+            "score": 100
+        },
+        {
+            "number": "28",
+            "type": 0,
+            "question": "結婚吧封鎖國外IP，是用了哪一個？",
+            "options": [
+                "GeoIP1",
+                "GeoIP2",
+                "GeoIP3"
+            ],
+            "answer": "GeoIP2",
+            "score": 100
+        },
+        {
+            "number": "29",
+            "type": 0,
+            "question": "結婚吧用了哪個涵式進行HEIC/HEIF轉換JPG？",
+            "options": [
+                "UIImageToJPGRepresentation",
+                "UIImageJPGRepresentation",
+                "UIImageJPEGRepresentation"
+            ],
+            "answer": "UIImageJPEGRepresentation",
+            "score": 100
+        },
+        {
+            "number": "30",
+            "type": 0,
+            "question": "結婚吧圖片轉WEBP，最後會傳上哪個雲端服務？",
+            "options": [
+                "GCP",
+                "Azure",
+                "AWS"
+            ],
+            "answer": "AWS",
+            "score": 100
+        },
+        {
+            "number": "31",
+            "type": 0,
+            "question": "出任務使用圖片辨識的技術是?",
+            "options": [
+                "Version",
+                "Vision",
+                "Vista"
+            ],
+            "answer": "Vision",
+            "score": 100
+        },
+        {
+            "number": "32",
+            "type": 0,
+            "question": "出任務使用哪種新的支付系統?",
+            "options": [
+                "TapPay",
+                "TapePay",
+                "TappPay"
+            ],
+            "answer": "TapPay",
+            "score": 100
+        },
+        {
+            "number": "33",
+            "type": 0,
+            "question": "出任務讓HTML怎麼了?",
+            "options": [
+                "模組化",
+                "元件化",
+                "單例化"
+            ],
+            "answer": "元件化",
+            "score": 100
+        },
+        {
+            "number": "34",
+            "type": 0,
+            "question": "出任務用了什麼技術，讓文章區流量成長",
+            "options": [
+                "AGP",
+                "AAC",
+                "AMP"
+            ],
+            "answer": "AMP",
+            "score": 100
+        },
+        {
+            "number": "35",
+            "type": 0,
+            "question": "出任務使用了哪種遷端框架",
+            "options": [
+                "Angular JS",
+                "Node JS",
+                "React JS"
+            ],
+            "answer": "React JS",
+            "score": 100
+        },
+        {
+            "number": "36",
+            "type": 0,
+            "question": "出任務使用了哪款編輯器",
+            "options": [
+                "DiroEditor",
+                "CKEditor",
+                "GucciEditor"
+            ],
+            "answer": "CKEditor",
+            "score": 100
+        },
+        {
+            "number": "37",
+            "type": 0,
+            "question": "出任務的文章區流量成長了幾倍?",
+            "options": [
+                "7倍",
+                "8倍",
+                "9倍"
+            ],
+            "answer": "8倍",
+            "score": 100
+        },
+        {
+            "number": "38",
+            "type": 0,
+            "question": "出任務使用AMP需要注意哪個地方",
+            "options": [
+                "使用門檻高",
+                "有裝置支援性問題",
+                "大幅限制JS使用"
+            ],
+            "answer": "大幅限制JS使用",
+            "score": 100
+        },
+        {
+            "number": "39",
+            "type": 0,
+            "question": "出任務Vision可以達到以下哪種效果?",
+            "options": [
+                "提取出圖片內的文字",
+                "偵測圖片是否含有裸露內容",
+                "以上皆是"
+            ],
+            "answer": "以上皆是",
+            "score": 100
+        },
+        {
+            "number": "40",
+            "type": 0,
+            "question": "出任務備援 mail server是哪間的?",
+            "options": [
+                "Amazon",
+                "Google",
+                "MailCloud"
+            ],
+            "answer": "Amazon",
+            "score": 100
+        },
+        {
+            "number": "41",
+            "type": 0,
+            "question": "維運使用HTTP/2的優點",
+            "options": [
+                "單工處理",
+                "雙工處理",
+                "多工處理"
+            ],
+            "answer": "",
+            "score": 100
+        },
+        {
+            "number": "42",
+            "type": 0,
+            "question": "維運HTTP/2因為還不支援什麼，所以只讓靜態主機使用",
+            "options": [
+                "HTTPS",
+                "SOCKET",
+                "PROTOCOL"
+            ],
+            "answer": "SOCKET",
+            "score": 100
+        },
+        {
+            "number": "43",
+            "type": 0,
+            "question": "維運iOS推播改HTTP/2後解決了什麼問題?",
+            "options": [
+                "點擊率提高",
+                "裝置不漏接",
+                "憑證不用每年更換"
+            ],
+            "answer": "憑證不用每年更換",
+            "score": 100
+        },
+        {
+            "number": "44",
+            "type": 0,
+            "question": "維運Leetcode訓練時間為?",
+            "options": [
+                "週二 6:30",
+                "週三 6:30",
+                "週四 6:30"
+            ],
+            "answer": "週三 6:30",
+            "score": 100
+        },
+        {
+            "number": "45",
+            "type": 0,
+            "question": "維運ios推播改http/2後，發送速度快幾倍？",
+            "options": [
+                "5倍",
+                "10倍",
+                "15倍"
+            ],
+            "answer": "5倍",
+            "score": 100
+        },
+        {
+            "number": "46",
+            "type": 0,
+            "question": "哪一個是維運升級的項目？",
+            "options": [
+                "OpenResty",
+                "OpenEye",
+                "OpenRabbit"
+            ],
+            "answer": "OpenResty",
+            "score": 100
+        },
+        {
+            "number": "47",
+            "type": 0,
+            "question": "維運使用OpenResty後，nginx安裝時間由30縮短至幾分鐘?",
+            "options": [
+                "5分鐘",
+                "8分鐘",
+                "10分鐘"
+            ],
+            "answer": "5分鐘",
+            "score": 100
+        },
+        {
+            "number": "48",
+            "type": 0,
+            "question": "維運AI演算法引入中研院何種系統?",
+            "options": [
+                "結巴系統",
+                "語句分析系統",
+                "新分詞系統"
+            ],
+            "answer": "新分詞系統",
+            "score": 100
+        },
+        {
+            "number": "49",
+            "type": 0,
+            "question": "維運AI演算法服務數量由4個增加到幾個?",
+            "options": [
+                "13",
+                "14",
+                "15"
+            ],
+            "answer": "13",
+            "score": 100
+        },
+        {
+            "number": "50",
+            "type": 0,
+            "question": "維運管理工作排成解決方案使用了?",
+            "options": [
+                "waterflow",
+                "airflow",
+                "earthflow"
+            ],
+            "answer": "airflow",
+            "score": 100
         }
     ],
     "fate" : [

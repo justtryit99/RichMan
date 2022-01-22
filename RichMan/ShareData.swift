@@ -77,6 +77,7 @@ class ShareData: NSObject {
             dataSource.chance = dataSource.chance.filter { $0.question != data.question }
             print("刪除後，機會還有：\(dataSource.chance.count) 題")
             chance = data
+            print("getChanceData: \(chance)")
         } else {
             print("題目沒了，重新讀取來源")
             getDataSource(type: .chance)
@@ -143,7 +144,7 @@ class ShareData: NSObject {
                     let data = SourceData.Fate(number: f.number.str,
                                                type: FateType(rawValue: f.type ?? 0) ?? .twoButton,
                                                image: f.image.str,
-                                               description: f.description.str,
+                                               description: f.description.str.uppercased(),
                                                score: f.score ?? 0)
                     dataSource.fate.append(data)
                 }
@@ -151,7 +152,7 @@ class ShareData: NSObject {
                 dataSource.funny = []
                 for f in decoder.funny ?? [] {
                     let data = SourceData.Funny(number: f.number.str,
-                                                type: 0, description: f.description.str,
+                                                type: 0, description: f.description.str.uppercased(),
                                                 score: f.score ?? 0,
                                                 action: f.action.str)
                     dataSource.funny.append(data)
@@ -176,14 +177,14 @@ class ShareData: NSObject {
                     let data = SourceData.Fate(number: f.number.str,
                                                type: FateType(rawValue: f.type ?? 0) ?? .twoButton,
                                                image: f.image.str,
-                                               description: f.description.str,
+                                               description: f.description.str.uppercased(),
                                                score: f.score ?? 0)
                     dataSource.fate.append(data)
                 }
                 
                 for f in decoder.funny ?? [] {
                     let data = SourceData.Funny(number: f.number.str,
-                                                type: 0, description: f.description.str,
+                                                type: 0, description: f.description.str.uppercased(),
                                                 score: f.score ?? 0,
                                                 action: f.action.str)
                     dataSource.funny.append(data)
