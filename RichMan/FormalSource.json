@@ -603,18 +603,67 @@
     ],
     "fate" : [
         {
-            "number" : "1",
-            "type" : 1,
-            "image" : "基紐",
-            "description" : "正式請依照圖片動作拍照，通過即可得分",
-            "score" : 180
+            "number":"1",
+            "type":"2",
+            "image":"",
+            "description":"拳法：『瘋狂黑白猜』\n請指定任一隊伍對戰\n生死有命，富貴在天",
+            "score":"200"
         },
         {
-            "number" : "2",
-            "type" : 2,
-            "image" : "",
-            "description" : "正式拳法：『海帶拳』\n請指定任一隊伍對戰\n生死有命，富貴在天",
-            "score" : 300
+            "number":"2",
+            "type":"2",
+            "image":"",
+            "description":"拳法：『海帶拳』\n請指定任一隊伍對戰\n生死有命，富貴在天",
+            "score":"200"
+        },
+        {
+            "number":"3",
+            "type":"2",
+            "image":"",
+            "description":"玩法：『猜彈珠』\n請指定任一隊伍對戰\n生死有命，富貴在天",
+            "score":"200"
+        },
+        {
+            "number":"4",
+            "type":"2",
+            "image":"",
+            "description":"玩法：『打卡片』\n請指定任一隊伍對戰\n生死有命，富貴在天",
+            "score":"200"
+        },
+        {
+            "number":"5",
+            "type":"1",
+            "image":"基紐",
+            "description":"請依照圖片動作拍照，通過即可得分",
+            "score":"200"
+        },
+        {
+            "number":"6",
+            "type":"1",
+            "image":"高升",
+            "description":"請依照圖片動作拍照，通過即可得分",
+            "score":"200"
+        },
+        {
+            "number":"7",
+            "type":"1",
+            "image":"氣波",
+            "description":"請依照圖片動作拍照，通過即可得分",
+            "score":"200"
+        },
+        {
+            "number":"8",
+            "type":"1",
+            "image":"千手",
+            "description":"請依照圖片動作拍照，通過即可得分",
+            "score":"200"
+        },
+        {
+            "number":"9",
+            "type":"1",
+            "image":"金剛",
+            "description":"請依照圖片動作拍照，通過即可得分",
+            "score":"200"
         }
     ],
     "funny" : [

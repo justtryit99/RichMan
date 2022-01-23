@@ -93,7 +93,7 @@ class ShareData: NSObject {
         var chance = SourceData.Fate()
         if let data = dataSource.fate.randomElement() {
             print("命運還有：\(dataSource.fate.count) 題")
-            dataSource.fate = dataSource.fate.filter { $0.description != data.description }
+            dataSource.fate = dataSource.fate.filter { $0.number != data.number }
             print("刪除後，命運還有：\(dataSource.fate.count) 題")
             chance = data
         } else {
@@ -144,11 +144,15 @@ class ShareData: NSObject {
             case .fate:
                 dataSource.fate = []
                 for f in decoder.fate ?? [] {
+                    if Int(f.score.str) == nil || Int(f.type.str) == nil {
+                        print("＊＊＊ getDataSource 轉int失敗 ＊＊＊")
+                    }
+                    
                     let data = SourceData.Fate(number: f.number.str,
-                                               type: FateType(rawValue: f.type ?? 0) ?? .twoButton,
+                                               type: FateType(rawValue: Int(f.type.str) ?? 0) ?? .twoButton,
                                                image: f.image.str,
                                                description: f.description.str.uppercased(),
-                                               score: f.score ?? 0)
+                                               score: Int(f.score.str) ?? 200)
                     dataSource.fate.append(data)
                 }
             case .mark:
@@ -177,11 +181,14 @@ class ShareData: NSObject {
                 }
                 
                 for f in decoder.fate ?? [] {
+                    if Int(f.score.str) == nil || Int(f.type.str) == nil {
+                        print("＊＊＊ getDataSource 轉int失敗 ＊＊＊")
+                    }
                     let data = SourceData.Fate(number: f.number.str,
-                                               type: FateType(rawValue: f.type ?? 0) ?? .twoButton,
+                                               type: FateType(rawValue: Int(f.type.str) ?? 0) ?? .twoButton,
                                                image: f.image.str,
                                                description: f.description.str.uppercased(),
-                                               score: f.score ?? 0)
+                                               score: Int(f.score.str) ?? 200)
                     dataSource.fate.append(data)
                 }
                 
@@ -235,9 +242,9 @@ struct SourceCodable: Codable {
     
     struct Fate: Codable {
         let number: String?
-        let type: Int?
+        let type: String?
         let image, description: String?
-        let score: Int?
+        let score: String?
 
         enum CodingKeys: String, CodingKey {
             case number, type, image

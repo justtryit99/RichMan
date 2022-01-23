@@ -28,17 +28,17 @@
     "fate" : [
         {
             "number" : "1",
-            "type" : 1,
+            "type" : "1",
             "image" : "基紐",
             "description" : "請依照圖片動作拍照，通過即可得分",
-            "score" : 180
+            "score" : "180"
         },
         {
             "number" : "2",
-            "type" : 2,
+            "type" : "2",
             "image" : "",
             "description" : "拳法：海帶拳\n請指定任一隊伍對戰\n生死有命，富貴在天",
-            "score" : 300
+            "score" : "300"
         }
     ],
     "funny" : [
