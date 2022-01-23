@@ -19,6 +19,7 @@ extension DetailVC: CardViewDelegate {
                          msg: "機會第\(data.number)題 超時")
                 share.dataAry[row].score += -data.score
                 self.delegate?.detatilSendReload()
+                self.isCountScore = true
             }
         }
     }
@@ -33,6 +34,7 @@ extension DetailVC: CardViewDelegate {
                      msg: "\(isSuccess ? "通過" : "失敗")命運第\(data.number)題")
             share.dataAry[row].score += isSuccess ? data.score : -data.score
             self.delegate?.detatilSendReload()
+            self.isCountScore = true
         }
     }
     
@@ -49,6 +51,7 @@ extension DetailVC: CardViewDelegate {
                          msg: "\(isSuccess ? "答對" : "答錯")機會第\(data.number)題")
                 share.dataAry[row].score += isSuccess ? data.score : -data.score
                 self.delegate?.detatilSendReload()
+                self.isCountScore = true
             }
             
         }
@@ -75,6 +78,7 @@ extension DetailVC: CardViewDelegate {
                 share.dataAry[row].score += score
                 share.dataAry[subRow].score -= score
                 self.delegate?.detatilSendReload()
+                self.isCountScore = true
             }
         }
         let subAction = UIAlertAction(title: "客：\(sub)", style: .default) { action in
@@ -89,6 +93,7 @@ extension DetailVC: CardViewDelegate {
                 share.dataAry[row].score -= score
                 share.dataAry[subRow].score += score
                 self.delegate?.detatilSendReload()
+                self.isCountScore = true
                 
             }
         }
@@ -134,6 +139,7 @@ extension DetailVC: MarkViewDelegate {
                      msg: "問號第\(data.number)題")
             share.dataAry[row].score += data.score
             self.delegate?.detatilSendReload()
+            self.isCountScore = true
         }
     }
 }

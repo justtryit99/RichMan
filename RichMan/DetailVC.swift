@@ -53,6 +53,7 @@ class DetailVC: UIViewController {
     let countDefault = 11
     var secTimer = Timer()
     var tapCardType = CardType.chance
+    var isCountScore = false
     
     
 //    var timeAry: [TimeInterval] = [0.5, 0.3, 0.2, 0.2, 0.3, 0.5]
@@ -173,11 +174,24 @@ class DetailVC: UIViewController {
     }
     
     @objc func tapTeam2() {
-        switch tapCardType {
-        case .chance, .fate:
-            closeCard(type: tapCardType)
-        case .mark:
-            closeMark()
+        if isCountScore == false {
+            showAlert(title: "尚未計分，流局？") { action in
+                logEvent(row: getTeamRow(key: self.teamKey), score: 0, msg: "流局")
+                saveToDefaults()
+                switch self.tapCardType {
+                case .chance, .fate:
+                    self.closeCard(type: self.tapCardType)
+                case .mark:
+                    self.closeMark()
+                }
+            }
+        } else {
+            switch tapCardType {
+            case .chance, .fate:
+                closeCard(type: tapCardType)
+            case .mark:
+                closeMark()
+            }
         }
     }
     
@@ -192,6 +206,7 @@ class DetailVC: UIViewController {
         addNumberTimes()
         
         markView.setMarkData(share.getFunnyData())
+        isCountScore = false
         saveToDefaults()
     }
     
@@ -206,6 +221,7 @@ class DetailVC: UIViewController {
         addNumberTimes()
         
         chanceCard.setChanceData(share.getChanceData())
+        isCountScore = false
         saveToDefaults()
         
     }
@@ -221,6 +237,7 @@ class DetailVC: UIViewController {
         addNumberTimes()
         
         fateCard.setFateData(share.getFateData())
+        isCountScore = false
         saveToDefaults()
     }
     
