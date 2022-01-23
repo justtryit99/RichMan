@@ -44,17 +44,17 @@
     "funny" : [
         {
             "number" : "1",
-            "type" : 0,
+            "type" : "0",
             "description" : "出門搭丟賽",
             "action" : "加分？扣分？",
-            "score" : -500
+            "score" : "-500"
         },
         {
             "number" : "2",
-            "type" : 0,
+            "type" : "0",
             "description" : "出門搭丟賽，但遇到好心人施捨",
             "action" : "加分？扣分？",
-            "score" : 500
+            "score" : "500"
         }
     ]
 }

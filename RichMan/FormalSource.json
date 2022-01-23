@@ -668,18 +668,74 @@
     ],
     "funny" : [
         {
-            "number" : "1",
-            "type" : 0,
-            "description" : "正式出門搭丟賽",
-            "action" : "加分？扣分？",
-            "score" : -500
+            "number":"1",
+            "type":"",
+            "description":"Crash啦！\n你PM在你背後很怒",
+            "action":"",
+            "score":"-200"
         },
         {
-            "number" : "2",
-            "type" : 0,
-            "description" : "正式出門搭丟賽，但遇到好心人施捨",
-            "action" : "加分？扣分？",
-            "score" : 500
+            "number":"2",
+            "type":"",
+            "description":"網頁404\n你老闆正火冒唐三藏",
+            "action":"",
+            "score":"-200"
+        },
+        {
+            "number":"3",
+            "type":"",
+            "description":"Server掛了\n購買新主機",
+            "action":"",
+            "score":"-200"
+        },
+        {
+            "number":"4",
+            "type":"",
+            "description":"乖乖過期\n站台出現一推蟲",
+            "action":"",
+            "score":"-200"
+        },
+        {
+            "number":"5",
+            "type":"",
+            "description":"踢到主機電源線",
+            "action":"",
+            "score":"-200"
+        },
+        {
+            "number":"6",
+            "type":"",
+            "description":"領年終",
+            "action":"",
+            "score":"200"
+        },
+        {
+            "number":"7",
+            "type":"",
+            "description":"年度最佳APP 加200",
+            "action":"",
+            "score":"200"
+        },
+        {
+            "number":"8",
+            "type":"",
+            "description":"成功解除Bug 加200",
+            "action":"",
+            "score":"200"
+        },
+        {
+            "number":"9",
+            "type":"",
+            "description":"準時上線 加200",
+            "action":"",
+            "score":"200"
+        },
+        {
+            "number":"10",
+            "type":"",
+            "description":"神隊友 加200",
+            "action":"",
+            "score":"200"
         }
     ]
 }

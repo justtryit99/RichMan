@@ -122,6 +122,17 @@ class ShareData: NSObject {
     
     func getDataSource(type: DataType) {
         let path = Bundle.main.path(forResource: sourceType.rawValue, ofType: "json")
+        
+        let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: .alwaysMapped)
+                             
+        do {
+            _ = try JSONDecoder().decode(SourceCodable.self, from: data!)
+        } catch {
+            print("error: \(error)")
+        }
+        
+        
+        
         if let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: .alwaysMapped), let decoder = try? JSONDecoder().decode(SourceCodable.self, from: data) {
             
             //print("decoder: \(decoder)")
@@ -145,7 +156,7 @@ class ShareData: NSObject {
                 dataSource.fate = []
                 for f in decoder.fate ?? [] {
                     if Int(f.score.str) == nil || Int(f.type.str) == nil {
-                        print("＊＊＊ getDataSource 轉int失敗 ＊＊＊")
+                        print("＊＊＊ getDataSource 轉int失敗 fate:\(f.number.str)＊＊＊")
                     }
                     
                     let data = SourceData.Fate(number: f.number.str,
@@ -158,9 +169,13 @@ class ShareData: NSObject {
             case .mark:
                 dataSource.funny = []
                 for f in decoder.funny ?? [] {
+                    if Int(f.score.str) == nil {
+                        print("＊＊＊ getDataSource 轉int失敗 funny:\(f.number.str)＊＊＊")
+                    }
+                    
                     let data = SourceData.Funny(number: f.number.str,
                                                 type: 0, description: f.description.str.uppercased(),
-                                                score: f.score ?? 0,
+                                                score: Int(f.score.str) ?? 200,
                                                 action: f.action.str)
                     dataSource.funny.append(data)
                 }
@@ -182,7 +197,7 @@ class ShareData: NSObject {
                 
                 for f in decoder.fate ?? [] {
                     if Int(f.score.str) == nil || Int(f.type.str) == nil {
-                        print("＊＊＊ getDataSource 轉int失敗 ＊＊＊")
+                        print("＊＊＊ getDataSource 轉int失敗 fate:\(f.number.str)＊＊＊")
                     }
                     let data = SourceData.Fate(number: f.number.str,
                                                type: FateType(rawValue: Int(f.type.str) ?? 0) ?? .twoButton,
@@ -193,15 +208,17 @@ class ShareData: NSObject {
                 }
                 
                 for f in decoder.funny ?? [] {
+                    if Int(f.score.str) == nil {
+                        print("＊＊＊ getDataSource 轉int失敗 funny:\(f.number.str)＊＊＊")
+                    }
+                    
                     let data = SourceData.Funny(number: f.number.str,
                                                 type: 0, description: f.description.str.uppercased(),
-                                                score: f.score ?? 0,
+                                                score: Int(f.score.str) ?? 200,
                                                 action: f.action.str)
                     dataSource.funny.append(data)
                 }
             }
-            
-            
             
 
 //            dump(testSource)
@@ -209,7 +226,7 @@ class ShareData: NSObject {
         } else {
             print("** getTestSource 解析失敗 ** ")
             print("** getTestSource 解析失敗 ** ")
-            print("** getTestSource 解析失敗 ** ")
+            print("** getTestSource 解析失敗 ** sourceType: \(sourceType)")
         }
     }
     
@@ -255,13 +272,13 @@ struct SourceCodable: Codable {
     
     struct Funny: Codable {
         let number: String?
-        let type: Int?
+//        let type: String?
         let description: String?
-        let score: Int?
+        let score: String?
         let action: String?
 
         enum CodingKeys: String, CodingKey {
-            case number, type
+            case number
             case description
             case score, action
         }
