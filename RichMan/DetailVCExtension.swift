@@ -177,7 +177,8 @@ extension DetailVC {
                 self.view.layoutIfNeeded()
             } completion: { bool in
                 self.markView.backImg.image = UIImage(named: "問號圖")
-                self.isCanTapCir = true
+//                self.isCanTapCir = true
+                isGaming = false
             }
 
         }
@@ -186,6 +187,8 @@ extension DetailVC {
     
     /// 問號動畫
     func popMark(i: Int) {
+        guard markView.isFront == false else {return}
+        
         let time = 0.18
         let sprScale = 1.5
         
@@ -367,7 +370,10 @@ extension DetailVC {
             
             UIView.animate(withDuration: 0.3) {
                 self.view.layoutIfNeeded()
+            } completion: { bool in
+                isGaming = false
             }
+            
         }
         
     }

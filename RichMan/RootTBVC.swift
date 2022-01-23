@@ -114,6 +114,13 @@ class RootTBVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
+        guard !isGaming else {
+            showAlert(title: "遊戲中\n是否解除？") { action in
+                isGaming = false
+            }
+            return
+        }
+        
         let row = indexPath.row
         let cellData = shareData.dataAry[row]
         

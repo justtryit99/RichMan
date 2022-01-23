@@ -29,6 +29,9 @@ var sourceType = SourceType.test {
     }
 }
 
+var isGaming = false
+var isTestCardData = true
+
 class ShareData: NSObject {
     static let instance = ShareData()
     

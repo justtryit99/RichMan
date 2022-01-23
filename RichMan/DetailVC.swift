@@ -197,8 +197,9 @@ class DetailVC: UIViewController {
     
     // MARK: 點擊問號
     @objc func tapMark() {
-        guard isCanTapCir else {return}
-        isCanTapCir = false
+        guard !isGaming || isTestCardData else {return}
+        isGaming = true
+        
         tapCardType = .mark
         addEffect()
         blurView.fadeIn(0.6)
@@ -212,6 +213,9 @@ class DetailVC: UIViewController {
     
     // MARK: 點擊機會
     @objc func tapChanceCard() {
+        guard !isGaming || isTestCardData else {return}
+        isGaming = true
+        
         // 要加翻牌後無法再觸發
         chanceCard.teamKey = teamKey
         
@@ -228,6 +232,9 @@ class DetailVC: UIViewController {
     
     // MARK: 點擊命運
     @objc func tapFateCard() {
+        guard !isGaming || isTestCardData else {return}
+        isGaming = true
+        
         // 要加翻牌後無法再觸發
         fateCard.teamKey = teamKey
         
@@ -282,6 +289,7 @@ class DetailVC: UIViewController {
     
     
     // MARK: - Test Code
+    /*
     @IBAction func clickButton(_ sender: Any) {
         let popupVC: PopVC = MainSB.with(id: .popVC)
         present(popupVC, animated: true, completion: nil)
@@ -377,7 +385,8 @@ class DetailVC: UIViewController {
         print("alpha: \(sender.value)")
 //        moneyImg.alpha = CGFloat(sender.value)
     }
-
+     
+    */
 }
 
 
