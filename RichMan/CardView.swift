@@ -120,6 +120,7 @@ class CardView: BaseView {
                 }
             } else {
                 countLabel.text = "10"
+                subTeamImg.image = UIImage(named: "teamDefault")
                 cardImg.fadeIn()
                 frontImg.fadeOut()
                 frontBaseView.fadeOut()
