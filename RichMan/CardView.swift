@@ -229,6 +229,7 @@ class CardView: BaseView {
         contentLabel.text = data.description
         fateType = data.type
         scoreLabel.text = "\(data.score)"
+        contentImg.image = UIImage(named: data.image)
     }
     
     @IBAction func clickABCbutton(_ sender: UIButton) {
