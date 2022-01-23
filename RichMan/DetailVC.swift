@@ -202,7 +202,7 @@ class DetailVC: UIViewController {
             openMark()
         } else {
             // 確認是否開牌
-            showAlert(title: "開啟問號？") { action in
+            showAlert(title: "開啟「問號」？") { action in
                 self.openMark()
             }
         }
@@ -230,7 +230,7 @@ class DetailVC: UIViewController {
             openChance()
         } else {
             // 確認是否開牌
-            showAlert(title: "開啟機會？") { action in
+            showAlert(title: "開啟「機會」？") { action in
                 self.openChance()
             }
         }
@@ -259,7 +259,7 @@ class DetailVC: UIViewController {
             openFate()
         } else {
             // 確認是否開牌
-            showAlert(title: "開啟命運？") { action in
+            showAlert(title: "開啟「命運」？") { action in
                 self.openFate()
             }
         }

@@ -9,4 +9,6 @@ target 'RichMan' do
   pod 'LTMorphingLabel', '~> 0.9.3'
   pod 'SwiftyUserDefaults', '~> 3.0.1'
   
+#  pod 'ShowTime'
+  
 end

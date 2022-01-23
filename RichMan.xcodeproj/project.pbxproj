@@ -47,6 +47,9 @@
 		3CB23BA127999BF400FFD28F /* LogVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB23B9F27999BF400FFD28F /* LogVC.xib */; };
 		3CB23BA427999D7300FFD28F /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB23BA227999D7300FFD28F /* LogCell.swift */; };
 		3CB23BA527999D7300FFD28F /* LogCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CB23BA327999D7300FFD28F /* LogCell.xib */; };
+		3CB8C450279D271000ED093B /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CB8C44B279D271000ED093B /* LICENSE.md */; };
+		3CB8C451279D271000ED093B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3CB8C44C279D271000ED093B /* README.md */; };
+		3CB8C452279D271000ED093B /* ShowTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB8C44F279D271000ED093B /* ShowTime.swift */; };
 		A90B6D3055277FD12A050765 /* Pods_RichMan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F553D9F5B1B7AB44C32C3B3B /* Pods_RichMan.framework */; };
 		EE228092278673BD003BBFDE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE228091278673BD003BBFDE /* UIColorExtension.swift */; };
 		EE228094278673CC003BBFDE /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE228093278673CC003BBFDE /* UITableViewExtension.swift */; };
@@ -108,6 +111,9 @@
 		3CB23B9F27999BF400FFD28F /* LogVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogVC.xib; sourceTree = "<group>"; };
 		3CB23BA227999D7300FFD28F /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
 		3CB23BA327999D7300FFD28F /* LogCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogCell.xib; sourceTree = "<group>"; };
+		3CB8C44B279D271000ED093B /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		3CB8C44C279D271000ED093B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3CB8C44F279D271000ED093B /* ShowTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowTime.swift; sourceTree = "<group>"; };
 		5FBB01BF50963199981DCC31 /* Pods-RichMan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichMan.release.xcconfig"; path = "Target Support Files/Pods-RichMan/Pods-RichMan.release.xcconfig"; sourceTree = "<group>"; };
 		E8FD8CFC7E7021CDB487B89C /* Pods-RichMan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RichMan.debug.xcconfig"; path = "Target Support Files/Pods-RichMan/Pods-RichMan.debug.xcconfig"; sourceTree = "<group>"; };
 		EE228091278673BD003BBFDE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -226,6 +232,7 @@
 				EE228090278673A8003BBFDE /* Extension */,
 				3C6BFFF42785EB77001AF291 /* Other */,
 				3C537E282790533900C6EAD7 /* ImageViewer */,
+				3CB8C44A279D271000ED093B /* ShowTime */,
 			);
 			path = RichMan;
 			sourceTree = "<group>";
@@ -245,6 +252,32 @@
 				EEF1EB102786E366009974D7 /* BaseView.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		3CB8C44A279D271000ED093B /* ShowTime */ = {
+			isa = PBXGroup;
+			children = (
+				3CB8C44B279D271000ED093B /* LICENSE.md */,
+				3CB8C44C279D271000ED093B /* README.md */,
+				3CB8C44D279D271000ED093B /* Sources */,
+			);
+			path = ShowTime;
+			sourceTree = "<group>";
+		};
+		3CB8C44D279D271000ED093B /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3CB8C44E279D271000ED093B /* ShowTime */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3CB8C44E279D271000ED093B /* ShowTime */ = {
+			isa = PBXGroup;
+			children = (
+				3CB8C44F279D271000ED093B /* ShowTime.swift */,
+			);
+			path = ShowTime;
 			sourceTree = "<group>";
 		};
 		B6A7F6EB9F287978890C6FBA /* Frameworks */ = {
@@ -337,8 +370,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CB8C450279D271000ED093B /* LICENSE.md in Resources */,
 				EEF1EB172786E582009974D7 /* crayon_1-1.ttf in Resources */,
 				3C183A45278B26F200360983 /* TestSource.json in Resources */,
+				3CB8C451279D271000ED093B /* README.md in Resources */,
 				EEEA61C0278E9569003397D3 /* EEJI-CHAO-BeiMingGBT-Flash.ttf in Resources */,
 				3C537E372790533900C6EAD7 /* ImageViewerController.xib in Resources */,
 				3C87F1242789AE0100B5437B /* MarkView.xib in Resources */,
@@ -417,6 +452,7 @@
 				3C6BFF982785CCBF001AF291 /* AppDelegate.swift in Sources */,
 				3C6BFFF92785ECAB001AF291 /* TeamCell.swift in Sources */,
 				3C6BFFF12785EB1A001AF291 /* RootTBVC.swift in Sources */,
+				3CB8C452279D271000ED093B /* ShowTime.swift in Sources */,
 				EEF1EB1C2786F59D009974D7 /* DetailVC.swift in Sources */,
 				3C537E362790533900C6EAD7 /* AnimatableImageView.swift in Sources */,
 				EE6D3A4D279C053700812296 /* PublicFunc.swift in Sources */,
