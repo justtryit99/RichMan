@@ -60,7 +60,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="474" height="661"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XQA-RM-9as">
-                            <rect key="frame" x="30" y="30" width="414" height="349"/>
+                            <rect key="frame" x="30" y="30" width="414" height="379"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mwL-tl-80t" userLabel="textBaseView">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="153"/>
@@ -81,27 +81,40 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NM4-2l-Qbk" userLabel="abcButtonView">
-                                    <rect key="frame" x="0.0" y="173" width="414" height="176"/>
+                                    <rect key="frame" x="0.0" y="173" width="414" height="206"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jjR-1E-ZBO">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="176"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="206"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTc-5J-TQK">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="cTc-5J-TQK">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="86"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="FontquanXinYiGuanHeiTi-Regular" family="FontquanXinYiGuanHeiTi" pointSize="30"/>
-                                                    <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="10"/>
                                                     <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" title="(A) jor技術犯規" backgroundImage="button">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <buttonConfiguration key="configuration" style="plain">
+                                                        <backgroundConfiguration key="background" image="button"/>
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="(A) jor技術犯規(A) jor技術犯規(A) jor技術犯規">
+                                                                <attributes>
+                                                                    <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="30" name="FontquanXinYiGuanHeiTi-Regular"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </buttonConfiguration>
                                                     <connections>
                                                         <action selector="clickABCbutton:" destination="-1" eventType="touchUpInside" id="BI1-MY-klm"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7K-gP-4oU">
-                                                    <rect key="frame" x="0.0" y="62" width="414" height="52"/>
+                                                    <rect key="frame" x="0.0" y="96" width="414" height="50"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="FontquanXinYiGuanHeiTi-Regular" family="FontquanXinYiGuanHeiTi" pointSize="30"/>
                                                     <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="10"/>
@@ -110,12 +123,23 @@
                                                     <state key="normal" title="(B) 打手犯規" backgroundImage="button">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <buttonConfiguration key="configuration" style="plain">
+                                                        <backgroundConfiguration key="background" image="button"/>
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="(B) 打手犯規">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="30" name="FontquanXinYiGuanHeiTi-Regular"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </buttonConfiguration>
                                                     <connections>
                                                         <action selector="clickABCbutton:" destination="-1" eventType="touchUpInside" id="kOp-Oh-DjI"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDw-mM-kiQ">
-                                                    <rect key="frame" x="0.0" y="124" width="414" height="52"/>
+                                                    <rect key="frame" x="0.0" y="156" width="414" height="50"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="FontquanXinYiGuanHeiTi-Regular" family="FontquanXinYiGuanHeiTi" pointSize="30"/>
                                                     <inset key="contentEdgeInsets" minX="0.0" minY="6" maxX="0.0" maxY="10"/>
@@ -124,6 +148,17 @@
                                                     <state key="normal" title="(C) 走步違例" backgroundImage="button">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <buttonConfiguration key="configuration" style="plain">
+                                                        <backgroundConfiguration key="background" image="button"/>
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment content="(C) 走步違例">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="30" name="FontquanXinYiGuanHeiTi-Regular"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </buttonConfiguration>
                                                     <connections>
                                                         <action selector="clickABCbutton:" destination="-1" eventType="touchUpInside" id="CaT-7G-ob9"/>
                                                     </connections>
@@ -140,7 +175,7 @@
                                     </constraints>
                                 </view>
                                 <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="基紐" translatesAutoresizingMaskIntoConstraints="NO" id="Omk-9d-Tc1">
-                                    <rect key="frame" x="0.0" y="349" width="414" height="280"/>
+                                    <rect key="frame" x="0.0" y="379" width="414" height="280"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="280" id="Iv9-jQ-O0J"/>
                                     </constraints>

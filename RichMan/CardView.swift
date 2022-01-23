@@ -192,14 +192,30 @@ class CardView: BaseView {
         chanceData = data
         
         contentLabel.text = data.question
+        
         for (i, opt) in data.options.enumerated() {
             switch i {
             case 0:
-                buttonA.setTitle("(A) \(opt)", for: .normal)
+                var title = AttributedString("(A) \(opt)")
+                title.foregroundColor = .black
+                title.font = UIFont(name: "FontquanXinYiGuanHeiTi", size: 30)
+                buttonA.configuration?.attributedTitle = title
+                buttonA.configuration?.contentInsets.bottom = 12
+                
             case 1:
-                buttonB.setTitle("(B) \(opt)", for: .normal)
+                var title = AttributedString("(B) \(opt)")
+                title.foregroundColor = .black
+                title.font = UIFont(name: "FontquanXinYiGuanHeiTi", size: 30)
+                buttonB.configuration?.attributedTitle = title
+                buttonB.configuration?.contentInsets.bottom = 12
+                
             case 2:
-                buttonC.setTitle("(C) \(opt)", for: .normal)
+                var title = AttributedString("(C) \(opt)")
+                title.foregroundColor = .black
+                title.font = UIFont(name: "FontquanXinYiGuanHeiTi", size: 30)
+                buttonC.configuration?.attributedTitle = title
+                buttonC.configuration?.contentInsets.bottom = 12
+                
             default:
                 break
             }

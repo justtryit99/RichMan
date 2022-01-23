@@ -60,8 +60,10 @@ func getDefaults() {
 func testSource() {
     for data in share.dataSource.chance {
         if data.options.contains(data.answer) {
-            print("No.\(data.number) 正確")
+            //print("No.\(data.number) 正確")
         } else {
+            print("No.\(data.number) 找不到解答")
+            print("No.\(data.number) 找不到解答")
             print("No.\(data.number) 找不到解答")
         }
     }

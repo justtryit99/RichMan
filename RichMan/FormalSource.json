@@ -341,11 +341,11 @@
             "type": 0,
             "question": "結婚吧用了哪個涵式進行HEIC/HEIF轉換JPG？",
             "options": [
-                "UIImageToJPGRepresentation",
-                "UIImageJPGRepresentation",
-                "UIImageJPEGRepresentation"
+                "UIImage To JPG Representation",
+                "UIImage JPG Representation",
+                "UIImage JPEG Representation"
             ],
-            "answer": "UIImageJPEGRepresentation",
+            "answer": "UIImage JPEG Representation",
             "score": 100
         },
         {
