@@ -198,6 +198,17 @@ class DetailVC: UIViewController {
     // MARK: 點擊問號
     @objc func tapMark() {
         guard !isGaming || isTestCardData else {return}
+        if isTestCardData {
+            openMark()
+        } else {
+            // 確認是否開牌
+            showAlert(title: "開啟問號？") { action in
+                self.openMark()
+            }
+        }
+    }
+    
+    func openMark() {
         isGaming = true
         
         tapCardType = .mark
@@ -214,25 +225,48 @@ class DetailVC: UIViewController {
     // MARK: 點擊機會
     @objc func tapChanceCard() {
         guard !isGaming || isTestCardData else {return}
+        
+        if isTestCardData {
+            openChance()
+        } else {
+            // 確認是否開牌
+            showAlert(title: "開啟機會？") { action in
+                self.openChance()
+            }
+        }
+        
+    }
+    
+    func openChance() {
         isGaming = true
         
-        // 要加翻牌後無法再觸發
-        chanceCard.teamKey = teamKey
+        self.chanceCard.teamKey = self.teamKey
         
-        addEffect()
-        tapCardType = .chance
-        popCard(type: tapCardType)
-        addNumberTimes()
+        self.addEffect()
+        self.tapCardType = .chance
+        self.popCard(type: self.tapCardType)
+        self.addNumberTimes()
         
-        chanceCard.setChanceData(share.getChanceData())
-        isCountScore = false
+        self.chanceCard.setChanceData(share.getChanceData())
+        self.isCountScore = false
         saveToDefaults()
-        
     }
     
     // MARK: 點擊命運
     @objc func tapFateCard() {
         guard !isGaming || isTestCardData else {return}
+        if isTestCardData {
+            openFate()
+        } else {
+            // 確認是否開牌
+            showAlert(title: "開啟命運？") { action in
+                self.openFate()
+            }
+        }
+        
+    }
+    
+    func openFate() {
         isGaming = true
         
         // 要加翻牌後無法再觸發
@@ -247,7 +281,6 @@ class DetailVC: UIViewController {
         isCountScore = false
         saveToDefaults()
     }
-    
     
     
     @objc func timeCount() {
