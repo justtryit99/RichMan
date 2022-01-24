@@ -119,7 +119,7 @@ class ShareData: NSObject {
         return chance
     }
     
-    
+    // MARK: - 取得Json檔資料
     func getDataSource(type: DataType) {
         let path = Bundle.main.path(forResource: sourceType.rawValue, ofType: "json")
         
@@ -128,9 +128,8 @@ class ShareData: NSObject {
         do {
             _ = try JSONDecoder().decode(SourceCodable.self, from: data!)
         } catch {
-            print("error: \(error)")
+            print("getDataSource error: \(error)")
         }
-        
         
         
         if let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: .alwaysMapped), let decoder = try? JSONDecoder().decode(SourceCodable.self, from: data) {

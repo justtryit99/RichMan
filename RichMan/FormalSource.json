@@ -627,7 +627,7 @@
             "number":"4",
             "type":"2",
             "image":"",
-            "description":"玩法：『打卡片』\n請指定任一隊伍對戰\n生死有命，富貴在天",
+            "description":"玩法：『打畫片』\n請指定任一隊伍對戰\n生死有命，富貴在天",
             "score":"200"
         },
         {
@@ -664,6 +664,20 @@
             "image":"金剛",
             "description":"請依照圖片動作拍照，通過即可得分",
             "score":"200"
+        },
+        {
+            "number":"10",
+            "type":"2",
+            "image":"",
+            "description":"拳法：『一拳超人』\n請指定任一隊伍對戰\n生死有命，富貴在天",
+            "score":"200"
+        },
+        {
+            "number":"11",
+            "type":"1",
+            "image":"漫威",
+            "description":"請依照圖片動作拍照，通過即可得分",
+            "score":"200"
         }
     ],
     "funny" : [
@@ -691,51 +705,51 @@
         {
             "number":"4",
             "type":"",
-            "description":"乖乖過期\n站台出現一推蟲",
+            "description":"乖乖過期\n站台出現一堆蟲",
             "action":"",
             "score":"-200"
         },
         {
-            "number":"5",
-            "type":"",
-            "description":"踢到主機電源線",
-            "action":"",
-            "score":"-200"
+            "number": "5",
+            "type": "",
+            "description": "踢到主機電源線\n主機居然會冒煙",
+            "action": "",
+            "score": "-200"
         },
         {
-            "number":"6",
-            "type":"",
-            "description":"領年終",
-            "action":"",
-            "score":"200"
+            "number": "6",
+            "type": "",
+            "description": "領年終\n開...開心心過好年",
+            "action": "",
+            "score": "200"
         },
         {
-            "number":"7",
-            "type":"",
-            "description":"年度最佳APP 加200",
-            "action":"",
-            "score":"200"
+            "number": "7",
+            "type": "",
+            "description": "獲得年度最佳APP\n副總很開心",
+            "action": "",
+            "score": "200"
         },
         {
-            "number":"8",
-            "type":"",
-            "description":"成功解除Bug 加200",
-            "action":"",
-            "score":"200"
+            "number": "8",
+            "type": "",
+            "description": "成功解除萬年Bug\n通神啦",
+            "action": "",
+            "score": "200"
         },
         {
-            "number":"9",
-            "type":"",
-            "description":"準時上線 加200",
-            "action":"",
-            "score":"200"
+            "number": "9",
+            "type": "",
+            "description": "改版準時上線\n廣受好評",
+            "action": "",
+            "score": "200"
         },
         {
-            "number":"10",
-            "type":"",
-            "description":"神隊友 加200",
-            "action":"",
-            "score":"200"
+            "number": "10",
+            "type": "",
+            "description": "你的澳門最強神隊友上線啦!",
+            "action": "",
+            "score": "200"
         }
     ]
 }
