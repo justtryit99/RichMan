@@ -42,19 +42,13 @@
         }
     ],
     "funny" : [
+        
         {
-            "number" : "1",
-            "type" : "0",
-            "description" : "出門搭丟賽",
+            "number" : "3",
+            "type" : "1",
+            "description" : "程式課老大，生日快樂！\n祝你食甲兩仟三佰五六十歲\n保佑你萬事如意 萬年富貴",
             "action" : "加分？扣分？",
-            "score" : "-500"
-        },
-        {
-            "number" : "2",
-            "type" : "0",
-            "description" : "出門搭丟賽，但遇到好心人施捨",
-            "action" : "加分？扣分？",
-            "score" : "500"
+            "score" : "51888"
         }
     ]
 }

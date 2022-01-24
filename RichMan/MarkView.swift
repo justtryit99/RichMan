@@ -15,6 +15,7 @@ class MarkView: BaseView {
     
     weak var delegate: MarkViewDelegate?
     
+    @IBOutlet weak var titleImg: UIImageView!
     @IBOutlet weak var backImg: UIImageView!
     @IBOutlet weak var markImg: UIImageView!
     @IBOutlet weak var markWidth: NSLayoutConstraint!
@@ -61,6 +62,8 @@ class MarkView: BaseView {
         contentLabel.text = data.description
         scoreLabel.text = "\(data.score)"
         
+        let imgName = data.type == "1" ? "花" : "恭喜"
+        titleImg.image = UIImage(named: imgName)
     }
     
     @IBAction func clickButtonA(_ sender: UIButton) {

@@ -173,7 +173,8 @@ class ShareData: NSObject {
                     }
                     
                     let data = SourceData.Funny(number: f.number.str,
-                                                type: 0, description: f.description.str.uppercased(),
+                                                type: f.type.str,
+                                                description: f.description.str.uppercased(),
                                                 score: Int(f.score.str) ?? 200,
                                                 action: f.action.str)
                     dataSource.funny.append(data)
@@ -212,7 +213,8 @@ class ShareData: NSObject {
                     }
                     
                     let data = SourceData.Funny(number: f.number.str,
-                                                type: 0, description: f.description.str.uppercased(),
+                                                type: f.type.str,
+                                                description: f.description.str.uppercased(),
                                                 score: Int(f.score.str) ?? 200,
                                                 action: f.action.str)
                     dataSource.funny.append(data)
@@ -271,7 +273,7 @@ struct SourceCodable: Codable {
     
     struct Funny: Codable {
         let number: String?
-//        let type: String?
+        let type: String?
         let description: String?
         let score: String?
         let action: String?
@@ -280,6 +282,7 @@ struct SourceCodable: Codable {
             case number
             case description
             case score, action
+            case type
         }
     }
 }
@@ -320,7 +323,7 @@ struct SourceData: Codable {
         var key: String = ""
         
         var number: String = ""
-        var type: Int?
+        var type = ""
         var description: String = ""
         var score: Int = 0
         var action: String = ""
