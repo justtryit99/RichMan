@@ -51,7 +51,7 @@ public final class ShowTime: NSObject {
     
     /// The size of the touch circles.
     /// (44pt x 44pt by default)
-    @objc public static var size = CGSize(width: 44, height: 44)
+    @objc public static var size = CGSize(width: 50, height: 50)
     
     /// The style of animation to use when hiding a visual touch.
     /// (`.standard` by default)
