@@ -20,6 +20,7 @@ enum DataType {
 enum SourceType: String {
     case test = "TestSource"
     case formal = "FormalSource"
+    case show = "ShowSource"
 }
 
 var sourceType = SourceType.test {
