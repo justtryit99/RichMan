@@ -16,7 +16,7 @@
     ],
     "fate" : [
         {
-            "number":"4",
+            "number":"8",
             "type":"2",
             "image":"",
             "description":"玩法：『打畫片』\n請指定任一隊伍對戰\n生死有命，富貴在天",
@@ -31,13 +31,12 @@
         }
     ],
     "funny" : [
-        
         {
-            "number" : "3",
-            "type" : "1",
-            "description" : "程式課老大，生日快樂！\n祝你食甲兩仟三佰五六十歲\n保佑你萬事如意 萬年富貴",
+            "number" : "8",
+            "type" : "",
+            "description" : "獲得年度最佳APP\n老闆大加碼",
             "action" : "加分？扣分？",
-            "score" : "51888"
+            "score" : "888"
         }
     ]
 }
