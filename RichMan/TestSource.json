@@ -1,48 +1,29 @@
 {
     "chance" : [
         {
-            "number" : "1",
-            "type" : 0,
-            "question" : "請問誰是kobe?",
-            "options" : ["kobe", "jordan", "curry"],
-            "answer" : "kobe",
-            "score" : 100
-        },
-        {
-            "number" : "2",
-            "type" : 0,
-            "question" : "請問誰是jordan?",
-            "options" : ["kobe", "jordan", "curry"],
-            "answer" : "jordan",
-            "score" : 100
-        },
-        {
-            "number" : "3",
-            "type" : 0,
-            "question" : "請問誰是curry?",
-            "options" : ["kobe", "jordan", "curry"],
-            "answer" : "curry",
-            "score" : 100
+            "number": "1",
+            "type": 0,
+            "question": "請問2021技術研究會主席是？",
+            "options": [
+                "周育佑",
+                "許銘原",
+                "莊文博"
+            ],
+            "answer": "許銘原",
+            "score": 100
         }
+        
     ],
     "fate" : [
         {
-            "number" : "1",
-            "type" : "1",
-            "image" : "基紐",
-            "description" : "請依照圖片動作拍照，通過即可得分",
-            "score" : "180"
-        },
-        {
-            "number" : "2",
-            "type" : "2",
-            "image" : "",
-            "description" : "拳法：海帶拳\n請指定任一隊伍對戰\n生死有命，富貴在天",
-            "score" : "300"
+            "number":"11",
+            "type":"1",
+            "image":"帥",
+            "description":"請依照圖片動作拍照，通過即可得分",
+            "score":"200"
         }
     ],
     "funny" : [
-        
         {
             "number" : "3",
             "type" : "1",
