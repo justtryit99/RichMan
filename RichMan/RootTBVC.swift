@@ -55,19 +55,19 @@ class RootTBVC: UITableViewController {
         
         
         // *** 正式開始記得打開 ***
-//        if let _ = Defaults[.dataAry] {
-//            // 是否讀取舊資料
-//            showAlert(title: "是否讀取舊資料") { action in
-//                // 如果讀取存檔資料，應該是正式資料
-//                sourceType = .formal
-//                getDefaults()
-//                self.tableView.reloadData()
-//            }
-//        }
+        if let _ = Defaults[.dataAry] {
+            // 是否讀取舊資料
+            showAlert(title: "是否讀取舊資料") { action in
+                // 如果讀取存檔資料，應該是正式資料
+                sourceType = SourceType(rawValue: Defaults[.sourceType] ?? "") ?? .formal
+                getDefaults()
+                self.tableView.reloadData()
+            }
+        }
         
         
         // 測試用
-        sourceType = .show
+        sourceType = .test
         testSource()
         
     }

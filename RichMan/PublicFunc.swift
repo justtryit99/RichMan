@@ -28,6 +28,7 @@ func logEvent(row: Int, score: Int, msg: String) {
 }
 
 func saveToDefaults() {
+    Defaults[.sourceType] = sourceType.rawValue
     Defaults[.dataSource] = try? PropertyListEncoder().encode(share.dataSource)
     
     Defaults[.dataAry] = []

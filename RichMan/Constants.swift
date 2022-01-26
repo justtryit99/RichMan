@@ -14,6 +14,7 @@ import SwiftyUserDefaults
 extension DefaultsKeys {
     static let dataSource = DefaultsKey<Data?>("dataSource")
     static let dataAry = DefaultsKey<[Data]?>("dataAry")
+    static let sourceType = DefaultsKey<String?>("sourceType")
 }
 
 
