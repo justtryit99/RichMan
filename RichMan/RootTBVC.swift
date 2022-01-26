@@ -87,8 +87,15 @@ class RootTBVC: UITableViewController {
                 Defaults.removeAll()
             }
         }
+        let text = isTestCardData ? "開啟中\n關閉？" : "關閉中\n開啟？"
+        let testDataAction = UIAlertAction(title: "測試開關", style: .default) { action in
+            showAlert(title: text) { action in
+                isTestCardData.toggle()
+            }
+        }
+        
         UIAlertController.show(title: "Source", style: .actionSheet,
-                               actions: [testAction, formalAction],
+                               actions: [testAction, formalAction, testDataAction],
                                sourceView: sender)
     }
     
